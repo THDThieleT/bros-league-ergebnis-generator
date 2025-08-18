@@ -1,14 +1,11 @@
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import mm
-from reportlab.pdfgen import canvas
-from reportlab.lib.utils import ImageReader
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from pdf2image import convert_from_path
-from reportlab.graphics import renderPM
+import os
+import re
 import csv
-
+import datetime
 from PIL import Image, ImageDraw, ImageFont
+import xml.etree.ElementTree as ET
+
+#Setup Variables
 
 width, height = 1920, 1080
 y_offset = 62
@@ -47,7 +44,8 @@ pos_bold = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=position_siz
 
 
 
-def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
+
+def create_rennergebnis_page_1(data, race_time, filename="rennergebnisse_seite1.png"):
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
 
@@ -89,7 +87,8 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
     
     ### Fill Positions
     position = 0
-    for name, lastname, team, time, flag in data:
+    winner_final_time = race_time[0]
+    for name, lastname, number, team, flag, overall, stammpilot in data:
         #Text zu CAPS
         lastname = lastname.upper()
         team = team.upper()
@@ -134,7 +133,11 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             #Teamname
             draw.text((team_name_allignment , first_name + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
             #Zeit
-            draw.text((race_time_allignment , first_name + (position * y_offset)), time, font=regular, fill=(0, 0, 0, 255), anchor="rm")
+            td = datetime.timedelta(seconds=winner_final_time)
+            # Format as mm:ss.SSS
+            minutes, sec = divmod(td.total_seconds(), 60)
+            formatted = f"{int(minutes):02}:{sec:06.3f}"
+            draw.text((race_time_allignment , first_name + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
             #Points
             draw.text((points_pos_x, first_name + (position * y_offset)), gained_points, font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
         else:
@@ -151,7 +154,10 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             #Teamname
             draw.text((team_name_allignment , first_name + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lb")
             #Zeit
-            draw.text((race_time_allignment , first_name + (position * y_offset)), time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            if(race_time[position] == 0.0):
+                draw.text((race_time_allignment , first_name + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            else:
+                draw.text((race_time_allignment , first_name + (position * y_offset)), f"+{(race_time[position] - winner_final_time):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             #Points
             draw.text((points_pos_x, first_name + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
 
@@ -282,30 +288,76 @@ def create_rennergebnis_page_2(winner, data, filename="rennergebnisse_seite2.png
 
 if __name__ == "__main__":
 
-    # load fonts    
-    pdfmetrics.registerFont(TTFont("Bold", "./fonts/Formula1-Bold_web.ttf"))
-    pdfmetrics.registerFont(TTFont("Regular", "./fonts/Formula1-Regular_web.ttf"))
-    pdfmetrics.registerFont(TTFont("Wide", "./fonts/Formula1-Wide_web.ttf"))
+    ### Finde die XML Datei zum letzten Rennen ###
+    folder = 'race_results'
+    pattern = re.compile(r'Rennen(\d+)\.xml')
 
+    # Find all files matching the pattern
+    files = [f for f in os.listdir(folder) if pattern.match(f)]
 
-    # data for betreuer
-    # schema: [name, funktion]
-    rennergebnis = []
+    # Extract the number and find the file with the highest number
+    if files:
+        max_file = max(files, key=lambda f: int(pattern.match(f).group(1)))
+        print(f"Öffne Datei: {max_file}")
+        # Beispiel: XML parsen
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(os.path.join(folder, max_file))
+        root = tree.getroot()
+        # ...weitere Verarbeitung...
+    else:
+        print("Keine passenden XML-Dateien gefunden.")
 
-    # read betreuer.csv and prepare data
-    with open("Race01.csv", encoding="utf-8") as csvfile:
+    ### Extract Drivers from XML ###
+    xml_export = []
+    for driver in root.findall('.//Driver'):
+        name_elem = driver.find('Name')
+        position = driver.find('Position')
+        category_elem = driver.find('Category')
+        racetime = driver.find('FinishTime')
+        if category_elem is not None and "F1S13" in category_elem.text:                        
+            if name_elem is not None and name_elem.text:
+                if racetime is None:
+                    racetime = "0.0"
+                    xml_export.append((name_elem.text, position.text, racetime))
+                else:
+                    xml_export.append((name_elem.text, position.text, racetime.text))
+    xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
+
+    ### get Driver config ###
+    driver_config = []    
+    # read driver_config.csv
+    with open("driver_config.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile, delimiter=";")
 
-        # skip header
+        # skip header1
         next(csvreader)
 
         for row in csvreader:
             if row == []:
-                continue
-            rennergebnis.append([row[0], row[1], row[2], row[3], row[4]])
+                continue            
+            driver_config.append(row)
+
+    ### get sorted Race Result with config file ###
+    rennergebnis = []    
+    race_time = []
+    for entry in xml_export:
+        found = False
+        for config in driver_config:
+            if (config[0] + " " + config[1]).upper() == entry[0].upper():                
+                rennergebnis.append(config)                
+                race_time.append(float(entry[2]))
+                driver_config.remove(config)
+                found = True                                
+                break
+        if not found:
+            print("Kein Eintrag für " + entry[0] + " gefunden!")            
+
+
+    
+
     # create badges for betreuer
     fahrer_seite1 = rennergebnis[:10]  # First 10 entries for page 1
     fahrer_seite2 = rennergebnis[10:20]  # Next 10 entries for page 2
-    create_rennergebnis_page_1(fahrer_seite1)
-    create_rennergebnis_page_2(rennergebnis[0], fahrer_seite2)
+    create_rennergebnis_page_1(fahrer_seite1, race_time[:10])
+    #create_rennergebnis_page_2(rennergebnis[0], fahrer_seite2)
     
