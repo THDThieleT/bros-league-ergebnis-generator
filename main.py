@@ -43,15 +43,30 @@ class Winner:
         if(self.Team == "Audi F1 Team"):
             return "AUDI"
 
+class fastest_lap:
+    def __init__(self, Vorname="Vorname", Nachname="Nachname", Team="Test Team", lap_time="1000.0"):
+        self.Vorname = Vorname
+        self.Nachname = Nachname
+        self.Team = Team
+        self.lap_time = lap_time
+        
+    def get_laptime_formatted(self):
+        td = datetime.timedelta(seconds=float(self.lap_time))
+        # Format as mm:ss.SSS
+        minutes, sec = divmod(td.total_seconds(), 60)
+        return f"{int(minutes):02}:{sec:06.3f}"
+
 #Setup Variables
 
 width, height = 1920, 1080
-y_offset = 62
-first_name = 302 #310 unterseite erste Zeile
+y_offset = 65
+first_name = 243 #310 unterseite erste Zeile
+first_team_and_points = 232
 position_text = 556
 left_allignment = 620
 name_size = 20
 
+fastest_lap_position = (556, 1006)
 lastname_size = 30
 flag_width = 40
 flag_height = 26
@@ -71,7 +86,9 @@ winner_team_size = 55
 winner_name_pos = (288, 770)
 winner_name_size = 42
 winner = Winner([])
+fastest_lap_driver = fastest_lap()
 
+name_rennen = "Name des Rennens"
 
 # Load a font (optional: use default if you don't have one)
 race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
@@ -87,21 +104,24 @@ pos_bold = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=position_siz
 xml_export = []
 driver_config = []
 rennergebnis = []
+fastest_laps = []
 
 
 
 def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
+    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
     background = Image.open("./images/Rennergebnis_Hintergrund.png").convert("RGBA")
 
     # Paste images onto the final image at specified positions
+    mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
+    final_image.paste(classment_transparent, (0, 0), mask)  # The third argument is the mask for transparency
     final_image.paste(background, (0, 0), background)  # The third argument is the mask for transparency
     draw = ImageDraw.Draw(final_image)
 
-    # Draw text with semi-transparency
-    draw.text((557, 134), "FORMULA 1 BROS LEAGUE rF2 EIFEL GRAND PRIX 2024", font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
-    draw.text((557, 193), "RACE CLASSIFICATION", font=race_classification, fill=(167, 169, 171, 255), anchor="lt")
+    # Draw Racetitel with semi-transparency
+    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
 
     #Draw race winner
     winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
@@ -167,6 +187,8 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             gained_points = "+2"
         elif(position == 9):
             gained_points = "+1"
+        else:
+            gained_points = "+0"
 
         
         if(position == 0):
@@ -181,15 +203,15 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             #Nachname
             draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
             #Teamname
-            draw.text((team_name_allignment , first_name + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lm")
             #Zeit
             td = datetime.timedelta(seconds=float(winner.finish_time))
             # Format as mm:ss.SSS
             minutes, sec = divmod(td.total_seconds(), 60)
             formatted = f"{int(minutes):02}:{sec:06.3f}"
-            draw.text((race_time_allignment , first_name + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rb")
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
             #Points
-            draw.text((points_pos_x, first_name + (position * y_offset)), gained_points, font=pos_bold, fill=(0, 0, 0, 255), anchor="rb")
+            draw.text((points_pos_x, first_team_and_points + (position * y_offset)), gained_points, font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
         else:
             #Draw Position
             draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
@@ -202,23 +224,31 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             #Nachname
             draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
             #Teamname
-            draw.text((team_name_allignment , first_name + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
             #Zeit
             if (driver_time == "DNS"):
-                draw.text((race_time_allignment , first_name + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rb")
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             elif (driver_time == "DNF"):
-                draw.text((race_time_allignment , first_name + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rb")            
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
             elif ("Lap" in driver_time):
-                draw.text((race_time_allignment , first_name + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rb")
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
             else:
-                draw.text((race_time_allignment , first_name + (position * y_offset)), f"+{(float(driver_time) - float(winner.finish_time)):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+                time_behind_leader = float(driver_time) - float(winner.finish_time)
+                if(time_behind_leader < 10):
+                    draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+0{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+                else:
+                    draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             #Points
-            draw.text((points_pos_x, first_name + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rb")
+            draw.text((points_pos_x, first_team_and_points + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
 
         # Update position for the next name
         position += 1
 
-    
+    ### Draw fsatess Lap
+    bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
+    name_length = bbox[2] - bbox[0]
+    draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
+    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}     (+1 Point)", font=regular, fill=(255, 255, 255, 255), anchor="lm")
 
     # Save the final image
     final_image.save(filename, format="PNG")
@@ -227,15 +257,17 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
 def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
+    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
     background = Image.open("./images/Rennergebnis_Hintergrund_2.png").convert("RGBA")
 
     # Paste images onto the final image at specified positions
+    mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
+    final_image.paste(classment_transparent, (0, 0), mask)  # The third argument is the mask for transparency
     final_image.paste(background, (0, 0), background)  # The third argument is the mask for transparency
     draw = ImageDraw.Draw(final_image)
 
-    # Draw text with semi-transparency
-    draw.text((557, 134), "FORMULA 1 BROS LEAGUE rF2 EIFEL GRAND PRIX 2024", font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
-    draw.text((557, 193), "RACE CLASSIFICATION", font=race_classification, fill=(167, 169, 171, 255), anchor="lt")
+    # Draw Racetitel with semi-transparency
+    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
 
     #Draw race winner
     winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
@@ -311,8 +343,9 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
         name_length = bbox[2] - bbox[0]
                 
         gained_points = "+0"
+        
         #Draw Position
-        draw.text((position_text, first_name + (position * y_offset)), str(position + 10), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
+        draw.text((position_text, first_name + (position * y_offset)), str(position + 12), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
         #Draw Flag
         flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
         flag_image = flag_image.resize((flag_width, flag_height))
@@ -322,21 +355,32 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
         #Nachname
         draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
         #Teamname
-        draw.text((team_name_allignment , first_name + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
         #Zeit
         if (driver_time == "DNS"):
-            draw.text((race_time_allignment , first_name + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rb")
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif (driver_time == "DNF"):
-            draw.text((race_time_allignment , first_name + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rb")            
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
         elif ("Lap" in driver_time):
-            draw.text((race_time_allignment , first_name + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rb")
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
         else:
-            draw.text((race_time_allignment , first_name + (position * y_offset)), f"+{(float(driver_time) - float(winner.finish_time)):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            time_behind_leader = float(driver_time) - float(winner.finish_time)
+            if(time_behind_leader < 10):
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+0{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            else:
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         #Points
-        draw.text((points_pos_x, first_name + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rb")
+        draw.text((points_pos_x, first_team_and_points + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
 
         # Update position for the next name
         position += 1
+
+    ### Draw fsatess Lap
+    bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
+    name_length = bbox[2] - bbox[0]
+    draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
+    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}     (+1 Point)", font=regular, fill=(255, 255, 255, 255), anchor="lm")
+
 
     
 
@@ -372,6 +416,7 @@ def read_raceresult_xml():
         racetime = driver.find('FinishTime')
         finished = driver.find('FinishStatus')        
         finished_laps = driver.find('Laps')
+        fastes_lap = driver.find('BestLapTime')
 
         if (category_elem is None) or not ("F1S13" in category_elem.text):                        
             continue
@@ -379,24 +424,29 @@ def read_raceresult_xml():
         if (finished is None):
             print("finished ist None")
             continue
+        
+        if fastes_lap is None:
+            fastes_lap = "1000"
+        else:
+            fastes_lap = fastes_lap.text
 
         if finished.text == "None":
-            xml_export.append((name_elem.text, position.text, "DNS"))
+            xml_export.append((name_elem.text, position.text, "DNS", fastes_lap))
             continue
 
         if finished.text == "DNF":
-            xml_export.append((name_elem.text, position.text, "DNF"))
+            xml_export.append((name_elem.text, position.text, "DNF", fastes_lap))
             continue
 
         if int(finished_laps.text) < int(race_laps.text):
             if (int(race_laps.text) - int(finished_laps.text) == 1):
-                xml_export.append((name_elem.text, position.text, "+1 Lap"))
+                xml_export.append((name_elem.text, position.text, "+1 Lap", fastes_lap))
             else:
-                xml_export.append((name_elem.text, position.text, f"+ {int(race_laps.text) - int(finished_laps.text)} Laps"))
+                xml_export.append((name_elem.text, position.text, f"+ {int(race_laps.text) - int(finished_laps.text)} Laps", fastes_lap))
             continue
 
         if finished.text == "Finished Normally":
-            xml_export.append((name_elem.text, position.text, racetime.text))
+            xml_export.append((name_elem.text, position.text, racetime.text, fastes_lap))
             continue    
     ### Sortiere nach Position
     xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
@@ -414,30 +464,34 @@ def read_driver_config():
             driver_config.append(row)    
 
 def result_preprocessing():
-    ### get sorted Race Result with config file ###    
+    ### get sorted Race Result with config file ###   
+    fastest = fastest_lap()
     for entry in xml_export:
         found = False
         for config in driver_config:
             if (config[0] + " " + config[1]).upper() == entry[0].upper():                
                 rennergebnis.append([config, entry[2]])                                            
                 driver_config.remove(config)
-                found = True                                
+                found = True         
+                if(float(entry[3]) < float(fastest.lap_time)):
+                    fastest = fastest_lap(config[0], config[1], config[3], entry[3])
                 break
         if not found:
             print("Kein Eintrag für " + entry[0] + " gefunden!")   
-
-    ### set global winner time
-    winner_finish_time = xml_export[0][2]
+    
+    print("Fertig mit der Ergebnisverarbeitung.")
+    return Winner(rennergebnis[0][0], rennergebnis[0][1]), fastest
 
 if __name__ == "__main__":
 
     read_raceresult_xml()
     read_driver_config()
-    result_preprocessing()    
-    winner = Winner(rennergebnis[0][0], rennergebnis[0][1])
+    winner, fastest_lap_driver = result_preprocessing() 
+    name_rennen = "FORMULA 1 BROS LEAGUE rF2 EIFEL GRAND PRIX 2024"
+    
     # create badges for betreuer
-    fahrer_seite1 = rennergebnis[:10]  # First 10 entries for page 1
-    fahrer_seite2 = rennergebnis[10:]  # Next 10 entries for page 2    
+    fahrer_seite1 = rennergebnis[:12]  # First 11 entries for page 1
+    fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2    
     create_rennergebnis_page_1(fahrer_seite1)
     create_rennergebnis_page_2(fahrer_seite2)
     
