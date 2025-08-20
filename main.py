@@ -91,8 +91,6 @@ winner_name_size = 42
 winner = Winner([])
 fastest_lap_driver = fastest_lap()
 
-name_rennen = "Name des Rennens"
-
 # Load a font (optional: use default if you don't have one)
 race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
 race_classification = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=56)
@@ -109,7 +107,8 @@ driver_config = []
 rennergebnis = []
 fastest_laps = []
 
-
+name_rennen = "Name des Rennens"
+current_race_number = 0
 
 def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
     # Create a transparent base image (RGBA mode)  
@@ -420,6 +419,7 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     print("Image saved as "+ filename)
 
 def read_raceresult_xml():
+    global current_race_number
     ### Finde die XML Datei zum letzten Rennen ###
     folder = 'race_results'
     pattern = re.compile(r'Rennen(\d+)\.xml')
@@ -437,6 +437,8 @@ def read_raceresult_xml():
         root = tree.getroot()
     else:
         print("Keine passenden XML-Dateien gefunden.")
+    
+    current_race_number = int(str.split(max_file, "Rennen")[1][0:2])
 
     race_laps = root.find('.//RaceLaps')
     ### Extract Drivers from XML ###    
@@ -543,8 +545,16 @@ if __name__ == "__main__":
 
     read_raceresult_xml()
     read_driver_config()
-    winner, fastest_lap_driver = result_preprocessing() 
-    name_rennen = "FORMULA 1 BROS LEAGUE rF2 EIFEL GRAND PRIX 2024"
+
+    with open("Race_Names.csv", encoding="utf-8") as csvfile:
+        csvreader = csv.reader(csvfile)        
+        race_titels = list(csvreader)
+        if(len(race_titels) < current_race_number):
+            print("Mehr Rennergebnis.xml als Renntitel in Race_Names.csv")
+        else:
+            name_rennen = race_titels[current_race_number - 1][0]        
+
+    winner, fastest_lap_driver = result_preprocessing()    
     
     # create badges for betreuer
     fahrer_seite1 = rennergebnis[:12]  # First 11 entries for page 1
