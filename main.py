@@ -78,15 +78,15 @@ team_logo_alignment = (1085,207)
 team_logo_scaled = (50,50)
 team_name_allignment = 1165
 race_time_allignment = 1700
-overall_position = (-50, 130)
+overall_position = (-50, 100)
 
 points_pos_x = 1811
 position_size = 24
 
-winner_team_position = (86, 132)
-winner_number_position = (450, 132)
+winner_team_position = (86, 80)
+winner_number_position = (450, 80)
 winner_team_size = 55
-winner_name_pos = (288, 770)
+winner_name_pos = (288, 815)
 winner_name_size = 42
 winner = Winner([])
 fastest_lap_driver = fastest_lap()
@@ -137,7 +137,7 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
     team_box = draw.textbbox((-100, -100), winner.winning_team, font=winner_team_font)
     temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
     temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 76), anchor="lt")
+    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
 
     # Rotate the temporary image 90 degrees counter-clockwise
     rotated_text = temp_img.rotate(90, expand=True)
@@ -147,7 +147,7 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
     team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
     temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
     temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 76), anchor="lt")
+    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
 
     # Rotate the temporary image 90 degrees counter-clockwise
     rotated_text = temp_img.rotate(90, expand=True)
@@ -296,7 +296,7 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     team_box = draw.textbbox((-100, -100), winner.winning_team, font=winner_team_font)
     temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
     temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 76), anchor="lt")
+    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
 
     # Rotate the temporary image 90 degrees counter-clockwise
     rotated_text = temp_img.rotate(90, expand=True)
@@ -306,7 +306,7 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
     temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
     temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 76), anchor="lt")
+    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
 
     # Rotate the temporary image 90 degrees counter-clockwise
     rotated_text = temp_img.rotate(90, expand=True)
