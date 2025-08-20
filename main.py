@@ -42,6 +42,8 @@ class Winner:
             return "CADILLAC"
         if(self.Team == "Audi F1 Team"):
             return "AUDI"
+        if(self.Team == "Reserve"):
+            return "ERSATZ"
 
 class fastest_lap:
     def __init__(self, Vorname="Vorname", Nachname="Nachname", Team="Test Team", lap_time="1000.0"):
@@ -72,7 +74,8 @@ flag_width = 40
 flag_height = 26
 flag_y_offset = 22
 spacer = 10
-team_logo_alignment = 1070
+team_logo_alignment = (1085,207)
+team_logo_scaled = (50,50)
 team_name_allignment = 1165
 race_time_allignment = 1700
 overall_position = (-50, 130)
@@ -162,6 +165,7 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
         team = entry[0][3].upper()
         flag = entry[0][4]        
         driver_time = entry[1]
+        team_filename = get_team_logo(entry[0][3])
         
         # Draw the rest of row     
         bbox = draw.textbbox((-100, -100), name, font=regular)
@@ -204,6 +208,12 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
             #Teamname
             draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lm")
+            #Team Logo
+            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+            logo = logo.resize(team_logo_scaled)
+            # Paste images onto the final image at specified positions
+            final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+            draw = ImageDraw.Draw(final_image)
             #Zeit
             td = datetime.timedelta(seconds=float(winner.finish_time))
             # Format as mm:ss.SSS
@@ -225,6 +235,12 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
             draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
             #Teamname
             draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+            #Team Logo
+            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+            logo = logo.resize(team_logo_scaled)
+            # Paste images onto the final image at specified positions
+            final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+            draw = ImageDraw.Draw(final_image)
             #Zeit
             if (driver_time == "DNS"):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
@@ -318,6 +334,13 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
     #Teamname
     draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+    #Team Logo
+    team_filename = get_team_logo(winner.Team)
+    logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+    logo = logo.resize(team_logo_scaled)
+    # Paste images onto the final image at specified positions
+    final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+    draw = ImageDraw.Draw(final_image)
     #Zeit
     td = datetime.timedelta(seconds=float(winner.finish_time))
     # Format as mm:ss.SSS
@@ -338,6 +361,8 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
         flag = entry[0][4]        
         driver_time = entry[1]
         
+        team_filename = get_team_logo(entry[0][3])
+        
         # Draw the rest of row     
         bbox = draw.textbbox((-100, -100), name, font=regular)
         name_length = bbox[2] - bbox[0]
@@ -356,6 +381,12 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
         draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
         #Teamname
         draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        #Team Logo
+        logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+        logo = logo.resize(team_logo_scaled)
+        # Paste images onto the final image at specified positions
+        final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+        draw = ImageDraw.Draw(final_image)
         #Zeit
         if (driver_time == "DNS"):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
@@ -481,6 +512,32 @@ def result_preprocessing():
     
     print("Fertig mit der Ergebnisverarbeitung.")
     return Winner(rennergebnis[0][0], rennergebnis[0][1]), fastest
+
+def get_team_logo(team):
+    if(team == "Toyota F1 Team"):
+            return "toyota.png"
+    if(team == "Hugo Bros BMW Williams"):
+        return "bmw.png"
+    if(team == "Scuderia Toro Rosso"):
+        return "toro_rosso.png"
+    if(team == "Alpine F1 Team"):
+        return "alpine.png"
+    if(team == "Mercedes AMG"):
+        return "mercedes.png"
+    if(team == "Scuderia Ferrari"):
+        return "ferrari.png"
+    if(team == "McLaren F1 Team"):
+        return "mclaren.png"
+    if(team == "LUNZiT Red Bull Racing"):
+        return "red_bull.png"
+    if(team == "Jordan Grand Prix"):
+        return "jordan.png"
+    if(team == "Cadillac F1 Team"):
+        return "cadillac.png"
+    if(team == "Audi F1 Team"):
+        return "audi.png"
+    if(team == "Reserve"):
+        return "reserve.png"
 
 if __name__ == "__main__":
 
