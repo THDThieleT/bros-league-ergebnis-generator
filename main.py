@@ -260,7 +260,7 @@ def create_rennergebnis_page_1(data, filename="rennergebnisse_seite1.png"):
         # Update position for the next name
         position += 1
 
-    ### Draw fsatess Lap
+    ### Draw fastest Lap
     bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
     name_length = bbox[2] - bbox[0]
     draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
@@ -346,9 +346,9 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     # Format as mm:ss.SSS
     minutes, sec = divmod(td.total_seconds(), 60)
     formatted = f"{int(minutes):02}:{sec:06.3f}"
-    draw.text((race_time_allignment , first_name + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rb")
+    draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
     #Points
-    draw.text((points_pos_x, first_name + (position * y_offset)), "+25", font=pos_bold, fill=(0, 0, 0, 255), anchor="rb")
+    draw.text((points_pos_x, first_team_and_points + (position * y_offset)), "+25", font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
 
 
     ### Fill Positions
@@ -406,7 +406,7 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
         # Update position for the next name
         position += 1
 
-    ### Draw fsatess Lap
+    ### Draw fastest Lap
     bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
     name_length = bbox[2] - bbox[0]
     draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
