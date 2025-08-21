@@ -92,6 +92,10 @@ winner_name_size = 42
 winner = Winner([])
 fastest_lap_driver = fastest_lap()
 
+arrow_scale = (25,25)
+driver_wm_arrow_x = 1592
+team_wm_arrow_x = 1594
+
 ###### Drivers Championship
 driver_wm_race_titel_position = (330, 130)
 driver_wm_offset_x = 96
@@ -823,15 +827,19 @@ def calculate_wm_rankings():
                     driver_standings.append([driver,  (0.01)  - (finish_position/10000)])
                     continue                        
 
-    ### Sort by points ###
-    driver_standings.sort(key=lambda x:x[1], reverse=True)
-    team_standings_sorted = (team_standings.copy())[:11]
-    team_standings_sorted.sort(key=lambda x: x[-1], reverse=True)
-    team_standings_sorted.append(team_standings[-1])
+        ### Sort by points ###
+        driver_standings.sort(key=lambda x:x[1], reverse=True)
+        team_standings_sorted = (team_standings.copy())[:11]
+        team_standings_sorted.sort(key=lambda x: x[-1], reverse=True)
+        team_standings_sorted.append(team_standings[-1])
 
-    if(race_number == len(files) - 1):
+        if(race_number == len(files) - 1):
+            driver_standings_last_race = driver_standings.copy()
+            team_standings_last_race = team_standings.copy()
+        
+    if(race_number == 1):
         driver_standings_last_race = driver_standings.copy()
-        team_standings_last_race = team_standings.copy()
+        team_standings_last_race = team_standings_sorted.copy()
 
     #print("\nFahrer WM Stand nach " + race_file + "\n" + "-------------------------------")                                                    
     #for driver in driver_standings:
@@ -876,9 +884,15 @@ def generate_drivers_championship(last_race_standings, driver_standings):
         
         relevant_drivers = driver_standings[i * 11:(i + 1) * 11]
 
+        #Positionspfeile
+        arrow_up = Image.open("./images/arrow_up.png").convert("RGBA")
+        arrow_down = Image.open("./images/arrow_down.png").convert("RGBA")
+        arrow_up= arrow_up.resize(arrow_scale)
+        arrow_down= arrow_down.resize(arrow_scale)
+        
         ### Fill Positions
         position = 0
-        for entry in relevant_drivers:
+        for entry in relevant_drivers:            
             #Text zu CAPS
             name = entry[0][0][0]            
             lastname = entry[0][0][1].upper()
@@ -890,7 +904,11 @@ def generate_drivers_championship(last_race_standings, driver_standings):
             # Draw the rest of row     
             bbox = draw.textbbox((-100, -100), name, font=regular)
             name_length = bbox[2] - bbox[0]
-                    
+
+            try:
+                last_race_index = last_race_standings.index(next(driver for driver in last_race_standings if driver[0][0] == entry[0][0]))                        
+            except StopIteration:
+                last_race_index = position + (i * 11)
             if(position == 0 and i == 0):
                 #Draw Position
                 draw.text((driver_wm_position_x, driver_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
@@ -914,7 +932,14 @@ def generate_drivers_championship(last_race_standings, driver_standings):
                 if(entry[1] % 1) < 0.5:
                     draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
                 else:
-                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")                
+                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")   
+
+                if (last_race_index > 1):
+                    # Paste images onto the final image at specified positions
+                    final_image.paste(arrow_up, (driver_wm_arrow_x, driver_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_up)
+                    draw = ImageDraw.Draw(final_image)
+                
+
             else:
                 #Draw Position
                 draw.text((driver_wm_position_x, driver_wm_first_name_y + (position * y_offset)), str(position + 1 + (i*11)), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
@@ -939,7 +964,15 @@ def generate_drivers_championship(last_race_standings, driver_standings):
                     draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
                 else:
                     draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
-
+                #Pos Gained arrow
+                if (last_race_index > (position + (i*11))):
+                    # Paste images onto the final image at specified positions
+                    final_image.paste(arrow_up, (driver_wm_arrow_x, driver_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_up)
+                    draw = ImageDraw.Draw(final_image)
+                elif (last_race_index < (position + (i*11))):
+                    # Paste images onto the final image at specified positions
+                    final_image.paste(arrow_down, (driver_wm_arrow_x, driver_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_down)
+                    draw = ImageDraw.Draw(final_image)
             # Update position for the next name
             position += 1
 
@@ -965,7 +998,13 @@ def generate_constructor_championship(last_race_standings, team_standings):
     draw.text(team_wm_race_titel_position, name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
     
     draw.text(team_wm_info_text_position, f"Stand nach {current_race_number}/17 Rennen", font=regular, fill=(255, 255, 255, 255), anchor="lm")
-    
+
+    #Positionspfeile
+    arrow_up = Image.open("./images/arrow_up.png").convert("RGBA")
+    arrow_down = Image.open("./images/arrow_down.png").convert("RGBA")
+    arrow_up= arrow_up.resize(arrow_scale)
+    arrow_down= arrow_down.resize(arrow_scale)
+
 
     ### Fill Positions
     position = 0
@@ -980,6 +1019,8 @@ def generate_constructor_championship(last_race_standings, team_standings):
         bbox = draw.textbbox((-100, -100), name, font=regular)
         name_length = bbox[2] - bbox[0]
                 
+        last_race_index = last_race_standings.index(next(entry for entry in last_race_standings if entry[0] == team[0]))   
+
         if(position == 0):
             #Draw Position
             draw.text((team_wm_position_x, team_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
@@ -1002,6 +1043,12 @@ def generate_constructor_championship(last_race_standings, team_standings):
                 draw.text((team_wm_points_pos[0], team_wm_points_pos[1] + (position * y_offset)), str(math.floor(team[-1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
             else:
                 draw.text((team_wm_points_pos[0], team_wm_points_pos[1] + (position * y_offset)), str(math.ceil(team[-1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
+
+            #Position gained?
+            if (last_race_index > 1):
+                # Paste images onto the final image at specified positions
+                final_image.paste(arrow_up, (team_wm_arrow_x, team_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_up)
+                draw = ImageDraw.Draw(final_image)
         else:
             #Draw Position
             draw.text((team_wm_position_x, team_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
@@ -1024,6 +1071,15 @@ def generate_constructor_championship(last_race_standings, team_standings):
                 draw.text((team_wm_points_pos[0], team_wm_points_pos[1] + (position * y_offset)), str(math.floor(team[-1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
             else:
                 draw.text((team_wm_points_pos[0], team_wm_points_pos[1] + (position * y_offset)), str(math.ceil(team[-1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
+            #Pos Gained arrow
+                if (last_race_index > position):
+                    # Paste images onto the final image at specified positions
+                    final_image.paste(arrow_up, (team_wm_arrow_x, team_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_up)
+                    draw = ImageDraw.Draw(final_image)
+                elif (last_race_index < position):
+                    # Paste images onto the final image at specified positions
+                    final_image.paste(arrow_down, (team_wm_arrow_x, team_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_down)
+                    draw = ImageDraw.Draw(final_image)
 
         # Update position for the next name
         position += 1
