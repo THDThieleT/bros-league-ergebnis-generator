@@ -4,7 +4,7 @@ import csv
 import datetime
 from PIL import Image, ImageDraw, ImageFont
 import xml.etree.ElementTree as ET
-
+import math
 
 class Winner:
     def __init__(self, winner_data=[], finish_time=""):
@@ -67,6 +67,7 @@ first_team_and_points = 232
 position_text = 556
 left_allignment = 620
 name_size = 20
+row_height = 42
 
 fastest_lap_position = (556, 1006)
 lastname_size = 30
@@ -90,6 +91,20 @@ winner_name_pos = (288, 815)
 winner_name_size = 42
 winner = Winner([])
 fastest_lap_driver = fastest_lap()
+
+###### Drivers Championship
+driver_wm_race_titel_position = (330, 145)
+driver_wm_offset_x = 96
+driver_wm_left_allignment_x = 312 + driver_wm_offset_x
+driver_wm_first_row_lower = 286
+driver_wm_first_name_y = driver_wm_first_row_lower - 10
+driver_wm_position_x = 353
+driver_wm_team_x = 950
+driver_wm_team_y = (int) (driver_wm_first_row_lower - (row_height / 2))
+driver_wm_team_logo = (driver_wm_team_x - 75, driver_wm_team_y - 25)
+driver_wm_points_pos = (1575, (int) (driver_wm_first_row_lower - (row_height / 2)))
+driver_wm_info_text_position = (350, 974)
+
 
 # Load a font (optional: use default if you don't have one)
 race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
@@ -419,7 +434,10 @@ def create_rennergebnis_page_2(data, filename="rennergebnisse_seite2.png"):
     print("Image saved as "+ filename)
 
 def read_raceresult_xml():
-    global current_race_number
+    global current_race_number, xml_export
+
+    xml_export = []
+
     ### Finde die XML Datei zum letzten Rennen ###
     folder = 'race_results'
     pattern = re.compile(r'Rennen(\d+)\.xml')
@@ -484,9 +502,11 @@ def read_raceresult_xml():
     ### Sortiere nach Position
     xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
 
-def read_driver_config():       
+def read_driver_config():    
+    global driver_config
     # read driver_config.csv
     with open("driver_config.csv", encoding="utf-8") as csvfile:
+        driver_config.clear()  # Clear existing data
         csvreader = csv.reader(csvfile, delimiter=";")
         # skip header1
         next(csvreader)
@@ -499,15 +519,38 @@ def read_driver_config():
 def result_preprocessing():
     ### get sorted Race Result with config file ###   
     fastest = fastest_lap()
-    for entry in xml_export:
+    rennergebnis.clear()  # Clear existing results
+    for entry in xml_export:        
         found = False
         for config in driver_config:
-            if (config[0] + " " + config[1]).upper() == entry[0].upper():                
+            if (config[0] + " " + config[1]).upper() == entry[0].upper():  
+                #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
                 rennergebnis.append([config, entry[2]])                                            
                 driver_config.remove(config)
                 found = True         
                 if(float(entry[3]) < float(fastest.lap_time)):
                     fastest = fastest_lap(config[0], config[1], config[3], entry[3])
+                break
+        if not found:
+            print("Kein Eintrag für " + entry[0] + " gefunden!")   
+    
+    print("Fertig mit der Ergebnisverarbeitung.")
+    return Winner(rennergebnis[0][0], rennergebnis[0][1]), fastest
+
+def result_preprocessing_wm():
+    ### get sorted Race Result with config file ###   
+    fastest = fastest_lap()
+    rennergebnis.clear()  # Clear existing results
+    for entry in xml_export:        
+        found = False
+        for config in driver_config:
+            if (config[0] + " " + config[1]).upper() == entry[0].upper():  
+                #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
+                rennergebnis.append([config, entry[1]])                                            
+                driver_config.remove(config)
+                found = True         
+                if(float(entry[2]) < float(fastest.lap_time)):
+                    fastest = fastest_lap(config[0], config[1], config[3], entry[2])
                 break
         if not found:
             print("Kein Eintrag für " + entry[0] + " gefunden!")   
@@ -541,6 +584,269 @@ def get_team_logo(team):
     if(team == "Reserve"):
         return "reserve.png"
 
+def calculate_wm_rankings():
+    global xml_export, driver_config, rennergebnis
+    driver_standings = []
+    standings_last_race = []
+    xml_export.clear()  # Clear existing results
+
+    print("WM Stand erzeugen")
+
+    ### lese alle XML Datein ###
+    folder = 'race_results'
+    pattern = re.compile(r'Rennen(\d+)\.xml')
+
+    # Find all files matching the pattern
+    files = [f for f in os.listdir(folder) if pattern.match(f)]
+
+    import xml.etree.ElementTree as ET
+    race_number = 0
+    ### Für jedes Rennen
+    for race_file in files:   
+        print("\n" + race_file + "\n")        
+        tree = ET.parse(os.path.join(folder, race_file))
+        root = tree.getroot()
+        xml_export.clear()
+        race_number += 1
+
+        ### Extract Drivers from XML ###    
+        for driver in root.findall('.//Driver'):
+            name_elem = driver.find('Name')
+            position = driver.find('Position')
+            category_elem = driver.find('Category')
+            fastes_lap = driver.find('BestLapTime')
+            
+            if (category_elem is None) or not ("F1S13" in category_elem.text):                        
+                continue
+
+            if fastes_lap is None:
+                fastes_lap = "1000"
+            else:
+                fastes_lap = fastes_lap.text
+
+            xml_export.append((name_elem.text, position.text, fastes_lap))
+
+        ### Sortiere nach Position
+        xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
+
+        ### Get driver config again    
+        read_driver_config()
+        _, fastest = result_preprocessing_wm()     
+        finish_position = 0
+        #print("\nRennergebnis:")
+        for driver in rennergebnis:
+            finish_position += 1              
+            #print(driver[0][0] + " " + driver[0][1], finish_position)
+            if(len(driver_standings) == 0):
+                driver_standings.append([driver, 25])
+                continue
+
+            if any(entry[0][0] == driver[0] for entry in driver_standings):                
+                ### Driver already in standings
+                #print(driver[0])
+                #print(driver_standings[0][0][0])
+                item = next(entry for entry in driver_standings if entry[0][0] == driver[0])                  
+
+                if item[0][0][0] == fastest.Vorname and item[0][0][1] == fastest.Nachname:  
+                    item[1] += 1
+
+                if(finish_position == 1):
+                    item[1] += 25
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 2):
+                    item[1] += 18
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 3):
+                    item[1] += 15
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 4):
+                    item[1] += 12
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 5):
+                    item[1] += 10
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 6):
+                    item[1] += 8
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 7):
+                    item[1] += 6
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 8):
+                    item[1] += 4
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 9):
+                    item[1] += 2
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position == 10):
+                    item[1] += 1
+                    item[1] -= (finish_position/10000)
+                    continue
+                elif(finish_position > 10):
+                    item[1] += 0.01 
+                    item[1] -= (finish_position/10000)
+                    continue
+            else:        
+                print("Fahrer " + driver[0][0] + " " + driver[0][1] +  " hinzufügen zu Standings")   
+                #print(driver)
+                #print(driver_standings)
+                #print("")
+                fastest_lap_point = 0
+                if driver[0][0][0] == fastest.Vorname and driver[0][0][1] == fastest.Nachname:  
+                    fastest_lap_point = 1
+
+                if(finish_position == 1):
+                    driver_standings.append([driver, (25 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 2):
+                    driver_standings.append([driver, (18 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 3):
+                    driver_standings.append([driver, (15 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 4):
+                    driver_standings.append([driver, (12 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 5):
+                    driver_standings.append([driver, (10 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 6):
+                    driver_standings.append([driver, (8 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 7):
+                    driver_standings.append([driver, (6 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 8):
+                    driver_standings.append([driver, (4 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 9):
+                    driver_standings.append([driver, (2 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                elif(finish_position == 10):
+                    driver_standings.append([driver, (1 + fastest_lap_point) - (finish_position/10000)])
+                    continue
+                else:
+                    driver_standings.append([driver,  (fastest_lap_point + 0.01)  - (finish_position/10000)])
+                    continue                        
+
+    driver_standings.sort(key=lambda x:x[1], reverse=True)  # Sort by points
+    if(race_number == len(files) - 1):
+        standings_last_race = driver_standings.copy()
+    print("\nWM Stand nach " + race_file + "\n" + "-------------------------------")                                                    
+    for driver in driver_standings:
+        if(driver[1] % 1) < 0.5:
+            print(driver[0][0][0] + " " + driver[0][0][1] + " - " + str(math.floor(driver[1])) + " Punkte (" + str(driver[1]) + ")")
+        else:
+            print(driver[0][0][0] + " " + driver[0][0][1] + " - " + str(math.ceil(driver[1])) + " Punkte (" + str(driver[1]) + ")")
+
+    generate_drivers_championship(standings_last_race, driver_standings)
+
+def generate_drivers_championship(last_race_standings, driver_standings):
+    
+    necessary_pages = math.ceil(len(driver_standings) / 11)
+    
+    for i in range(0, necessary_pages):
+        # Create a transparent base image (RGBA mode)          
+        final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
+        background = Image.open("./images/Driver_standing_Background.png").convert("RGBA")
+        if(i == 0):
+            overlay = Image.open("./images/Driver_standings_1.png").convert("RGBA")
+        else:
+            overlay = Image.open("./images/Driver_standings_2.png").convert("RGBA")
+
+        # Paste images onto the final image at specified positions
+        mask = Image.new('L', background.size, 200)  # 50% transparency
+        final_image.paste(background, (0, 0), mask)  # The third argument is the mask for transparency
+        final_image.paste(overlay, (0, 0), overlay)  # The third argument is the mask for transparency
+        draw = ImageDraw.Draw(final_image)
+
+        # Draw Racetitel with semi-transparency
+        draw.text(driver_wm_race_titel_position, name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
+        
+        draw.text(driver_wm_info_text_position, f"Stand nach {current_race_number}/17 Rennen", font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        
+        relevant_drivers = driver_standings[i * 11:(i + 1) * 11]
+
+        ### Fill Positions
+        position = 0
+        for entry in relevant_drivers:
+            #Text zu CAPS
+            name = entry[0][0][0]            
+            lastname = entry[0][0][1].upper()
+            team = entry[0][0][3].upper()
+            flag = entry[0][0][4]        
+            driver_time = entry[0][1]
+            team_filename = get_team_logo(entry[0][0][3])
+            
+            # Draw the rest of row     
+            bbox = draw.textbbox((-100, -100), name, font=regular)
+            name_length = bbox[2] - bbox[0]
+                    
+            if(position == 0 and i == 0):
+                #Draw Position
+                draw.text((driver_wm_position_x, driver_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
+                #Draw Flag
+                flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+                flag_image = flag_image.resize((flag_width, flag_height))
+                final_image.paste(flag_image, (driver_wm_left_allignment_x, driver_wm_first_name_y + (position * y_offset) - flag_y_offset), flag_image)
+                #Vorname
+                draw.text((driver_wm_left_allignment_x + flag_width + spacer, driver_wm_first_name_y + (position * y_offset)), name, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+                #Nachname
+                draw.text((driver_wm_left_allignment_x  + flag_width + spacer + name_length + spacer, driver_wm_first_name_y + (position * y_offset)), lastname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
+                #Teamname
+                draw.text((driver_wm_team_x , driver_wm_team_y + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lm")
+                #Team Logo
+                logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+                logo = logo.resize(team_logo_scaled)
+                # Paste images onto the final image at specified positions
+                final_image.paste(logo, (driver_wm_team_logo[0], driver_wm_team_logo[1] + (position * y_offset)), logo)
+                draw = ImageDraw.Draw(final_image)
+                #Points
+                if(entry[1] % 1) < 0.5:
+                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")
+                else:
+                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="rm")                
+            else:
+                #Draw Position
+                draw.text((driver_wm_position_x, driver_wm_first_name_y + (position * y_offset)), str(position + 1 + (i*11)), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
+                #Draw Flag
+                flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+                flag_image = flag_image.resize((flag_width, flag_height))
+                final_image.paste(flag_image, (driver_wm_left_allignment_x, driver_wm_first_name_y + (position * y_offset) - flag_y_offset), flag_image)
+                #Vorname
+                draw.text((driver_wm_left_allignment_x + flag_width + spacer, driver_wm_first_name_y + (position * y_offset)), name, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+                #Nachname
+                draw.text((driver_wm_left_allignment_x  + flag_width + spacer + name_length + spacer, driver_wm_first_name_y + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
+                #Teamname
+                draw.text((driver_wm_team_x , driver_wm_team_y + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+                #Team Logo
+                logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+                logo = logo.resize(team_logo_scaled)
+                # Paste images onto the final image at specified positions
+                final_image.paste(logo, (driver_wm_team_logo[0], driver_wm_team_logo[1] + (position * y_offset)), logo)
+                draw = ImageDraw.Draw(final_image)
+                #Points
+                if(entry[1] % 1) < 0.5:
+                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
+                else:
+                    draw.text((driver_wm_points_pos[0], driver_wm_points_pos[1] + (position * y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
+
+            # Update position for the next name
+            position += 1
+
+
+        filename = "Fahrer_WM_Seite_" + str(i + 1) + ".png"
+        final_image.save(filename, format="PNG")
+        print("Image saved as "+ filename)
+
 if __name__ == "__main__":
 
     read_raceresult_xml()
@@ -561,4 +867,6 @@ if __name__ == "__main__":
     fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2    
     create_rennergebnis_page_1(fahrer_seite1)
     create_rennergebnis_page_2(fahrer_seite2)
+
+    calculate_wm_rankings()
     
