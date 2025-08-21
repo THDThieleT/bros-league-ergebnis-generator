@@ -926,7 +926,7 @@
 <ControlAndAids startLap="1" endLap="11">PlayerControl</ControlAndAids>
 </Driver>
 <Driver>
-<Name>David Holm</Name>
+<Name>Markus Gerson</Name>
 <Connected>1</Connected>
 <VehFile>F1BS13_26.VEH</VehFile>
 <UpgradeCode>9a0a1800 00000000 00000000 00000000</UpgradeCode>
