@@ -9,13 +9,13 @@ Jomaso;Heller;8;Hugo Bros BMW Williams;Deutschland;Heller.png;True
 Joshua;Preuss;0;Scuderia Toro Rosso;Deutschland;Preuss.png;True
 Andre;Heiler;52;Scuderia Toro Rosso;Deutschland;Heiler.png;True
 
-Lea;Luxemburg;48;Alpine F1 Team;Deutschland;Luxemburg.png;True
+Lea;Luxemburg;48;Alpine F1 Team;Kuba;Luxemburg.png;True
 Maino;Takao;21;Alpine F1 Team;Deutschland;Takao.png;True
 
 Florian;Paul;73;Mercedes AMG;Deutschland;Paul.png;True
-Vorname;Burkhardt;0;Mercedes AMG;Deutschland;Burkhardt.png;True
+Fabian;Rutishauser;87;Mercedes AMG;Schweiz;Rutishauser.png;True
 
-Sandro;Raffa;91;Scuderia Ferrari;Schweiz;Raffa.png;True
+Sandro;Raffa;91;Scuderia Ferrari;Italien;Raffa.png;True
 Philipp;Stange;27;Scuderia Ferrari;Deutschland;Stange.png;True
 
 Noah;Nebling;35;McLaren F1 Team;Deutschland;Nebling.png;True
@@ -47,4 +47,4 @@ Noah;Bergmann;0;Reserve;Deutschland;Reserve.png;False
 Philipp;Maier;0;Reserve;Deutschland;Reserve.png;False
 Christian;Beckmann;0;Reserve;Deutschland;Reserve.png;False
 Sharl;Riccalo;0;Reserve;Deutschland;Reserve.png;False
-Fabian;Rutishauser;0;Reserve;Deutschland;Reserve.png;False
+
