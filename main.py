@@ -296,7 +296,7 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
     bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
     name_length = bbox[2] - bbox[0]
     draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
-    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}     (+1 Point)", font=regular, fill=(255, 255, 255, 255), anchor="lm")
+    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}", font=regular, fill=(255, 255, 255, 255), anchor="lm")
 
     # Save the final image
     final_image.save(filename, format="PNG")
@@ -442,7 +442,7 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
     bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
     name_length = bbox[2] - bbox[0]
     draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
-    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}     (+1 Point)", font=regular, fill=(255, 255, 255, 255), anchor="lm")
+    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}", font=regular, fill=(255, 255, 255, 255), anchor="lm")
 
 
     
