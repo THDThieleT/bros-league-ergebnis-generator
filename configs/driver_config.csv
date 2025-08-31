@@ -33,18 +33,22 @@ Francesco;Madeo;0;Cadillac F1 Team;Deutschland;Madeo.png;True
 Mario;Wolf;9;Audi F1 Team;Deutschland;Wolf.png;True
 Martin;Felix;89;Audi F1 Team;Deutschland;Felix.png;True
 
-Andre;Porbadnik;0;Reserve;Deutschland;Reserve.png;False
-Dennis;Binder;0;Reserve;Deutschland;Reserve.png;False
-Elias;Muecke;0;Reserve;Deutschland;Reserve.png;False
-Hannes;Mathuni;0;Reserve;Deutschland;Reserve.png;False
-Jan-Niklas;Weiter;0;Reserve;Deutschland;Reserve.png;False
-Julian;Klaffenboeck;0;Reserve;Deutschland;Reserve.png;False
-Julian;Poschalko;0;Reserve;Deutschland;Reserve.png;False
-Leonardo;Lucky;0;Reserve;Deutschland;Reserve.png;False
-Lukas;Biewald;0;Reserve;Deutschland;Reserve.png;False
-Markus;Gerson;0;Reserve;Deutschland;Reserve.png;False
-Noah;Bergmann;0;Reserve;Deutschland;Reserve.png;False
-Philipp;Maier;0;Reserve;Schweiz;Reserve.png;False
-Christian;Beckmann;0;Reserve;Deutschland;Reserve.png;False
-Sharl;Riccalo;0;Reserve;Deutschland;Reserve.png;False
 
+Dennis;Binder;11;Reserve;Deutschland;Reserve.png;False
+Leonardo;Gabrielli;13;Reserve;Italien;Reserve.png;False
+Christian;Beckmann;19;Reserve;Deutschland;Reserve.png;False
+Jan-Niklas;Weiter;23;Reserve;Deutschland;Reserve.png;False
+Elias;Muecke;39;Reserve;Deutschland;Reserve.png;False
+Noah;Bergmann;49;Reserve;Deutschland;Reserve.png;False
+Julian;Boschalko;56;Reserve;Oesterreich;Reserve.png;False
+Andre;Porbadnik;77;Reserve;Deutschland;Reserve.png;False
+Leon;Kuhn;66;Reserve;Deutschland;Reserve.png;False
+Julian;Klaffenboeck;12;Reserve;Oesterreich;Reserve.png;False
+Sharl;Riccalo;14;Reserve;Afghanistan;Reserve.png;False
+Chris;Leicester;22;Reserve;Deutschland;Reserve.png;False
+Hannes;Mathuni;29;Reserve;Deutschland;Reserve.png;False
+Lukas;Biewald;43;Reserve;Deutschland;Reserve.png;False
+Simon;Kaufmann;51;Reserve;Schweiz;Reserve.png;False
+Markus;Gerson;78;Reserve;Deutschland;Reserve.png;False
+Philipp;Maier;61;Reserve;Schweiz;Reserve.png;False
+Hendrik;Lauer;6;Reserve;Deutschland;Reserve.png;False
