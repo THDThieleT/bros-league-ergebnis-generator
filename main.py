@@ -7,17 +7,59 @@ import xml.etree.ElementTree as ET
 import math
 
 class Winner:
-    def __init__(self, winner_data=[], finish_time=""):
-        if not (winner_data == []):
-            self.Vorname = winner_data[0]
-            self.Nachname = winner_data[1]
-            self.Nummer = winner_data[2]
-            self.Team = winner_data[3]
+    def __init__(self, winner_driver):
+        if not (winner_driver is None):
+            self.Vorname = winner_driver.Vorname
+            self.Nachname = winner_driver.Nachname
+            self.Nummer = winner_driver.Nummer
+            self.Team = winner_driver.Team
             self.winning_team = self.get_team_short()
-            self.Nation = winner_data[4]
-            self.Overall = winner_data[5]
-            self.Stammfahrer = winner_data[6]
-            self.finish_time = finish_time
+            self.Nation = winner_driver.Nation
+            self.Overall = winner_driver.Overall
+            self.Stammfahrer = winner_driver.Stammfahrer
+            self.finish_time = winner_driver.finish_time
+
+    def get_team_short(self):
+        if(self.Team == "Toyota F1 Team"):
+            return "TOYOTA"
+        if(self.Team == "Hugo Bros BMW Williams"):
+            return "WILLIAMS"
+        if(self.Team == "Scuderia Toro Rosso"):
+            return "TORO ROSSO"
+        if(self.Team == "Alpine F1 Team"):
+            return "ALPINE"
+        if(self.Team == "Mercedes AMG"):
+            return "MERCEDES"
+        if(self.Team == "Scuderia Ferrari"):
+            return "FERRARI"
+        if(self.Team == "McLaren F1 Team"):
+            return "MCLAREN"
+        if(self.Team == "LUNZiT Red Bull Racing"):
+            return "RED BULL"
+        if(self.Team == "Jordan Grand Prix"):
+            return "JORDAN"
+        if(self.Team == "Cadillac F1 Team"):
+            return "CADILLAC"
+        if(self.Team == "Audi F1 Team"):
+            return "AUDI"
+        if(self.Team == "Reserve"):
+            return "ERSATZ"
+
+class Driver:
+    def __init__(self, driver_data=[]):
+        if not (driver_data == []):
+            self.Vorname = driver_data[0]
+            self.Nachname = driver_data[1]
+            self.Nummer = driver_data[2]
+            self.Team = driver_data[3]            
+            self.Nation = driver_data[4]
+            self.Overall = driver_data[5]
+            self.Stammfahrer = driver_data[6]
+            self.finish_time = ""
+            self.penalty = None
+
+    def get_driver_name(self):
+        return self.Vorname + " " + self.Nachname
 
     def get_team_short(self):
         if(self.Team == "Toyota F1 Team"):
@@ -84,12 +126,15 @@ overall_position = (-50, 100)
 points_pos_x = 1811
 position_size = 24
 
+penalty_pos_x = 1595
+penalty_text_size = 15
+
 winner_team_position = (86, 80)
 winner_number_position = (450, 80)
 winner_team_size = 55
 winner_name_pos = (288, 815)
 winner_name_size = 42
-winner = Winner([])
+#winner = Winner([])
 fastest_lap_driver = fastest_lap()
 
 arrow_scale = (25,25)
@@ -127,6 +172,7 @@ team_wm_team_logo_scaled = (45,45)
 race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
 race_classification = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=56)
 regular = ImageFont.truetype("./fonts/Formula1-Regular_web.ttf", size=name_size)
+penalty_font = ImageFont.truetype("./fonts/Formula1-Regular_web.ttf", size=penalty_text_size)
 position_font = ImageFont.truetype("./fonts/Formula1-Regular_web.ttf", size=24)
 winner_team_font = ImageFont.truetype("./fonts/Formula1-Wide_web.ttf", size=winner_team_size)
 winner_name_font = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=winner_name_size)
@@ -190,17 +236,12 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
     
     ### Fill Positions
     position = 0
-    for entry in data:
+    for driver in data:
         #Text zu CAPS
-        name = entry[0][0]            
-        lastname = entry[0][1].upper()
-        team = entry[0][3].upper()
-        flag = entry[0][4]        
-        driver_time = entry[1]
-        team_filename = get_team_logo(entry[0][3])
+
         
         # Draw the rest of row     
-        bbox = draw.textbbox((-100, -100), name, font=regular)
+        bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
         name_length = bbox[2] - bbox[0]
         
         if(position == 0):
@@ -231,17 +272,17 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
             #Draw Position
             draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
             #Draw Flag
-            flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+            flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
             flag_image = flag_image.resize((flag_width, flag_height))
             final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
             #Vorname
-            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), name, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(0, 0, 0, 255), anchor="lb")
             #Nachname
-            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
+            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
             #Teamname
-            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lm")
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(0, 0, 0, 255), anchor="lm")
             #Team Logo
-            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+            logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
             logo = logo.resize(team_logo_scaled)
             # Paste images onto the final image at specified positions
             final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
@@ -258,36 +299,40 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
             #Draw Position
             draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
             #Draw Flag
-            flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+            flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
             flag_image = flag_image.resize((flag_width, flag_height))
             final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
             #Vorname
-            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), name, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(255, 255, 255, 255), anchor="lb")
             #Nachname
-            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
+            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
             #Teamname
-            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(255, 255, 255, 255), anchor="lm")
             #Team Logo
-            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+            logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
             logo = logo.resize(team_logo_scaled)
             # Paste images onto the final image at specified positions
             final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
             draw = ImageDraw.Draw(final_image)
             #Zeit
-            if (driver_time == "DNS"):
+            if (driver.finish_time == "DNS"):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
-            elif (driver_time == "DNF"):
+            elif (driver.finish_time == "DNF"):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
-            elif ("Lap" in driver_time):
-                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            elif ("Lap" in driver.finish_time):
+                draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
             else:
-                time_behind_leader = float(driver_time) - float(winner.finish_time)
+                time_behind_leader = float(driver.finish_time) - float(winner.finish_time)
                 if(time_behind_leader < 10):
                     draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+0{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
                 else:
                     draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             #Points
             draw.text((points_pos_x, first_team_and_points + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
+            #Penatly
+            if (driver.penalty is not None):
+                draw.text((penalty_pos_x , first_team_and_points + (position * y_offset)), ("+" + str(driver.penalty) + " sek") , font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
+
 
         # Update position for the next name
         position += 1
@@ -385,18 +430,12 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
 
     ### Fill Positions
     position = 1
-    for entry in data:
+    for driver in data:
         #Text zu CAPS
-        name = entry[0][0]            
-        lastname = entry[0][1].upper()
-        team = entry[0][3].upper()
-        flag = entry[0][4]        
-        driver_time = entry[1]
-        
-        team_filename = get_team_logo(entry[0][3])
+
         
         # Draw the rest of row     
-        bbox = draw.textbbox((-100, -100), name, font=regular)
+        bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
         name_length = bbox[2] - bbox[0]
                 
         gained_points = "+0"
@@ -404,37 +443,39 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
         #Draw Position
         draw.text((position_text, first_name + (position * y_offset)), str(position + 12), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
         #Draw Flag
-        flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+        flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
         flag_image = flag_image.resize((flag_width, flag_height))
         final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
         #Vorname
-        draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), name, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+        draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(255, 255, 255, 255), anchor="lb")
         #Nachname
-        draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
+        draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
         #Teamname
-        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
         #Team Logo
-        logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+        logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
         logo = logo.resize(team_logo_scaled)
         # Paste images onto the final image at specified positions
         final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
         draw = ImageDraw.Draw(final_image)
         #Zeit
-        if (driver_time == "DNS"):
+        if (driver.finish_time == "DNS"):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
-        elif (driver_time == "DNF"):
+        elif (driver.finish_time == "DNF"):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
-        elif ("Lap" in driver_time):
-            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
+        elif ("Lap" in driver.finish_time):
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
         else:
-            time_behind_leader = float(driver_time) - float(winner.finish_time)
+            time_behind_leader = float(driver.finish_time) - float(winner.finish_time)
             if(time_behind_leader < 10):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+0{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             else:
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         #Points
         draw.text((points_pos_x, first_team_and_points + (position * y_offset)), gained_points, font=pos_bold, fill=(255, 255, 255, 255), anchor="rm")
-
+        #Penalty
+        if (driver.penalty is not None):
+            draw.text((penalty_pos_x , first_team_and_points + (position * y_offset)), ("+" + str(driver.penalty) + " sek") , font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
         # Update position for the next name
         position += 1
 
@@ -486,6 +527,7 @@ def read_raceresult_xml():
         finished = driver.find('FinishStatus')        
         finished_laps = driver.find('Laps')
         fastes_lap = driver.find('BestLapTime')
+        penalty = driver.find('r2la_penalty')
 
         if (category_elem is None) or not ("F1S13" in category_elem.text):                        
             continue
@@ -494,29 +536,34 @@ def read_raceresult_xml():
             print("finished ist None")
             continue
         
+        if penalty is not None:
+            penalty = (int) (penalty.text.split(".")[0])  # Nur Sekundenanteil
+        else:
+            penalty = 0
+
         if fastes_lap is None:
             fastes_lap = "1000"
         else:
             fastes_lap = fastes_lap.text
 
         if finished.text == "None":
-            xml_export.append((name_elem.text, position.text, "DNS", fastes_lap))
+            xml_export.append((name_elem.text, position.text, "DNS", fastes_lap, penalty))
             continue
 
         if finished.text == "DNF":
-            xml_export.append((name_elem.text, position.text, "DNF", fastes_lap))
+            xml_export.append((name_elem.text, position.text, "DNF", fastes_lap, penalty))
             continue
 
         if int(finished_laps.text) < int(race_laps.text):
             if (int(race_laps.text) - int(finished_laps.text) == 1):
-                xml_export.append((name_elem.text, position.text, "+1 Lap", fastes_lap))
+                xml_export.append((name_elem.text, position.text, "+1 Lap", fastes_lap, penalty))
             else:
-                xml_export.append((name_elem.text, position.text, f"+ {int(race_laps.text) - int(finished_laps.text)} Laps", fastes_lap))
+                xml_export.append((name_elem.text, position.text, f"+ {int(race_laps.text) - int(finished_laps.text)} Laps", fastes_lap, penalty))
             continue
 
         if finished.text == "Finished Normally":
-            xml_export.append((name_elem.text, position.text, racetime.text, fastes_lap))
-            continue    
+            xml_export.append((name_elem.text, position.text, racetime.text, fastes_lap, penalty))
+            continue
     ### Sortiere nach Position
     xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
 
@@ -532,7 +579,7 @@ def read_driver_config():
         for row in csvreader:
             if row == []:
                 continue            
-            driver_config.append(row)    
+            driver_config.append(Driver(row))    
 
 def read_team_config():
     team_config = []
@@ -554,20 +601,26 @@ def result_preprocessing():
     rennergebnis.clear()  # Clear existing results
     for entry in xml_export:        
         found = False
-        for config in driver_config:
-            if (config[0] + " " + config[1]).upper() == entry[0].upper():  
+        for driver in driver_config:
+            if (driver.get_driver_name().upper() == entry[0].upper()):  
                 #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
-                rennergebnis.append([config, entry[2]])                                            
-                driver_config.remove(config)
-                found = True         
-                if(float(entry[3]) < float(fastest.lap_time)):
-                    fastest = fastest_lap(config[0], config[1], config[3], entry[3])
-                break
+                driver_config.remove(driver)
+
+                if entry[-1] > 0:
+                    driver.penalty = entry[-1]
+                driver.finish_time = entry[2]
+
+                rennergebnis.append(driver)                                                            
+                found = True    
+                if not (driver.finish_time == "DNS" or driver.finish_time == "DNF" or "+" in driver.finish_time):                         
+                    if(float(driver.finish_time) < float(fastest.lap_time)):
+                        fastest = fastest_lap(driver.Vorname, driver.Nachname, driver.Team, driver.finish_time)
+                    break
         if not found:
-            print("Kein Eintrag für " + entry[0] + " gefunden!")   
-    
+            print("Kein Eintrag für " + driver.get_driver_name() + " gefunden!")   
+
     print("Fertig mit der Ergebnisverarbeitung.")
-    return Winner(rennergebnis[0][0], rennergebnis[0][1]), fastest
+    return Winner(rennergebnis[0]), fastest
 
 def result_preprocessing_wm():
     ### get sorted Race Result with config file ###   
@@ -575,20 +628,17 @@ def result_preprocessing_wm():
     rennergebnis.clear()  # Clear existing results
     for entry in xml_export:        
         found = False
-        for config in driver_config:
-            if (config[0] + " " + config[1]).upper() == entry[0].upper():  
+        for driver in driver_config:
+            if (driver.get_driver_name().upper() == entry[0].upper()):  
                 #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
-                rennergebnis.append([config, entry[1]])                                            
-                driver_config.remove(config)
+                driver_config.remove(driver)
+                rennergebnis.append(driver)                                                            
                 found = True         
-                if(float(entry[2]) < float(fastest.lap_time)):
-                    fastest = fastest_lap(config[0], config[1], config[3], entry[2])
-                break
         if not found:
-            print("Kein Eintrag für " + entry[0] + " gefunden!")   
-    
+            print("Kein Eintrag für " + driver.get_driver_name() + " gefunden!")   
+
     print("Fertig mit der Ergebnisverarbeitung.")
-    return Winner(rennergebnis[0][0], rennergebnis[0][1]), fastest
+    return Winner(rennergebnis[0]), fastest
 
 def get_team_logo(team):
     if(team == "Toyota F1 Team"):
@@ -678,24 +728,25 @@ def calculate_wm_rankings():
             finish_position += 1              
             #print(driver[0][0] + " " + driver[0][1], finish_position)
             if(len(driver_standings) == 0):
+                print("Driver Standing init")
                 driver_standings.append([driver, 25])
                 team = "reserve"
-                if(driver[0][1]):                    
-                    team = driver[0][3]
+                if(driver.Stammfahrer):                    
+                    team = driver.Team
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
                 team_standings[team_index][-1] += 25
                 team_standings[team_index][-1] -= (finish_position/10000)
-                continue
+                continue                                
 
-            if any(entry[0][0] == driver[0] for entry in driver_standings):                
+            if any(entry[0].get_driver_name() == driver.get_driver_name() for entry in driver_standings):                
                 ### Driver already in standings
                 #print(driver)
                 #print(driver_standings[0][0][0])
-                item = next(entry for entry in driver_standings if entry[0][0] == driver[0])                  
+                item = next(entry for entry in driver_standings if entry[0].get_driver_name() == driver.get_driver_name())                  
                 team = "reserve"
-                if(driver[0][1]):                    
-                    team = driver[0][3]
+                if(driver.Stammfahrer):                    
+                    team = driver.Team
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
 
@@ -764,13 +815,13 @@ def calculate_wm_rankings():
                     item[1] -= (finish_position/10000)
                     continue
             else:        
-                print("Fahrer " + driver[0][0] + " " + driver[0][1] +  " hinzufügen zu Standings")   
+                print("Fahrer " + driver.get_driver_name() +  " hinzufügen zu Standings")   
                 #print(driver)
                 #print(driver_standings)
                 #print("")
                 team = "reserve"
-                if(driver[0][1]):
-                    team = driver[0][3]    
+                if(driver.Stammfahrer):
+                    team = driver.Team
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))                                                   
                 if(finish_position == 1):
@@ -894,19 +945,19 @@ def generate_drivers_championship(last_race_standings, driver_standings):
         position = 0
         for entry in relevant_drivers:            
             #Text zu CAPS
-            name = entry[0][0][0]            
-            lastname = entry[0][0][1].upper()
-            team = entry[0][0][3].upper()
-            flag = entry[0][0][4]        
-            driver_time = entry[0][1]
-            team_filename = get_team_logo(entry[0][0][3])
+            driver_selec = entry[0]
+            name = driver_selec.Vorname
+            lastname = driver_selec.Nachname.upper()
+            team = driver_selec.Team
+            flag = driver_selec.Nation
+            team_filename = get_team_logo(team)
             
             # Draw the rest of row     
             bbox = draw.textbbox((-100, -100), name, font=regular)
             name_length = bbox[2] - bbox[0]
 
             try:
-                last_race_index = last_race_standings.index(next(driver for driver in last_race_standings if driver[0][0] == entry[0][0]))                        
+                last_race_index = last_race_standings.index(next(standing for standing in last_race_standings if standing[0] == driver_selec))                        
             except StopIteration:
                 last_race_index = position + (i * 11)
             if(position == 0 and i == 0):
@@ -1088,7 +1139,6 @@ def generate_constructor_championship(last_race_standings, team_standings):
     final_image.save("output/Team_WM.png", format="PNG")
     print("Image saved as Team_WM.png")
 
-
 if __name__ == "__main__":
 
     read_raceresult_xml()
@@ -1111,4 +1161,3 @@ if __name__ == "__main__":
     create_rennergebnis_page_2(fahrer_seite2)
 
     calculate_wm_rankings()
-    
