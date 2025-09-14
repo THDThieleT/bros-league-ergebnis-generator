@@ -108,6 +108,7 @@
 </Driver>
 <Driver>
 <Name>Julian Gerlach</Name>
+<r2la_penalty>5.0</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_32.VEH</VehFile>
 <UpgradeCode>9c060000 00000000 00000000 00000000</UpgradeCode>
@@ -120,7 +121,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>8</GridPos>
-<Position>2</Position>
+<Position>3</Position>
 <ClassGridPos>8</ClassGridPos>
 <ClassPosition>2</ClassPosition>
 <Points>0</Points>
@@ -168,7 +169,7 @@
 <Lap num="40" p="2" et="3853.3318" s1="25.5244" s2="27.0012" s3="25.9226" fuel="0.078" twfl="0.663" twfr="0.565" twrl="0.565" twrr="0.580" fcompound="1,C4" rcompound="1,C4">78.4482</Lap>
 <Lap num="41" p="2" et="3931.7800" s1="25.4954" s2="26.9172" s3="26.0603" fuel="0.059" twfl="0.639" twfr="0.533" twrl="0.533" twrr="0.549" fcompound="1,C4" rcompound="1,C4">78.4729</Lap>
 <BestLapTime>76.4902</BestLapTime>
-<FinishTime>3389.8550</FinishTime>
+<FinishTime>3394.8550</FinishTime>
 <Laps>41</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -256,7 +257,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>5</GridPos>
-<Position>3</Position>
+<Position>2</Position>
 <ClassGridPos>5</ClassGridPos>
 <ClassPosition>3</ClassPosition>
 <Points>0</Points>
@@ -516,6 +517,7 @@
 </Driver>
 <Driver>
 <Name>Dennis Porbadnik</Name>
+<r2la_penalty>15.0</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_69.VEH</VehFile>
 <UpgradeCode>9c060000 00000000 00000000 00000000</UpgradeCode>
@@ -528,7 +530,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>16</GridPos>
-<Position>13</Position>
+<Position>14</Position>
 <ClassGridPos>15</ClassGridPos>
 <ClassPosition>13</ClassPosition>
 <Points>0</Points>
@@ -575,7 +577,7 @@
 <Lap num="39" p="14" et="3877.4546" s1="26.0823" s2="27.7419" s3="25.8540" fuel="0.102" twfl="0.941" twfr="0.914" twrl="0.925" twrr="0.922" fcompound="0,C5" rcompound="0,C5">79.6782</Lap>
 <Lap num="40" p="13" et="3957.1328" s1="24.9954" s2="26.9319" s3="25.9661" fuel="0.082" twfl="0.914" twfr="0.867" twrl="0.890" twrr="0.871" fcompound="0,C5" rcompound="0,C5">77.8933</Lap>
 <BestLapTime>77.8933</BestLapTime>
-<FinishTime>3414.6284</FinishTime>
+<FinishTime>3429.6284</FinishTime>
 <Laps>40</Laps>
 <Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -651,6 +653,7 @@
 </Driver>
 <Driver>
 <Name>Jomaso Heller</Name>
+<r2la_penalty>10.0</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_08.VEH</VehFile>
 <UpgradeCode>9c060000 00000000 00000000 00000000</UpgradeCode>
@@ -711,7 +714,7 @@
 <Lap num="40" p="9" et="3892.8923" s1="25.8083" s2="28.7344" s3="26.5459" fuel="0.082" twfl="0.447" twfr="0.310" twrl="0.431" twrr="0.455" fcompound="0,C5" rcompound="0,C5">81.0886</Lap>
 <Lap num="41" p="9" et="3973.9810" s1="25.6284" s2="27.8740" s3="26.1650" fuel="0.059" twfl="0.416" twfr="0.275" twrl="0.396" twrr="0.420" fcompound="0,C5" rcompound="0,C5">79.6675</Lap>
 <BestLapTime>78.6685</BestLapTime>
-<FinishTime>3433.2505</FinishTime>
+<FinishTime>3443.2505</FinishTime>
 <Laps>41</Laps>
 <Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -1032,7 +1035,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>18</GridPos>
-<Position>14</Position>
+<Position>13</Position>
 <ClassGridPos>17</ClassGridPos>
 <ClassPosition>14</ClassPosition>
 <Points>0</Points>
@@ -1200,6 +1203,7 @@
 </Driver>
 <Driver>
 <Name>Leonardo Lucky</Name>
+<r2la_penalty>5.0</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_26.VEH</VehFile>
 <UpgradeCode>9c060800 00000000 00000000 00000000</UpgradeCode>

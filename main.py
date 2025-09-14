@@ -882,11 +882,11 @@ def calculate_wm_rankings():
         driver_standings.sort(key=lambda x:x[1], reverse=True)
         team_standings_sorted = (team_standings.copy())[:11]
         team_standings_sorted.sort(key=lambda x: x[-1], reverse=True)
-        team_standings_sorted.append(team_standings[-1])
+        team_standings_sorted.append(team_standings[-1])        
 
         if(race_number == len(files) - 1):
             driver_standings_last_race = driver_standings.copy()
-            team_standings_last_race = team_standings.copy()
+            team_standings_last_race = team_standings_sorted.copy()
         
     if(race_number == 1):
         driver_standings_last_race = driver_standings.copy()
@@ -907,6 +907,7 @@ def calculate_wm_rankings():
     #        print(constructor[0] + " - " + str(math.ceil(constructor[-1])) + " Punkte")
 
     generate_drivers_championship(driver_standings_last_race, driver_standings)
+    print(team_standings_last_race)
     generate_constructor_championship(team_standings_last_race, team_standings_sorted)
 
 def generate_drivers_championship(last_race_standings, driver_standings):
@@ -1071,7 +1072,7 @@ def generate_constructor_championship(last_race_standings, team_standings):
         name_length = bbox[2] - bbox[0]
                 
         last_race_index = last_race_standings.index(next(entry for entry in last_race_standings if entry[0] == team[0]))   
-
+        print(name, last_race_index, position,team[-1] )
         if(position == 0):
             #Draw Position
             draw.text((team_wm_position_x, team_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
