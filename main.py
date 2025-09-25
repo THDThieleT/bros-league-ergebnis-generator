@@ -121,12 +121,14 @@ team_logo_alignment = (1085,207)
 team_logo_scaled = (50,50)
 team_name_allignment = 1165
 race_time_allignment = 1700
+quali_time_allignment = 1820
 overall_position = (-50, 100)
 
 points_pos_x = 1811
 position_size = 24
 
-penalty_pos_x = 1595
+penalty_pos_x = 1590
+quali_penalty_x = 1700
 penalty_text_size = 15
 
 winner_team_position = (86, 80)
@@ -184,6 +186,8 @@ xml_export = []
 driver_config = []
 team_config = []
 rennergebnis = []
+qualiergebnis = []
+starting_grid = []
 fastest_laps = []
 
 name_rennen = "Name des Rennens"
@@ -492,10 +496,265 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
     final_image.save(filename, format="PNG")
     print("Image saved as "+ filename)
 
+def create_quali_page_1(data, filename="output/qualifikation_seite1.png"):
+    # Create a transparent base image (RGBA mode)  
+    final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
+    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
+    background = Image.open("./images/Quali_Hintergrund1.png").convert("RGBA")
+
+    # Paste images onto the final image at specified positions
+    mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
+    final_image.paste(classment_transparent, (0, 0), mask)  # The third argument is the mask for transparency
+    final_image.paste(background, (0, 0), background)  # The third argument is the mask for transparency
+    draw = ImageDraw.Draw(final_image)
+
+    # Draw Racetitel with semi-transparency
+    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
+
+    winner = data[0]
+
+    #Draw race winner
+    winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
+    winner_overall = winner_overall.resize((680, 680))
+    final_image.paste(winner_overall, overall_position, winner_overall)
+    overall_fade = Image.open("./images/Winner_Vordergrund.png").convert("RGBA")
+    final_image.paste(overall_fade, (0,0), overall_fade)
+    
+    #Winner rotated team text
+    team_box = draw.textbbox((-100, -100), winner.get_team_short(), font=winner_team_font)
+    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
+    temp_draw = ImageDraw.Draw(temp_img)
+    temp_draw.text((0, 0), winner.get_team_short(), font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
+
+    # Rotate the temporary image 90 degrees counter-clockwise
+    rotated_text = temp_img.rotate(90, expand=True)
+    final_image.paste(rotated_text, winner_team_position, rotated_text)
+
+    #Winner rotated number text
+    team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
+    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
+    temp_draw = ImageDraw.Draw(temp_img)
+    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
+
+    # Rotate the temporary image 90 degrees counter-clockwise
+    rotated_text = temp_img.rotate(90, expand=True)
+    final_image.paste(rotated_text, winner_number_position, rotated_text)
+    
+    ### Winner Name
+    draw.text(winner_name_pos, winner.Nachname.upper(), font=winner_name_font, fill=(255, 255, 255, 255), anchor="mm")
+    
+    ### Fill Positions
+    position = 0
+    for driver in data:
+        #Text zu CAPS
+
+        
+        # Draw the rest of row     
+        bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
+        name_length = bbox[2] - bbox[0]
+        
+        if(position == 0):
+            #Draw Position
+            draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
+            #Draw Flag
+            flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
+            flag_image = flag_image.resize((flag_width, flag_height))
+            final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
+            #Vorname
+            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+            #Nachname
+            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
+            #Teamname
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(0, 0, 0, 255), anchor="lm")
+            #Team Logo
+            logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
+            logo = logo.resize(team_logo_scaled)
+            # Paste images onto the final image at specified positions
+            final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+            draw = ImageDraw.Draw(final_image)
+            #Zeit
+            if winner.finish_time != "No Time":
+                td = datetime.timedelta(seconds=float(winner.finish_time))
+                # Format as mm:ss.SSS
+                minutes, sec = divmod(td.total_seconds(), 60)
+                formatted = f"{int(minutes):01}:{sec:06.3f}"
+                draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
+            else:
+                draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), "No Time", font=regular, fill=(0, 0, 0, 255), anchor="rm")
+        else:
+            #Draw Position
+            draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
+            #Draw Flag
+            flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
+            flag_image = flag_image.resize((flag_width, flag_height))
+            final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
+            #Vorname
+            draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+            #Nachname
+            draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
+            #Teamname
+            draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(255, 255, 255, 255), anchor="lm")
+            #Team Logo
+            logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
+            logo = logo.resize(team_logo_scaled)
+            # Paste images onto the final image at specified positions
+            final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+            draw = ImageDraw.Draw(final_image)
+            #Zeit
+            if (driver.finish_time == "No Time"):
+                draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), "No Time", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            else:
+                time_behind_leader = float(driver.finish_time) - float(winner.finish_time)
+                draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            #Penatly
+            if (driver.penalty is not None):
+                draw.text((quali_penalty_x , first_team_and_points + (position * y_offset)), driver.penalty, font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
+
+
+        # Update position for the next name
+        position += 1
+
+    # Save the final image
+    final_image.save(filename, format="PNG")
+    print("Image saved as "+ filename)
+
+def create_quali_page_2(data, filename="output/qualifikation_seite2.png"):
+    # Create a transparent base image (RGBA mode)  
+    final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
+    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
+    background = Image.open("./images/Quali_Hintergrund2.png").convert("RGBA")
+
+    # Paste images onto the final image at specified positions
+    mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
+    final_image.paste(classment_transparent, (0, 0), mask)  # The third argument is the mask for transparency
+    final_image.paste(background, (0, 0), background)  # The third argument is the mask for transparency
+    draw = ImageDraw.Draw(final_image)
+
+    # Draw Racetitel with semi-transparency
+    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
+    
+    winner = qualiergebnis[0]
+    #Draw race winner
+    winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
+    winner_overall = winner_overall.resize((680, 680))
+    final_image.paste(winner_overall, overall_position, winner_overall)
+    overall_fade = Image.open("./images/Winner_Vordergrund.png").convert("RGBA")
+    final_image.paste(overall_fade, (0,0), overall_fade)
+    
+    #Winner rotated team text
+    team_box = draw.textbbox((-100, -100), winner.get_team_short(), font=winner_team_font)
+    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
+    temp_draw = ImageDraw.Draw(temp_img)
+    temp_draw.text((0, 0), winner.get_team_short(), font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
+
+    # Rotate the temporary image 90 degrees counter-clockwise
+    rotated_text = temp_img.rotate(90, expand=True)
+    final_image.paste(rotated_text, winner_team_position, rotated_text)
+
+    #Winner rotated number text
+    team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
+    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
+    temp_draw = ImageDraw.Draw(temp_img)
+    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
+
+    # Rotate the temporary image 90 degrees counter-clockwise
+    rotated_text = temp_img.rotate(90, expand=True)
+    final_image.paste(rotated_text, winner_number_position, rotated_text)
+    
+    ### Winner Name
+    draw.text(winner_name_pos, winner.Nachname.upper(), font=winner_name_font, fill=(255, 255, 255, 255), anchor="mm")
+    
+
+    #Draw Winner in Tableau
+    position = 0
+    draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
+    #Draw Flag
+    flag_image = Image.open("./flags/" + winner.Nation + ".png").convert("RGBA")
+    flag_image = flag_image.resize((flag_width, flag_height))
+    final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
+
+    # Draw the rest of row     
+    bbox = draw.textbbox((-100, -100), winner.Vorname, font=regular)
+    name_length = bbox[2] - bbox[0]
+
+    #Vorname
+    draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), winner.Vorname, font=regular, fill=(0, 0, 0, 255), anchor="lb")    
+    #Nachname
+    draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
+    #Teamname
+    draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+    #Team Logo
+    team_filename = get_team_logo(winner.Team)
+    logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+    logo = logo.resize(team_logo_scaled)
+    # Paste images onto the final image at specified positions
+    final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+    draw = ImageDraw.Draw(final_image)
+    #Zeit
+    td = datetime.timedelta(seconds=float(winner.finish_time))
+    # Format as mm:ss.SSS
+    minutes, sec = divmod(td.total_seconds(), 60)
+    formatted = f"{int(minutes):01}:{sec:06.3f}"
+    draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
+
+
+    ### Fill Positions
+    position = 1
+    for driver in data:
+        #Text zu CAPS
+
+        # Draw the rest of row     
+        bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
+        name_length = bbox[2] - bbox[0]
+        
+        #Draw Position
+        draw.text((position_text, first_name + (position * y_offset)), str(position + 12), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
+        #Draw Flag
+        flag_image = Image.open("./flags/" + driver.Nation + ".png").convert("RGBA")
+        flag_image = flag_image.resize((flag_width, flag_height))
+        final_image.paste(flag_image, (left_allignment, first_name + (position * y_offset) - flag_y_offset), flag_image)
+        #Vorname
+        draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), driver.Vorname, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+        #Nachname
+        draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
+        #Teamname
+        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        #Team Logo
+        logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
+        logo = logo.resize(team_logo_scaled)
+        # Paste images onto the final image at specified positions
+        final_image.paste(logo, (team_logo_alignment[0], team_logo_alignment[1] + (position * y_offset)), logo)
+        draw = ImageDraw.Draw(final_image)
+        #Zeit
+        if (driver.finish_time == "No Time"):
+            draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), "No Time", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+        else:
+            time_behind_leader = float(driver.finish_time) - float(winner.finish_time)
+            draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), f"+{(time_behind_leader):.3f}", font=regular, fill=(255, 255, 255, 255), anchor="rm")
+        #Penalty
+        if (driver.penalty is not None):
+            draw.text((quali_penalty_x , first_team_and_points + (position * y_offset)), driver.penalty, font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
+        # Update position for the next name
+        position += 1
+
+    ### Draw fastest Lap
+    bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
+    name_length = bbox[2] - bbox[0]
+    draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
+    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}", font=regular, fill=(255, 255, 255, 255), anchor="lm")
+
+
+    
+
+    # Save the final image
+    final_image.save(filename, format="PNG")
+    print("Image saved as "+ filename)
+
 def read_raceresult_xml():
-    global current_race_number, xml_export
+    global current_race_number, xml_export, starting_grid
 
     xml_export = []
+    starting_grid = []
 
     ### Finde die XML Datei zum letzten Rennen ###
     folder = 'race_results'
@@ -528,6 +787,7 @@ def read_raceresult_xml():
         finished_laps = driver.find('Laps')
         fastes_lap = driver.find('BestLapTime')
         penalty = driver.find('r2la_penalty')
+        grid_pos = driver.find('GridPos')
 
         if (category_elem is None) or not ("F1S13" in category_elem.text):                        
             continue
@@ -535,6 +795,10 @@ def read_raceresult_xml():
         if (finished is None):
             print("finished ist None")
             continue
+        
+        if grid_pos is not None:
+            grid_pos = grid_pos.text
+            starting_grid.append((name_elem.text, grid_pos))
         
         if penalty is not None:
             penalty = (int) (penalty.text.split(".")[0])  # Nur Sekundenanteil
@@ -564,8 +828,102 @@ def read_raceresult_xml():
         if finished.text == "Finished Normally":
             xml_export.append((name_elem.text, position.text, racetime.text, fastes_lap, penalty))
             continue
+        
+        
     ### Sortiere nach Position
     xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
+    starting_grid.sort(key=lambda x: int(x[1]))  # Sort by grid position
+
+def read_quali_xml():
+    global qualiergebnis
+    quali1 = []
+    quali2 = []
+    ### Finde die XML Datei zum letzten Rennen ###
+    folder = 'quali_result'
+
+### Quali1 Ergegbnis
+
+    # Extract the number and find the file with the highest number
+    import xml.etree.ElementTree as ET
+    tree = ET.parse(os.path.join(folder, "quali1.xml"))
+    root = tree.getroot()
+
+    ### Extract Drivers from XML ###    
+    for driver in root.findall('.//Driver'):
+        name_elem = driver.find('Name')
+        position = driver.find('Position')
+        category_elem = driver.find('Category')
+        quali_time = driver.find('BestLapTime')
+        finished = driver.find('FinishStatus') 
+        penalty = driver.find('r2la_penalty')   
+
+        if (category_elem is None) or not ("F1S13" in category_elem.text):                        
+            continue
+
+        if (finished is None):
+            print("finished ist None")
+            continue
+
+        if quali_time is not None:
+            quali_time = quali_time.text
+
+        if penalty is not None:
+            if penalty.text.isdigit():
+                penalty = int(penalty.text)
+            else:
+                penalty = penalty.text
+        else: 
+            penalty = 0        
+        
+        if quali_time is not None:
+            quali1.append((name_elem.text, position.text, quali_time, penalty))
+        else:
+            quali1.append((name_elem.text, position.text, "No Time", penalty))
+    ### Sortiere nach Position
+    quali1.sort(key=lambda x: int(x[1]))  # Sort by position
+
+#Quali2 Ergebnis
+# Extract the number and find the file with the highest number
+    import xml.etree.ElementTree as ET
+    tree = ET.parse(os.path.join(folder, "quali2.xml"))
+    root = tree.getroot()
+
+    ### Extract Drivers from XML ###    
+    for driver in root.findall('.//Driver'):
+        name_elem = driver.find('Name')
+        position = driver.find('Position')
+        category_elem = driver.find('Category')
+        quali_time = driver.find('BestLapTime')
+        finished = driver.find('FinishStatus')
+        penalty = driver.find('r2la_penalty')       
+
+        if position is not None:
+            if int(position.text) > 10:
+                continue
+
+        if (category_elem is None) or not ("F1S13" in category_elem.text):                        
+            continue
+
+        if (finished is None):
+            print("finished ist None")
+            continue
+
+        if quali_time is not None:
+            quali_time = quali_time.text
+
+        if penalty is not None:
+            penalty = int(penalty.text)
+        else: 
+            penalty = 0        
+        
+        if quali_time is not None:
+            quali2.append((name_elem.text, position.text, quali_time, penalty))
+        else:
+            quali2.append((name_elem.text, position.text, "No Time", penalty))
+    ### Sortiere nach Position
+    quali2.sort(key=lambda x: int(x[1]))  # Sort by position
+
+    qualiergebnis = quali2 + quali1[10:]
 
 def read_driver_config():    
     global driver_config
@@ -639,6 +997,22 @@ def result_preprocessing_wm():
 
     print("Fertig mit der Ergebnisverarbeitung.")
     return Winner(rennergebnis[0]), fastest
+
+def quali_preprocessing():
+    global starting_grid, qualiergebnis
+    final_quali_result = []
+    for entry in qualiergebnis:
+        for driver in driver_config:
+            if (driver.get_driver_name().upper() == entry[0].upper()):  
+                driver.finish_time = entry[2]
+                if(entry[3] != 0):
+                    if(entry[3] == "DSQ"):
+                        driver.penalty = "DSQ"
+                    else:
+                        driver.penalty = f"+{entry[3]} Pos"
+                final_quali_result.append(driver)
+        
+    qualiergebnis = final_quali_result.copy()
 
 def get_team_logo(team):
     if(team == "Toyota F1 Team"):
@@ -907,7 +1281,6 @@ def calculate_wm_rankings():
     #        print(constructor[0] + " - " + str(math.ceil(constructor[-1])) + " Punkte")
 
     generate_drivers_championship(driver_standings_last_race, driver_standings)
-    print(team_standings_last_race)
     generate_constructor_championship(team_standings_last_race, team_standings_sorted)
 
 def generate_drivers_championship(last_race_standings, driver_standings):
@@ -1072,7 +1445,6 @@ def generate_constructor_championship(last_race_standings, team_standings):
         name_length = bbox[2] - bbox[0]
                 
         last_race_index = last_race_standings.index(next(entry for entry in last_race_standings if entry[0] == team[0]))   
-        print(name, last_race_index, position,team[-1] )
         if(position == 0):
             #Draw Position
             draw.text((team_wm_position_x, team_wm_first_name_y + (position * y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
@@ -1160,5 +1532,10 @@ if __name__ == "__main__":
     fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2    
     create_rennergebnis_page_1(fahrer_seite1)
     create_rennergebnis_page_2(fahrer_seite2)
-
     calculate_wm_rankings()
+    
+    read_driver_config()
+    read_quali_xml()
+    quali_preprocessing()
+    create_quali_page_1(qualiergebnis[:12])
+    create_quali_page_2(qualiergebnis[12:])
