@@ -56,6 +56,7 @@ class Driver:
             self.Overall = driver_data[5]
             self.Stammfahrer = driver_data[6]
             self.finish_time = ""
+            self.fastest_lap = ""
             self.penalty = None
 
     def get_driver_name(self):
@@ -737,13 +738,7 @@ def create_quali_page_2(data, filename="output/qualifikation_seite2.png"):
         # Update position for the next name
         position += 1
 
-    ### Draw fastest Lap
-    bbox = draw.textbbox((-100, -100), "FASTEST LAP", font=regular)
-    name_length = bbox[2] - bbox[0]
-    draw.text(fastest_lap_position, "FASTEST LAP", font=regular, fill=(255, 0, 255, 255), anchor="lm")
-    draw.text((fastest_lap_position[0] + name_length + spacer + 5, fastest_lap_position[1]), f"{fastest_lap_driver.Nachname}     {fastest_lap_driver.Team}     {fastest_lap_driver.get_laptime_formatted()}", font=regular, fill=(255, 255, 255, 255), anchor="lm")
-
-
+    
     
 
     # Save the final image
@@ -968,17 +963,18 @@ def result_preprocessing():
                     driver.penalty = entry[-1]
                 driver.finish_time = entry[2]
 
-                rennergebnis.append(driver)                                                            
+                rennergebnis.append(driver)      
+                driver.fastest_lap = entry[3]                                                      
                 found = True    
                 if not (driver.finish_time == "DNS" or driver.finish_time == "DNF" or "+" in driver.finish_time):                         
-                    if(float(driver.finish_time) < float(fastest.lap_time)):
-                        fastest = fastest_lap(driver.Vorname, driver.Nachname, driver.Team, driver.finish_time)
+                    if(float(driver.fastest_lap) < float(fastest.lap_time)):
+                        fastest = fastest_lap(driver.Vorname, driver.Nachname, driver.Team, driver.fastest_lap)
                     break
         if not found:
             print("Kein Eintrag für " + driver.get_driver_name() + " gefunden!")   
 
     print("Fertig mit der Ergebnisverarbeitung.")
-    return Winner(rennergebnis[0]), fastest
+    return (Winner(rennergebnis[0]), fastest)
 
 def result_preprocessing_wm():
     ### get sorted Race Result with config file ###   
@@ -1526,6 +1522,7 @@ if __name__ == "__main__":
             name_rennen = race_titels[current_race_number - 1][0]        
 
     winner, fastest_lap_driver = result_preprocessing()    
+    print(fastest_lap_driver)
     
     # create badges for betreuer
     fahrer_seite1 = rennergebnis[:12]  # First 11 entries for page 1
