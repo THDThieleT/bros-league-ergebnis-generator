@@ -9369,6 +9369,7 @@
 <MostLapsCompleted>46</MostLapsCompleted>
 <Driver>
 <Name>Sandro Raffa</Name>
+<SteamID>76561198161535393</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_91.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -9387,7 +9388,7 @@
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
 <LapRankIncludingDiscos>1</LapRankIncludingDiscos>
-<Lap num="1" p="13" et="618.4177" s1="23.7765" s2="23.5756" s3="48.4222" fuel="0.941" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5">95.7742</Lap>
+<Lap num="1" p="13" et="618.4177" s1="23.7765" s2="23.5756" s3="48.4222" fuel="0.941" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5" pit="1">95.7742</Lap>
 <Lap num="2" p="13" et="714.1919" s1="23.7983" s2="32.4387" s3="36.3799" fuel="0.929" twfl="0.992" twfr="0.992" twrl="0.992" twrr="0.992" fcompound="2,C3" rcompound="2,C3">92.6169</Lap>
 <Lap num="3" p="13" et="806.8088" s1="26.9470" s2="27.6900" s3="33.6192" fuel="0.914" twfl="0.980" twfr="0.984" twrl="0.984" twrr="0.984" fcompound="2,C3" rcompound="2,C3">88.2562</Lap>
 <Lap num="4" p="13" et="895.0649" s1="25.1841" s2="33.9005" s3="48.3947" fuel="0.902" twfl="0.969" twfr="0.973" twrl="0.973" twrr="0.973" fcompound="2,C3" rcompound="2,C3">107.4792</Lap>
@@ -9436,12 +9437,13 @@
 <BestLapTime>71.0469</BestLapTime>
 <FinishTime>3573.1204</FinishTime>
 <Laps>46</Laps>
-<Pitstops>1</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Dennis Castillo Sims</Name>
+<SteamID>76561198028310414</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_31.VEH</VehFile>
 <UpgradeCode>4a250000 00000000 00000000 00000000</UpgradeCode>
@@ -9487,7 +9489,7 @@
 <Lap num="25" p="1" et="2472.4124" s1="20.0828" s2="23.4104" s3="28.3777" fuel="0.443" twfl="0.878" twfr="0.894" twrl="0.871" twrr="0.867" fcompound="0,C5" rcompound="0,C5">71.8708</Lap>
 <Lap num="26" p="1" et="2544.2832" s1="20.2427" s2="23.3816" s3="28.1838" fuel="0.427" twfl="0.847" twfr="0.867" twrl="0.831" twrr="0.827" fcompound="0,C5" rcompound="0,C5">71.8081</Lap>
 <Lap num="27" p="1" et="2616.0913" s1="20.2339" s2="23.4844" s3="28.0935" fuel="0.408" twfl="0.816" twfr="0.843" twrl="0.792" twrr="0.788" fcompound="0,C5" rcompound="0,C5">71.8118</Lap>
-<Lap num="28" p="1" et="2687.9031" s1="20.9961" s2="24.1875" s3="45.1228" fuel="0.388" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5">90.3064</Lap>
+<Lap num="28" p="1" et="2687.9031" s1="20.9961" s2="24.1875" s3="45.1228" fuel="0.388" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5" pit="1">90.3064</Lap>
 <Lap num="29" p="1" et="2778.2095" s1="27.4077" s2="32.4143" s3="35.8179" fuel="0.376" twfl="0.996" twfr="0.996" twrl="0.996" twrr="0.996" fcompound="1,C4" rcompound="1,C4">95.6399</Lap>
 <Lap num="30" p="1" et="2873.8494" s1="27.9707" s2="34.3281" s3="36.1858" fuel="0.365" twfl="0.992" twfr="0.996" twrl="0.992" twrr="0.992" fcompound="1,C4" rcompound="1,C4">98.4846</Lap>
 <Lap num="31" p="1" et="2972.3340" s1="27.4270" s2="31.1636" s3="34.9141" fuel="0.353" twfl="0.988" twfr="0.992" twrl="0.988" twrr="0.988" fcompound="1,C4" rcompound="1,C4">93.5046</Lap>
@@ -9509,12 +9511,13 @@
 <BestLapTime>71.2166</BestLapTime>
 <FinishTime>3565.1365</FinishTime>
 <Laps>46</Laps>
-<Pitstops>1</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Andre Heiler</Name>
+<SteamID>76561198269354097</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_07.VEH</VehFile>
 <UpgradeCode>4a150000 00000000 00000000 00000000</UpgradeCode>
@@ -9566,7 +9569,7 @@
 <Lap num="31" p="7" et="2975.9810" s1="27.0999" s2="31.3518" s3="37.5930" fuel="0.373" twfl="0.929" twfr="0.953" twrl="0.945" twrr="0.941" fcompound="1,C4" rcompound="1,C4">96.0447</Lap>
 <Lap num="32" p="7" et="3072.0256" s1="23.9272" s2="35.9026" s3="47.9526" fuel="0.361" twfl="0.914" twfr="0.937" twrl="0.933" twrr="0.929" fcompound="1,C4" rcompound="1,C4">107.7825</Lap>
 <Lap num="33" p="8" et="3179.8081" s1="21.0981" s2="23.7190" s3="30.4248" fuel="0.341" twfl="0.886" twfr="0.835" twrl="0.898" twrr="0.898" fcompound="1,C4" rcompound="1,C4">75.2419</Lap>
-<Lap num="34" p="13" et="3255.0500" s1="24.2185" s2="29.4675" s3="55.1892" fuel="0.325" twfl="1.000" twfr="1.000" twrl="0.988" twrr="0.988" fcompound="1,C4" rcompound="1,C4">108.8752</Lap>
+<Lap num="34" p="13" et="3255.0500" s1="24.2185" s2="29.4675" s3="55.1892" fuel="0.325" twfl="1.000" twfr="1.000" twrl="0.988" twrr="0.988" fcompound="1,C4" rcompound="1,C4" pit="1">108.8752</Lap>
 <Lap num="35" p="13" et="3363.9253" s1="21.7251" s2="23.6663" s3="28.4553" fuel="0.306" twfl="0.973" twfr="0.976" twrl="0.949" twrr="0.945" fcompound="0,C5" rcompound="0,C5">73.8467</Lap>
 <Lap num="36" p="13" et="3437.7720" s1="20.1895" s2="23.3057" s3="28.1079" fuel="0.290" twfl="0.933" twfr="0.949" twrl="0.910" twrr="0.906" fcompound="0,C5" rcompound="0,C5">71.6030</Lap>
 <Lap num="37" p="13" et="3509.3750" s1="19.8765" s2="25.1167" s3="57.4570" fuel="0.271" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5" pit="1">102.4502</Lap>
@@ -9581,12 +9584,13 @@
 <BestLapTime>71.3018</BestLapTime>
 <FinishTime>3611.0432</FinishTime>
 <Laps>45</Laps>
-<Pitstops>4</Pitstops>
+<Pitstops>5</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="45">PlayerControl,TC=2,ABS=2,Stability=1,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Julian Gerlach</Name>
+<SteamID>76561198215701952</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_32.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -9633,7 +9637,7 @@
 <Lap num="26" p="3" et="2560.8330" s1="20.3052" s2="23.4946" s3="28.4136" fuel="0.443" twfl="0.761" twfr="0.816" twrl="0.737" twrr="0.733" fcompound="0,C5" rcompound="0,C5">72.2134</Lap>
 <Lap num="27" p="2" et="2633.0464" s1="20.3816" s2="23.9670" s3="28.3118" fuel="0.424" twfl="0.718" twfr="0.784" twrl="0.690" twrr="0.686" fcompound="0,C5" rcompound="0,C5">72.6604</Lap>
 <Lap num="28" p="3" et="2705.7068" s1="21.5405" s2="24.7673" s3="48.6658" fuel="0.408" twfl="1.000" twfr="1.000" twrl="0.996" twrr="0.996" fcompound="0,C5" rcompound="0,C5" pit="1">94.9736</Lap>
-<Lap num="29" p="3" et="2800.6804" s1="24.3728" s2="26.7207" s3="31.4014" fuel="0.392" twfl="0.988" twfr="0.992" twrl="0.988" twrr="0.988" fcompound="0,C5" rcompound="0,C5">82.4949</Lap>
+<Lap num="29" p="3" et="2800.6804" s1="24.3728" s2="26.7207" s3="31.4014" fuel="0.392" twfl="0.988" twfr="0.992" twrl="0.988" twrr="0.988" fcompound="1,C4" rcompound="1,C4">82.4949</Lap>
 <Lap num="30" p="3" et="2883.1753" s1="22.8936" s2="31.3230" s3="36.1101" fuel="0.380" twfl="0.976" twfr="0.984" twrl="0.980" twrr="0.976" fcompound="1,C4" rcompound="1,C4">90.3267</Lap>
 <Lap num="31" p="3" et="2973.5020" s1="27.2764" s2="30.9617" s3="34.9729" fuel="0.369" twfl="0.969" twfr="0.976" twrl="0.976" twrr="0.973" fcompound="1,C4" rcompound="1,C4">93.2109</Lap>
 <Lap num="32" p="3" et="3066.7129" s1="26.8586" s2="35.9138" s3="48.6028" fuel="0.357" twfl="0.965" twfr="0.973" twrl="0.969" twrr="0.965" fcompound="1,C4" rcompound="1,C4">111.3752</Lap>
@@ -9654,12 +9658,13 @@
 <BestLapTime>71.7673</BestLapTime>
 <FinishTime>3583.1482</FinishTime>
 <Laps>46</Laps>
-<Pitstops>1</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Jomaso Heller</Name>
+<r2la_penalty>10.0</r2la_penalty><Name>Jomaso Heller</Name>
+<SteamID>76561199022498544</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_08.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -9672,7 +9677,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>3</GridPos>
-<Position>5</Position>
+<Position>6</Position>
 <ClassGridPos>3</ClassGridPos>
 <ClassPosition>5</ClassPosition>
 <Points>0</Points>
@@ -9725,14 +9730,15 @@
 <Lap num="45" p="5" et="4058.6458" s1="20.0708" s2="24.8669" s3="29.2559" fuel="0.086" twfl="0.627" twfr="0.675" twrl="0.576" twrr="0.584" fcompound="1,C4" rcompound="1,C4">74.1936</Lap>
 <Lap num="46" p="5" et="4132.8394" s1="20.1699" s2="24.2769" s3="29.6753" fuel="0.067" twfl="0.600" twfr="0.647" twrl="0.545" twrr="0.553" fcompound="1,C4" rcompound="1,C4">74.1221</Lap>
 <BestLapTime>72.0972</BestLapTime>
-<FinishTime>3588.5437</FinishTime>
+<FinishTime>3598.5437</FinishTime>
 <Laps>46</Laps>
-<Pitstops>1</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Philipp Stange</Name>
+<SteamID>76561198863574951</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_27.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -9800,12 +9806,13 @@
 <BestLapTime>72.4443</BestLapTime>
 <FinishTime>3583.6741</FinishTime>
 <Laps>46</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Tobias Thiele</Name>
+<SteamID>76561198088746398</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_15.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -9818,7 +9825,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>7</GridPos>
-<Position>6</Position>
+<Position>5</Position>
 <ClassGridPos>7</ClassGridPos>
 <ClassPosition>6</ClassPosition>
 <Points>0</Points>
@@ -9879,6 +9886,7 @@
 </Driver>
 <Driver>
 <Name>Oliver Bolvron</Name>
+<SteamID>76561198285253229</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_17.VEH</VehFile>
 <UpgradeCode>4a051000 00000000 00000000 00000000</UpgradeCode>
@@ -9946,12 +9954,13 @@
 <BestLapTime>72.8655</BestLapTime>
 <FinishTime>3605.4265</FinishTime>
 <Laps>46</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Andre Porbadnik</Name>
+<SteamID>76561198216150347</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_73.VEH</VehFile>
 <UpgradeCode>4a151800 00000000 00000000 00000000</UpgradeCode>
@@ -9996,7 +10005,7 @@
 <Lap num="24" p="8" et="2428.3479" s1="20.6265" s2="23.8203" s3="29.2722" fuel="0.494" twfl="0.812" twfr="0.839" twrl="0.710" twrr="0.698" fcompound="0,C5" rcompound="0,C5">73.7190</Lap>
 <Lap num="25" p="8" et="2502.0669" s1="20.6377" s2="23.9822" s3="29.1440" fuel="0.475" twfl="0.784" twfr="0.816" twrl="0.659" twrr="0.651" fcompound="0,C5" rcompound="0,C5">73.7639</Lap>
 <Lap num="26" p="8" et="2575.8308" s1="20.3660" s2="23.9849" s3="29.0349" fuel="0.455" twfl="0.749" twfr="0.788" twrl="0.608" twrr="0.600" fcompound="0,C5" rcompound="0,C5">73.3857</Lap>
-<Lap num="27" p="8" et="2649.2166" s1="20.6672" s2="23.9465" s3="48.2078" fuel="0.435" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5">92.8215</Lap>
+<Lap num="27" p="8" et="2649.2166" s1="20.6672" s2="23.9465" s3="48.2078" fuel="0.435" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5" pit="1">92.8215</Lap>
 <Lap num="28" p="8" et="2742.0381" s1="24.5554" s2="26.6687" s3="32.2407" fuel="0.416" twfl="0.992" twfr="0.992" twrl="0.992" twrr="0.988" fcompound="1,C4" rcompound="1,C4">83.4648</Lap>
 <Lap num="29" p="8" et="2825.5029" s1="22.8477" s2="25.4041" s3="30.1516" fuel="0.400" twfl="0.980" twfr="0.984" twrl="0.976" twrr="0.976" fcompound="1,C4" rcompound="1,C4">78.4033</Lap>
 <Lap num="30" p="8" et="2903.9063" s1="22.2708" s2="24.9551" s3="30.2974" fuel="0.380" twfl="0.969" twfr="0.973" twrl="0.961" twrr="0.961" fcompound="1,C4" rcompound="1,C4">77.5232</Lap>
@@ -10024,7 +10033,8 @@
 <ControlAndAids startLap="1" endLap="46">PlayerControl,TC=1,ABS=1,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Maino Takao</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Maino Takao</Name>
+<SteamID>76561198346739695</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_21.VEH</VehFile>
 <UpgradeCode>4a051800 00000000 00000000 00000000</UpgradeCode>
@@ -10037,7 +10047,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>13</GridPos>
-<Position>9</Position>
+<Position>10</Position>
 <ClassGridPos>13</ClassGridPos>
 <ClassPosition>9</ClassPosition>
 <Points>0</Points>
@@ -10090,7 +10100,7 @@
 <Lap num="45" p="9" et="4086.8501" s1="22.2690" s2="24.7939" s3="29.4937" fuel="0.137" twfl="0.510" twfr="0.573" twrl="0.459" twrr="0.471" fcompound="1,C4" rcompound="1,C4">76.5566</Lap>
 <Lap num="46" p="9" et="4163.4067" s1="21.1265" s2="24.4468" s3="29.5884" fuel="0.118" twfl="0.478" twfr="0.549" twrl="0.424" twrr="0.435" fcompound="1,C4" rcompound="1,C4">75.1616</Lap>
 <BestLapTime>73.4358</BestLapTime>
-<FinishTime>3620.1506</FinishTime>
+<FinishTime>3625.1506</FinishTime>
 <Laps>46</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -10098,6 +10108,7 @@
 </Driver>
 <Driver>
 <Name>Dennis Porbadnik</Name>
+<SteamID>76561198260972097</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_69.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -10110,13 +10121,13 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>11</GridPos>
-<Position>10</Position>
+<Position>9</Position>
 <ClassGridPos>11</ClassGridPos>
 <ClassPosition>10</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
 <LapRankIncludingDiscos>11</LapRankIncludingDiscos>
-<Lap num="1" p="8" et="618.4177" s1="29.1213" s2="25.2164" s3="34.0706" fuel="0.894" twfl="0.980" twfr="0.984" twrl="0.976" twrr="0.973" fcompound="2,C3" rcompound="2,C3">88.4083</Lap>
+<Lap num="1" p="8" et="618.4177" s1="29.1213" s2="25.2164" s3="34.0706" fuel="0.894" twfl="0.980" twfr="0.984" twrl="0.976" twrr="0.973" fcompound="1,C4" rcompound="1,C4">88.4083</Lap>
 <Lap num="2" p="8" et="706.8259" s1="26.1002" s2="33.7335" s3="37.2053" fuel="0.882" twfl="0.973" twfr="0.980" twrl="0.969" twrr="0.965" fcompound="1,C4" rcompound="1,C4">97.0390</Lap>
 <Lap num="3" p="8" et="803.8649" s1="25.2080" s2="28.1860" s3="34.8564" fuel="0.867" twfl="0.965" twfr="0.973" twrl="0.957" twrr="0.953" fcompound="1,C4" rcompound="1,C4">88.2504</Lap>
 <Lap num="4" p="8" et="892.1154" s1="24.6060" s2="32.6642" s3="50.5683" fuel="0.859" twfl="0.957" twfr="0.969" twrl="0.949" twrr="0.941" fcompound="1,C4" rcompound="1,C4">107.8384</Lap>
@@ -10128,7 +10139,7 @@
 <Lap num="10" p="9" et="1375.3109" s1="21.6639" s2="23.9125" s3="28.6938" fuel="0.745" twfl="0.843" twfr="0.875" twrl="0.776" twrr="0.773" fcompound="1,C4" rcompound="1,C4">74.2703</Lap>
 <Lap num="11" p="9" et="1449.5812" s1="20.8270" s2="24.4092" s3="29.5513" fuel="0.725" twfl="0.824" twfr="0.859" twrl="0.749" twrr="0.745" fcompound="1,C4" rcompound="1,C4">74.7875</Lap>
 <Lap num="12" p="9" et="1524.3687" s1="21.2231" s2="24.5825" s3="29.6769" fuel="0.706" twfl="0.800" twfr="0.843" twrl="0.702" twrr="0.714" fcompound="1,C4" rcompound="1,C4">75.4825</Lap>
-<Lap num="13" p="13" et="1599.8512" s1="35.9589" s2="29.1182" s3="55.1857" fuel="0.690" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="1,C4" rcompound="1,C4">120.2627</Lap>
+<Lap num="13" p="13" et="1599.8512" s1="35.9589" s2="29.1182" s3="55.1857" fuel="0.690" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="1,C4" rcompound="1,C4" pit="1">120.2627</Lap>
 <Lap num="14" p="13" et="1720.1139" s1="24.0294" s2="25.2119" s3="29.4960" fuel="0.671" twfl="0.980" twfr="0.984" twrl="0.984" twrr="0.984" fcompound="1,C4" rcompound="1,C4">78.7373</Lap>
 <Lap num="15" p="13" et="1798.8512" s1="20.8722" s2="24.5259" s3="29.8477" fuel="0.651" twfl="0.965" twfr="0.973" twrl="0.965" twrr="0.965" fcompound="1,C4" rcompound="1,C4">75.2457</Lap>
 <Lap num="16" p="13" et="1874.0969" s1="20.7400" s2="24.1079" s3="29.3120" fuel="0.631" twfl="0.945" twfr="0.957" twrl="0.941" twrr="0.941" fcompound="1,C4" rcompound="1,C4">74.1599</Lap>
@@ -10170,7 +10181,8 @@
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Akil Aravinth</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Akil Aravinth</Name>
+<SteamID>76561198385438048</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_35.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -10202,7 +10214,7 @@
 <Lap num="11" p="10" et="1452.8993" s1="21.4862" s2="24.4875" s3="29.8927" fuel="0.761" twfl="0.608" twfr="0.608" twrl="0.557" twrr="0.537" fcompound="0,C5" rcompound="0,C5">75.8665</Lap>
 <Lap num="12" p="10" et="1528.7657" s1="20.9293" s2="24.7261" s3="29.8907" fuel="0.741" twfl="0.545" twfr="0.565" twrl="0.486" twrr="0.478" fcompound="0,C5" rcompound="0,C5">75.5461</Lap>
 <Lap num="13" p="11" et="1604.3119" s1="22.0291" s2="24.9950" s3="57.7545" fuel="0.725" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5" pit="1">104.7786</Lap>
-<Lap num="14" p="12" et="1709.0905" s1="23.8081" s2="25.1128" s3="30.3857" fuel="0.706" twfl="0.980" twfr="0.973" twrl="0.984" twrr="0.984" fcompound="0,C5" rcompound="0,C5">79.3066</Lap>
+<Lap num="14" p="12" et="1709.0905" s1="23.8081" s2="25.1128" s3="30.3857" fuel="0.706" twfl="0.980" twfr="0.973" twrl="0.984" twrr="0.984" fcompound="1,C4" rcompound="1,C4">79.3066</Lap>
 <Lap num="15" p="12" et="1788.3971" s1="20.8763" s2="24.3822" s3="29.9238" fuel="0.686" twfl="0.945" twfr="0.945" twrl="0.957" twrr="0.953" fcompound="1,C4" rcompound="1,C4">75.1824</Lap>
 <Lap num="16" p="11" et="1863.5795" s1="20.9493" s2="25.1082" s3="30.0370" fuel="0.667" twfl="0.910" twfr="0.906" twrl="0.929" twrr="0.929" fcompound="1,C4" rcompound="1,C4">76.0945</Lap>
 <Lap num="17" p="12" et="1939.6740" s1="22.3770" s2="25.3655" s3="30.4574" fuel="0.647" twfl="0.875" twfr="0.855" twrl="0.902" twrr="0.898" fcompound="1,C4" rcompound="1,C4">78.1998</Lap>
@@ -10236,14 +10248,15 @@
 <Lap num="45" p="11" et="4096.1089" s1="21.2612" s2="25.2031" s3="29.7651" fuel="0.110" twfl="0.490" twfr="0.553" twrl="0.533" twrr="0.553" fcompound="1,C4" rcompound="1,C4">76.2295</Lap>
 <Lap num="46" p="11" et="4172.3384" s1="20.9893" s2="24.6538" s3="29.6816" fuel="0.090" twfl="0.463" twfr="0.529" twrl="0.510" twrr="0.529" fcompound="1,C4" rcompound="1,C4">75.3247</Lap>
 <BestLapTime>74.0288</BestLapTime>
-<FinishTime>3629.2454</FinishTime>
+<FinishTime>3634.2454</FinishTime>
 <Laps>46</Laps>
-<Pitstops>1</Pitstops>
+<Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Martin Felix</Name>
+<SteamID>76561199735955201</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_89.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
@@ -10288,7 +10301,7 @@
 <Lap num="24" p="10" et="2458.3564" s1="20.6360" s2="24.0576" s3="29.5342" fuel="0.490" twfl="0.851" twfr="0.882" twrl="0.851" twrr="0.855" fcompound="1,C4" rcompound="1,C4">74.2278</Lap>
 <Lap num="25" p="9" et="2532.5842" s1="20.9160" s2="24.3137" s3="29.5779" fuel="0.471" twfl="0.824" twfr="0.855" twrl="0.824" twrr="0.831" fcompound="1,C4" rcompound="1,C4">74.8076</Lap>
 <Lap num="26" p="9" et="2607.3918" s1="20.7498" s2="24.3020" s3="29.5369" fuel="0.451" twfl="0.800" twfr="0.835" twrl="0.804" twrr="0.808" fcompound="1,C4" rcompound="1,C4">74.5886</Lap>
-<Lap num="27" p="10" et="2681.9805" s1="21.5300" s2="25.8430" s3="46.1284" fuel="0.435" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="1,C4" rcompound="1,C4">93.5015</Lap>
+<Lap num="27" p="10" et="2681.9805" s1="21.5300" s2="25.8430" s3="46.1284" fuel="0.435" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="1,C4" rcompound="1,C4" pit="1">93.5015</Lap>
 <Lap num="28" p="10" et="2775.4819" s1="23.0710" s2="25.9119" s3="29.8752" fuel="0.416" twfl="0.984" twfr="0.988" twrl="0.984" twrr="0.984" fcompound="1,C4" rcompound="1,C4">78.8582</Lap>
 <Lap num="29" p="10" et="2854.3401" s1="21.6277" s2="24.7185" s3="30.3579" fuel="0.396" twfl="0.965" twfr="0.976" twrl="0.973" twrr="0.969" fcompound="1,C4" rcompound="1,C4">76.7041</Lap>
 <Lap num="30" p="10" et="2931.0442" s1="21.5872" s2="24.6055" s3="29.8516" fuel="0.376" twfl="0.949" twfr="0.961" twrl="0.957" twrr="0.953" fcompound="1,C4" rcompound="1,C4">76.0442</Lap>
@@ -10311,12 +10324,13 @@
 <BestLapTime>74.1840</BestLapTime>
 <FinishTime>3638.2278</FinishTime>
 <Laps>46</Laps>
-<Pitstops>2</Pitstops>
+<Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Lea Luxemburg</Name>
+<SteamID>76561199165916648</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_48.VEH</VehFile>
 <UpgradeCode>4a050800 00000000 00000000 00000000</UpgradeCode>
@@ -10361,13 +10375,14 @@
 <Lap num="24" p="14" et="2590.9639" s1="20.9001" s2="23.8831" s3="29.4673" fuel="0.537" twfl="0.875" twfr="0.898" twrl="0.871" twrr="0.867" fcompound="0,C5" rcompound="0,C5">74.2505</Lap>
 <BestLapTime>74.2505</BestLapTime>
 <Laps>24</Laps>
-<Pitstops>2</Pitstops>
+<Pitstops>3</Pitstops>
 <FinishStatus>DNF</FinishStatus>
 <DNFReason>Accident</DNFReason>
 <ControlAndAids startLap="1" endLap="24">PlayerControl,TC=2,ABS=1,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Jan-Niklas Weiter</Name>
+<SteamID>76561198072408345</SteamID>
 <Connected>1</Connected>
 <VehFile>MERCEDESSC.VEH</VehFile>
 <UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
@@ -10395,12 +10410,13 @@
 <Lap num="7" p="15" et="3065.4998" s1="26.6633" s2="30.7603" s3="45.6841" fuel="0.878" twfl="0.918" twfr="0.937" twrl="0.925" twrr="0.929" fcompound="0,All-Weather" rcompound="0,All-Weather" pit="1">103.1077</Lap>
 <BestLapTime>92.8982</BestLapTime>
 <Laps>7</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>1</Pitstops>
 <FinishStatus>None</FinishStatus>
 <ControlAndAids startLap="1" endLap="7">PlayerControl</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Dominik Heinz Porbadnik</Name>
+<SteamID>76561198202541444</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_36.VEH</VehFile>
 <UpgradeCode>4a050000 00000000 00000000 00000000</UpgradeCode>
