@@ -169,7 +169,7 @@ team_wm_team_y = (int) (team_wm_first_row_lower - (row_height / 2))
 team_wm_team_logo = (team_wm_team_x - 75, team_wm_team_y - 22)
 team_wm_points_pos = (1575, (int) (team_wm_first_row_lower - (row_height / 2)))
 team_wm_info_text_position = (350, 1005)
-team_wm_team_logo_scaled = (45,45)
+team_wm_team_logo_scaled = (40,40)
 
 # Load a font (optional: use default if you don't have one)
 race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
@@ -868,7 +868,7 @@ def read_quali_xml():
             else:
                 penalty = penalty.text
         else: 
-            penalty = 0        
+            penalty = 0   
         
         if quali_time is not None:
             quali1.append((name_elem.text, position.text, quali_time, penalty))
@@ -907,9 +907,12 @@ def read_quali_xml():
             quali_time = quali_time.text
 
         if penalty is not None:
-            penalty = int(penalty.text)
+            if penalty.text.isdigit():
+                penalty = int(penalty.text)
+            else:
+                penalty = penalty.text
         else: 
-            penalty = 0        
+            penalty = 0         
         
         if quali_time is not None:
             quali2.append((name_elem.text, position.text, quali_time, penalty))
