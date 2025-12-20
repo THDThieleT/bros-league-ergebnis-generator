@@ -7,13 +7,14 @@ Oliver;Bolvron;17;Hugo Bros BMW Williams;Island;Bolvron.png;True
 Jomaso;Heller;8;Hugo Bros BMW Williams;Deutschland;Heller.png;True
 
 Joshua;Preuss;0;Scuderia Toro Rosso;Deutschland;Preuss.png;True
-Andre;Heiler;52;Scuderia Toro Rosso;Deutschland;Heiler.png;True
+Francesco;Madeo;0;Scuderia Toro Rosso;Italien;Madeo.png;True
 
 Lea;Luxemburg;48;Alpine F1 Team;Kuba;Luxemburg.png;True
 Maino;Takao;21;Alpine F1 Team;Deutschland;Takao.png;True
 
 Florian;Paul;73;Mercedes AMG;Deutschland;Paul.png;True
-Fabian;Rutishauser;87;Mercedes AMG;Schweiz;Rutishauser.png;True
+Andre;Heiler;52;Mercedes AMG;Schweiz;Heiler.png;True
+Fabian;Rutishauser;87;Mercedes AMG;Schweiz;Rutishauser.png;False
 
 Sandro;Raffa;91;Scuderia Ferrari;Italien;Raffa.png;True
 Philipp;Stange;27;Scuderia Ferrari;Deutschland;Stange.png;True
@@ -43,7 +44,7 @@ Noah;Bergmann;49;Reserve;Deutschland;Reserve.png;False
 Julian;Boschalko;56;Reserve;Oesterreich;Reserve.png;False
 Andre;Porbadnik;77;Reserve;Deutschland;Reserve.png;False
 Leon;Kuhn;66;Reserve;Deutschland;Reserve.png;False
-Julian;Klaffenboeck;12;Reserve;Oesterreich;Reserve.png;False
+Julian;Klaffenboeck;12;Reserve;Oesterreich;Juchi.png;False
 Sharl;Riccalo;14;Reserve;Afghanistan;Reserve.png;False
 Chris;Leicester;22;Reserve;Deutschland;Reserve.png;False
 Hannes;Mathuni;29;Reserve;Deutschland;Reserve.png;False

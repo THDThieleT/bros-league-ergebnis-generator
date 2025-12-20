@@ -582,6 +582,9 @@ def create_quali_page_1(data, filename="output/qualifikation_seite1.png"):
                 draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
             else:
                 draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), "No Time", font=regular, fill=(0, 0, 0, 255), anchor="rm")
+            #Penatly
+            if (driver.penalty is not None):
+                draw.text((quali_penalty_x , first_team_and_points + (position * y_offset)), driver.penalty, font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
         else:
             #Draw Position
             draw.text((position_text, first_name + (position * y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
@@ -697,6 +700,7 @@ def create_quali_page_2(data, filename="output/qualifikation_seite2.png"):
     minutes, sec = divmod(td.total_seconds(), 60)
     formatted = f"{int(minutes):01}:{sec:06.3f}"
     draw.text((quali_time_allignment , first_team_and_points + (position * y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
+    
 
 
     ### Fill Positions
@@ -1121,6 +1125,9 @@ def calculate_wm_rankings():
                 if(driver.Stammfahrer):                    
                     team = driver.Team
 
+                if(race_number < 7 and (driver.Nachname == "Rutishauser")):
+                    team = driver.Team
+
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
 
                 if(finish_position == 1):
@@ -1321,7 +1328,12 @@ def generate_drivers_championship(last_race_standings, driver_standings):
             driver_selec = entry[0]
             name = driver_selec.Vorname
             lastname = driver_selec.Nachname.upper()
-            team = driver_selec.Team
+
+            if(lastname == "RUTISHAUSER"):
+                team = "Reserve"
+            else:
+                team = driver_selec.Team
+
             flag = driver_selec.Nation
             team_filename = get_team_logo(team)
             
