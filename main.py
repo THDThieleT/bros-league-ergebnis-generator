@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Silverstone"
+file_prefix = "Kanada"
 
 ### Arrays
 xml_export = []
@@ -1891,7 +1891,7 @@ def driver_championship_insta(last_race_standings, relevant_drivers):
             
             if (last_race_index > 1):
                     # Paste images onto the final image at specified positions
-                    final_image.paste(logo, (insta_position_text - 28, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), logo)
+                    final_image.paste(logo, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), logo)
                     draw = ImageDraw.Draw(final_image)
 
         else:
@@ -1922,11 +1922,11 @@ def driver_championship_insta(last_race_standings, relevant_drivers):
             #Pos Gained arrow
             if (last_race_index > (position)):
                 # Paste images onto the final image at specified positions
-                final_image.paste(arrow_up, (insta_position_text - 28, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_up)
+                final_image.paste(arrow_up, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_up)
                 draw = ImageDraw.Draw(final_image)
             elif (last_race_index < (position)):
                 # Paste images onto the final image at specified positions
-                final_image.paste(arrow_down, (insta_position_text - 28, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_down)
+                final_image.paste(arrow_down, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_down)
                 draw = ImageDraw.Draw(final_image)
             
         # Update position for the next name
