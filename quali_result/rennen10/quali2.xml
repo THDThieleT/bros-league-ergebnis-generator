@@ -7,46 +7,64 @@
 <Setting>Multiplayer</Setting>
 <ServerName>F1 Bros S13</ServerName>
 <ClientFuelVisible>3</ClientFuelVisible>
-<PlayerFile>player</PlayerFile>
-<DateTime>1766338283</DateTime>
-<TimeString>2025/12/21 18:31:23</TimeString>
+<PlayerFile>player3</PlayerFile>
+<DateTime>1766338318</DateTime>
+<TimeString>2025/12/21 18:31:58</TimeString>
 <Mod>S13_V2_10</Mod>
 <Season></Season>
 <TrackVenue>GPVWC, 2025 Season</TrackVenue>
 <TrackCourse>Silverstone Circuit (GPVWC)</TrackCourse>
 <TrackEvent>Silverstone Circuit (2025)</TrackEvent>
-<TrackData>C:\Program Files (x86)\Steam\steamapps\common\rFactor 2\Installed\Locations\GPVWC_Silverstone\13.01FB\S13_EN_Layout.mas</TrackData>
+<TrackData>D:\rfactor2-dedicated\Installed\Locations\GPVWC_Silverstone\13.01FB\S13_EN_Layout.mas</TrackData>
 <TrackLength>5844.0</TrackLength>
 <GameVersion>1.1134</GameVersion>
-<Dedicated>0</Dedicated>
-<ConnectionType upload="10000" download="50000">Custom</ConnectionType>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="30000" download="10000">Custom</ConnectionType>
 <RaceLaps>34</RaceLaps>
 <RaceTime>75</RaceTime>
 <MechFailRate>1</MechFailRate>
 <DamageMult>65</DamageMult>
 <FuelMult>1</FuelMult>
 <TireMult>1</TireMult>
-<VehiclesAllowed>*</VehiclesAllowed>
+<VehiclesAllowed>|Alpine_F1_Team|AstonGT4SC|Audi_F1_Team|BMW_Williams|Cadillac_F1_Team|Jordan_Grand_Prix|LUNZiT_Red_Bull_Racing|McLaren_F1_Team|Mercedes-AMGSC|Mercedes_AMG|Scuderia_Ferrari|Scuderia_Toro_Rosso|Toyota_F1_Team</VehiclesAllowed>
 <ParcFerme>1</ParcFerme>
 <FixedSetups>0</FixedSetups>
 <FreeSettings>255</FreeSettings>
-<FixedUpgrades>0</FixedUpgrades>
+<FixedUpgrades>1</FixedUpgrades>
 <Qualify2>
-<DateTime>1766342610</DateTime>
-<TimeString>2025/12/21 19:43:30</TimeString>
+<DateTime>1766342663</DateTime>
+<TimeString>2025/12/21 19:44:23</TimeString>
 <Laps>2147483647</Laps>
 <Minutes>10</Minutes>
 <Stream>
-<Score et="63.3">Sandro Raffa(39) lap=0 point=1 t=-1.000 et=63.370</Score>
-<Score et="64.0">Andre Heiler(32) lap=0 point=1 t=-1.000 et=64.079</Score>
-<Score et="64.8">Oliver Bolvron(60) lap=0 point=1 t=-1.000 et=64.835</Score>
+<Command from="Christian Beckmann" nodeid="17" et="10.9">/dq Akil Aravinth</Command>
+<Vote et="10.9">Christian Beckmann: /dq Akil Aravinth</Vote>
+<Command from="Christian Beckmann" nodeid="17" et="18.8">/dq Kenny Gomez</Command>
+<Vote et="18.8">Christian Beckmann: /dq Kenny Gomez</Vote>
+<Command from="Christian Beckmann" nodeid="17" et="25.2">/dq Sharl Riccalo</Command>
+<Vote et="25.2">Christian Beckmann: /dq Sharl Riccalo</Vote>
+<Command from="Christian Beckmann" nodeid="17" et="30.8">/dq Maino Takao</Command>
+<Vote et="30.8">Christian Beckmann: /dq Maino Takao</Vote>
+<Command from="Christian Beckmann" nodeid="17" et="44.6">/dq Tobias Thiele</Command>
+<Vote et="44.6">Christian Beckmann: /dq Tobias Thiele</Vote>
+<Command from="Christian Beckmann" nodeid="17" et="52.1">/dq Jomaso Heller</Command>
+<Vote et="52.1">Christian Beckmann: /dq Jomaso Heller</Vote>
+<Score et="63.4">Sandro Raffa(39) lap=0 point=1 t=-1.000 et=63.370</Score>
+<Score et="64.1">Andre Heiler(32) lap=0 point=1 t=-1.000 et=64.079</Score>
+<Command from="Christian Beckmann" nodeid="17" et="64.6">/dq Hannes Mathuni</Command>
+<Vote et="64.6">Christian Beckmann: /dq Hannes Mathuni</Vote>
+<Score et="64.9">Oliver Bolvron(60) lap=0 point=1 t=-1.000 et=64.835</Score>
 <Score et="66.8">Julian Gerlach(53) lap=0 point=1 t=-1.000 et=66.803</Score>
-<Score et="67.4">Florian Paul(43) lap=0 point=1 t=-1.000 et=67.464</Score>
-<Score et="73.3">Dennis Castillo Sims(31) lap=0 point=1 t=-1.000 et=73.379</Score>
-<Score et="80.6">Cedryk Paetzold(54) lap=0 point=1 t=-1.000 et=80.671</Score>
-<Score et="93.5">Lea Luxemburg(46) lap=0 point=1 t=-1.000 et=93.543</Score>
+<Score et="67.5">Florian Paul(43) lap=0 point=1 t=-1.000 et=67.464</Score>
+<Score et="73.4">Dennis Castillo Sims(31) lap=0 point=1 t=-1.000 et=73.379</Score>
+<Command from="Christian Beckmann" nodeid="17" et="73.6">/dq Noah Nebling</Command>
+<Vote et="73.6">Christian Beckmann: /dq Noah Nebling</Vote>
+<Score et="80.7">Cedryk Paetzold(54) lap=0 point=1 t=-1.000 et=80.671</Score>
+<Command from="Christian Beckmann" nodeid="17" et="82.4">/dq Joshua Preuss</Command>
+<Vote et="82.4">Christian Beckmann: /dq Joshua Preuss</Vote>
+<Score et="93.6">Lea Luxemburg(46) lap=0 point=1 t=-1.000 et=93.543</Score>
 <Score et="103.1">Martin Felix(57) lap=0 point=1 t=-1.000 et=103.104</Score>
-<Score et="108.7">Sandro Raffa(39) lap=0 point=2 t=-1.000 et=108.728</Score>
+<Score et="108.8">Sandro Raffa(39) lap=0 point=2 t=-1.000 et=108.728</Score>
 <Score et="110.0">Andre Heiler(32) lap=0 point=2 t=-1.000 et=110.018</Score>
 <Score et="110.5">Oliver Bolvron(60) lap=0 point=2 t=-1.000 et=110.428</Score>
 <Score et="113.0">Julian Gerlach(53) lap=0 point=2 t=-1.000 et=112.955</Score>
@@ -58,7 +76,7 @@
 <Score et="141.9">Oliver Bolvron(60) lap=1 point=0 t=-1.000 et=141.904</Score>
 <Score et="142.1">Sandro Raffa(39) lap=1 point=0 t=-1.000 et=142.050</Score>
 <Score et="146.0">Julian Gerlach(53) lap=1 point=0 t=-1.000 et=145.927</Score>
-<Score et="147.5">Martin Felix(57) lap=0 point=2 t=-1.000 et=147.430</Score>
+<Score et="147.4">Martin Felix(57) lap=0 point=2 t=-1.000 et=147.430</Score>
 <Score et="153.2">Dennis Castillo Sims(31) lap=1 point=0 t=-1.000 et=153.216</Score>
 <Score et="155.2">Florian Paul(43) lap=1 point=0 t=-1.000 et=155.178</Score>
 <Score et="160.0">Cedryk Paetzold(54) lap=1 point=0 t=-1.000 et=160.016</Score>
@@ -66,8 +84,12 @@
 <Sector et="172.6">Andre Heiler(32) set new best for sector 2</Sector>
 <Score et="172.6">Andre Heiler(32) lap=1 point=1 t=32.540 et=172.547</Score>
 <Sector et="172.6">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="172.6">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="172.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="172.6">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="172.6">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="172.6">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="172.6">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="172.6">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="172.6">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="172.6">Sharl Riccalo(55) set new best for sector 2</Sector>
@@ -75,9 +97,12 @@
 <Sector et="172.6">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="172.6">(103) set new best for sector 2</Sector>
 <Sector et="172.6">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="172.6">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="172.6">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="172.6">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="172.6">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="172.6">(103) set new best for sector 2</Sector>
+<Sector et="172.7">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Score et="174.3">Oliver Bolvron(60) lap=1 point=1 t=32.375 et=174.278</Score>
 <Sector et="174.3">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="174.3">Oliver Bolvron(60) set new best for sector 2</Sector>
@@ -87,6 +112,9 @@
 <Sector et="174.3">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="174.3">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="174.3">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="174.3">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="174.3">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="174.3">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="174.3">(103) set new best for sector 2</Sector>
 <Sector et="174.3">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="174.3">Maino Takao(50) set new best for sector 2</Sector>
@@ -94,81 +122,103 @@
 <Sector et="174.3">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="174.3">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="174.3">Jomaso Heller(45) set new best for sector 2</Sector>
-<Sector et="174.4">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="174.3">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="174.3">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="174.4">(103) set new best for sector 2</Sector>
 <Score et="175.9">Martin Felix(57) lap=1 point=0 t=-1.000 et=175.846</Score>
-<Sector et="178.3">Julian Gerlach(53) set new best for sector 2</Sector>
 <Score et="178.3">Julian Gerlach(53) lap=1 point=1 t=32.351 et=178.278</Score>
 <Sector et="178.3">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="178.3">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="178.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="178.3">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="178.3">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="178.3">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="178.3">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="178.3">(103) set new best for sector 2</Sector>
 <Sector et="178.3">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="178.3">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="178.3">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="178.3">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="178.3">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="178.3">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="178.3">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="178.3">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="178.3">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="178.3">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="178.3">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="178.4">(103) set new best for sector 2</Sector>
 <Sector et="178.4">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="185.8">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Score et="185.8">Dennis Castillo Sims(31) lap=1 point=1 t=32.566 et=185.782</Score>
 <Sector et="185.8">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="185.8">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="185.8">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="185.8">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="185.8">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="185.8">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="185.8">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="185.8">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="185.8">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="185.8">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="185.8">(103) set new best for sector 2</Sector>
 <Sector et="185.8">Oliver Bolvron(60) set new best for sector 2</Sector>
-<Sector et="185.9">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="185.9">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="185.9">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="185.9">Sandro Raffa(39) set new best for sector 2</Sector>
-<Sector et="185.9">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="185.8">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="185.8">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="185.8">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="185.8">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="185.8">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="185.8">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="185.9">(103) set new best for sector 2</Sector>
-<Sector et="186.0">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="185.9">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="187.5">Florian Paul(43) set new best for sector 2</Sector>
 <Score et="187.5">Florian Paul(43) lap=1 point=1 t=32.303 et=187.481</Score>
 <Sector et="187.5">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="187.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
-<Sector et="187.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Sector et="187.6">Kenny Gomez(61) set new best for sector 2</Sector>
-<Sector et="187.6">Joshua Preuss(49) set new best for sector 2</Sector>
-<Sector et="187.6">Hannes Mathuni(56) set new best for sector 2</Sector>
-<Sector et="187.6">Akil Aravinth(42) set new best for sector 2</Sector>
-<Sector et="187.6">(103) set new best for sector 2</Sector>
-<Sector et="187.6">Oliver Bolvron(60) set new best for sector 2</Sector>
-<Sector et="187.6">Sharl Riccalo(55) set new best for sector 2</Sector>
-<Sector et="187.6">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="187.6">Noah Nebling(51) set new best for sector 2</Sector>
-<Sector et="187.6">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="187.6">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="187.6">(103) set new best for sector 2</Sector>
-<Sector et="187.6">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="187.6">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="187.5">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="187.5">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="187.5">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="187.5">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="187.5">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="187.5">(103) set new best for sector 2</Sector>
+<Sector et="187.5">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="187.5">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="187.5">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="187.5">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="187.5">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="187.5">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="187.5">(103) set new best for sector 2</Sector>
+<Sector et="187.5">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="187.5">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="187.6">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="187.6">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="187.6">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="192.4">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Sector et="192.4">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Score et="192.4">Cedryk Paetzold(54) lap=1 point=1 t=32.377 et=192.393</Score>
 <Sector et="192.4">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="192.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="192.4">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="192.4">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="192.4">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="192.4">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="192.4">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="192.4">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="192.4">Oliver Bolvron(60) set new best for sector 2</Sector>
-<Sector et="192.5">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="192.5">(103) set new best for sector 2</Sector>
-<Sector et="192.5">Noah Nebling(51) set new best for sector 2</Sector>
-<Sector et="192.5">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="192.5">(103) set new best for sector 2</Sector>
-<Sector et="192.5">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="192.4">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="192.4">(103) set new best for sector 2</Sector>
+<Sector et="192.4">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="192.4">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="192.4">(103) set new best for sector 2</Sector>
+<Sector et="192.4">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="192.4">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="192.4">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="192.4">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="192.4">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="192.5">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Score et="194.0">Sandro Raffa(39) lap=1 point=1 t=-1.000 et=193.979</Score>
-<Sector et="202.2">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Score et="202.2">Lea Luxemburg(46) lap=1 point=1 t=33.696 et=202.159</Score>
 <Sector et="202.2">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="202.2">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="202.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="202.2">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="202.2">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="202.2">(103) set new best for sector 2</Sector>
@@ -180,12 +230,13 @@
 <Sector et="202.2">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="202.2">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="202.2">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="202.2">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="202.2">(103) set new best for sector 2</Sector>
 <Sector et="202.2">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="202.2">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="202.2">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="202.2">Jomaso Heller(45) set new best for sector 2</Sector>
-<Sector et="202.3">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="208.6">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="202.2">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="208.6">Martin Felix(57) set new best for sector 2</Sector>
 <Score et="208.6">Martin Felix(57) lap=1 point=1 t=32.704 et=208.550</Score>
 <Sector et="208.6">Martin Felix(57) set new best for sector 2</Sector>
@@ -196,16 +247,20 @@
 <Sector et="208.6">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="208.6">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="208.6">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="208.6">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="208.6">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="208.6">(103) set new best for sector 2</Sector>
+<Sector et="208.6">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="208.6">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="208.6">(103) set new best for sector 2</Sector>
 <Sector et="208.6">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="208.6">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="208.6">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="208.6">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="208.6">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="208.7">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="215.0">Andre Heiler(32) set new best for sector 3</Sector>
 <Score et="215.0">Andre Heiler(32) lap=1 point=2 t=74.929 et=214.936</Score>
-<Sector et="215.0">Andre Heiler(32) set new best for sector 3</Sector>
 <Sector et="215.0">Andre Heiler(32) set new best for sector 3</Sector>
 <Sector et="215.0">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="215.0">Cedryk Paetzold(54) set new best for sector 3</Sector>
@@ -213,6 +268,9 @@
 <Sector et="215.0">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="215.0">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="215.0">(103) set new best for sector 3</Sector>
+<Sector et="215.0">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="215.0">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="215.0">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="215.0">(103) set new best for sector 3</Sector>
 <Sector et="215.0">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="215.0">Maino Takao(50) set new best for sector 3</Sector>
@@ -223,11 +281,10 @@
 <Sector et="215.0">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="215.0">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="215.1">Lea Luxemburg(46) set new best for sector 3</Sector>
-<Sector et="218.9">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="218.9">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Score et="218.9">Oliver Bolvron(60) lap=1 point=2 t=76.905 et=218.809</Score>
-<Sector et="218.9">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="218.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Score et="218.8">Oliver Bolvron(60) lap=1 point=2 t=76.905 et=218.809</Score>
+<Sector et="218.8">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="218.8">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="218.8">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="218.9">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="218.9">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="218.9">Noah Nebling(51) set new best for sector 3</Sector>
@@ -236,6 +293,9 @@
 <Sector et="218.9">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="218.9">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="218.9">(103) set new best for sector 3</Sector>
+<Sector et="218.9">(103) set new best for sector 3</Sector>
+<Sector et="218.9">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="218.9">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="218.9">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="218.9">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="218.9">Maino Takao(50) set new best for sector 3</Sector>
@@ -246,7 +306,11 @@
 <Score et="220.5">Julian Gerlach(53) lap=1 point=2 t=74.528 et=220.455</Score>
 <Sector et="220.5">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="220.5">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="220.5">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="220.5">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="220.5">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="220.5">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="220.5">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="220.5">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="220.5">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="220.5">(103) set new best for sector 3</Sector>
@@ -255,10 +319,13 @@
 <Sector et="220.5">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="220.5">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="220.5">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="220.5">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="220.5">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="220.5">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="220.5">Jomaso Heller(45) set new best for sector 3</Sector>
-<Sector et="220.6">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="220.5">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="220.6">(103) set new best for sector 3</Sector>
+<Sector et="227.6">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Score et="227.6">Dennis Castillo Sims(31) lap=1 point=2 t=74.335 et=227.550</Score>
 <Sector et="227.6">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="227.6">Florian Paul(43) set new best for sector 3</Sector>
@@ -268,6 +335,9 @@
 <Sector et="227.6">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="227.6">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="227.6">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="227.6">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="227.6">(103) set new best for sector 3</Sector>
+<Sector et="227.6">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="227.6">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="227.6">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="227.6">Tobias Thiele(41) set new best for sector 3</Sector>
@@ -278,11 +348,13 @@
 <Sector et="227.7">(103) set new best for sector 3</Sector>
 <Sector et="227.7">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="230.3">Florian Paul(43) set new best for sector 3</Sector>
-<Score et="230.4">Florian Paul(43) lap=1 point=2 t=75.124 et=230.302</Score>
-<Sector et="230.4">Florian Paul(43) set new best for sector 3</Sector>
-<Sector et="230.4">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Score et="230.3">Florian Paul(43) lap=1 point=2 t=75.124 et=230.302</Score>
+<Sector et="230.3">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="230.3">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="230.4">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="230.4">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="230.4">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="230.4">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="230.4">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="230.4">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="230.4">Hannes Mathuni(56) set new best for sector 3</Sector>
@@ -290,9 +362,12 @@
 <Sector et="230.4">(103) set new best for sector 3</Sector>
 <Sector et="230.4">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="230.4">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="230.4">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="230.4">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="230.4">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="230.4">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="230.4">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="230.4">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="230.5">(103) set new best for sector 3</Sector>
 <Sector et="235.7">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Score et="235.7">Cedryk Paetzold(54) lap=1 point=2 t=75.676 et=235.691</Score>
@@ -300,27 +375,36 @@
 <Sector et="235.7">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="235.7">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="235.7">Kenny Gomez(61) set new best for sector 3</Sector>
-<Sector et="235.8">Florian Paul(43) set new best for sector 3</Sector>
-<Sector et="235.8">Hannes Mathuni(56) set new best for sector 3</Sector>
-<Sector et="235.8">Joshua Preuss(49) set new best for sector 3</Sector>
-<Sector et="235.8">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="235.8">Sharl Riccalo(55) set new best for sector 3</Sector>
-<Sector et="235.8">(103) set new best for sector 3</Sector>
-<Sector et="235.8">Tobias Thiele(41) set new best for sector 3</Sector>
-<Sector et="235.8">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="235.7">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="235.7">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="235.7">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="235.7">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="235.7">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="235.7">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="235.7">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="235.7">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="235.7">(103) set new best for sector 3</Sector>
+<Sector et="235.7">Tobias Thiele(41) set new best for sector 3</Sector>
+<Sector et="235.7">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="235.7">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="235.7">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="235.8">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="235.8">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="235.8">(103) set new best for sector 3</Sector>
 <Score et="238.2">Sandro Raffa(39) lap=1 point=2 t=-1.000 et=238.148</Score>
-<Sector et="242.6">Andre Heiler(32) set new best for sector 1</Sector>
-<Score et="242.6">Andre Heiler(32) lap=2 point=0 t=102.478 et=242.485</Score>
-<Sector et="242.6">Andre Heiler(32) set new best for sector 1</Sector>
-<Sector et="242.6">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="242.5">Andre Heiler(32) set new best for sector 1</Sector>
+<Score et="242.5">Andre Heiler(32) lap=2 point=0 t=102.478 et=242.485</Score>
+<Sector et="242.5">Andre Heiler(32) set new best for sector 1</Sector>
+<Sector et="242.5">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="242.6">Florian Paul(43) set new best for sector 1</Sector>
 <Sector et="242.6">Kenny Gomez(61) set new best for sector 1</Sector>
 <Sector et="242.6">Akil Aravinth(42) set new best for sector 1</Sector>
 <Sector et="242.6">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="242.6">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="242.6">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="242.6">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="242.6">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="242.6">(103) set new best for sector 1</Sector>
 <Sector et="242.6">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="242.6">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="242.6">(103) set new best for sector 1</Sector>
@@ -328,10 +412,13 @@
 <Sector et="242.6">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="242.6">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="242.6">Jomaso Heller(45) set new best for sector 1</Sector>
-<Sector et="247.8">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="242.6">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="242.6">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Score et="247.8">Lea Luxemburg(46) lap=1 point=2 t=79.289 et=247.752</Score>
 <Sector et="247.8">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="247.8">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="247.8">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="247.8">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="247.8">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="247.8">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="247.8">Hannes Mathuni(56) set new best for sector 3</Sector>
@@ -342,15 +429,16 @@
 <Sector et="247.8">(103) set new best for sector 3</Sector>
 <Sector et="247.8">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="247.8">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="247.8">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="247.8">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="247.8">(103) set new best for sector 3</Sector>
 <Sector et="247.8">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="247.8">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="247.8">Lea Luxemburg(46) set new best for sector 3</Sector>
-<Sector et="247.9">Julian Gerlach(53) set new best for sector 1</Sector>
-<Sector et="247.9">Julian Gerlach(53) set new best for sector 1</Sector>
-<Score et="247.9">Julian Gerlach(53) lap=2 point=0 t=101.853 et=247.780</Score>
-<Sector et="247.9">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="247.8">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="247.8">Julian Gerlach(53) set new best for sector 3</Sector>
+<Score et="247.8">Julian Gerlach(53) lap=2 point=0 t=101.853 et=247.780</Score>
+<Sector et="247.8">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="247.9">Florian Paul(43) set new best for sector 1</Sector>
 <Sector et="247.9">Noah Nebling(51) set new best for sector 1</Sector>
 <Sector et="247.9">Hannes Mathuni(56) set new best for sector 1</Sector>
@@ -365,13 +453,15 @@
 <Sector et="247.9">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="247.9">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="247.9">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="247.9">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="247.9">(103) set new best for sector 1</Sector>
 <Sector et="247.9">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="247.9">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="247.9">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Score et="251.2">Martin Felix(57) lap=1 point=2 t=75.317 et=251.163</Score>
 <Sector et="251.2">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="251.2">Martin Felix(57) set new best for sector 3</Sector>
-<Sector et="251.2">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="251.2">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="251.2">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="251.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="251.2">Kenny Gomez(61) set new best for sector 3</Sector>
@@ -381,15 +471,21 @@
 <Sector et="251.2">(103) set new best for sector 3</Sector>
 <Sector et="251.2">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="251.2">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="251.2">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="251.2">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="251.2">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="251.2">Maino Takao(50) set new best for sector 3</Sector>
-<Sector et="251.3">Tobias Thiele(41) set new best for sector 3</Sector>
-<Sector et="251.3">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="251.2">Tobias Thiele(41) set new best for sector 3</Sector>
+<Sector et="251.2">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="251.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="251.3">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="251.3">(103) set new best for sector 3</Sector>
 <Sector et="254.6">Dennis Castillo Sims(31) set new best for sector 1</Sector>
-<Sector et="254.6">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Score et="254.6">Dennis Castillo Sims(31) lap=2 point=0 t=101.355 et=254.571</Score>
 <Sector et="254.6">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="254.6">Florian Paul(43) set new best for sector 1</Sector>
+<Sector et="254.6">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="254.6">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Sector et="254.6">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="254.6">Akil Aravinth(42) set new best for sector 1</Sector>
 <Sector et="254.6">Kenny Gomez(61) set new best for sector 1</Sector>
@@ -398,18 +494,21 @@
 <Sector et="254.6">Andre Heiler(32) set new best for sector 1</Sector>
 <Sector et="254.6">(103) set new best for sector 1</Sector>
 <Sector et="254.6">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="254.6">Lea Luxemburg(46) set new best for sector 1</Sector>
+<Sector et="254.6">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="254.6">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="254.6">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="254.6">(103) set new best for sector 1</Sector>
-<Sector et="254.7">Sandro Raffa(39) set new best for sector 1</Sector>
-<Sector et="254.7">Julian Gerlach(53) set new best for sector 1</Sector>
-<Sector et="254.7">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="254.6">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="254.6">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="254.6">Jomaso Heller(45) set new best for sector 1</Sector>
 <Score et="254.7">Oliver Bolvron(60) lap=2 point=0 t=-1.000 et=254.648</Score>
-<Sector et="258.1">Florian Paul(43) set new best for sector 1</Sector>
-<Sector et="258.1">Florian Paul(43) set new best for sector 1</Sector>
-<Score et="258.1">Florian Paul(43) lap=2 point=0 t=102.812 et=257.991</Score>
-<Sector et="258.1">Florian Paul(43) set new best for sector 1</Sector>
-<Sector et="258.1">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="258.0">Florian Paul(43) set new best for sector 1</Sector>
+<Score et="258.0">Florian Paul(43) lap=2 point=0 t=102.812 et=257.991</Score>
+<Sector et="258.0">Florian Paul(43) set new best for sector 1</Sector>
+<Sector et="258.0">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="258.1">Joshua Preuss(49) set new best for sector 1</Sector>
+<Sector et="258.1">Kenny Gomez(61) set new best for sector 1</Sector>
 <Sector et="258.1">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Sector et="258.1">Noah Nebling(51) set new best for sector 1</Sector>
 <Sector et="258.1">Hannes Mathuni(56) set new best for sector 1</Sector>
@@ -426,29 +525,37 @@
 <Sector et="258.1">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="258.1">(103) set new best for sector 1</Sector>
 <Sector et="258.2">Lea Luxemburg(46) set new best for sector 1</Sector>
+<Sector et="263.8">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Score et="263.8">Cedryk Paetzold(54) lap=2 point=0 t=103.758 et=263.773</Score>
 <Sector et="263.8">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Sector et="263.8">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="263.8">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="263.8">Florian Paul(43) set new best for sector 1</Sector>
-<Sector et="263.9">Sharl Riccalo(55) set new best for sector 1</Sector>
-<Sector et="263.9">Hannes Mathuni(56) set new best for sector 1</Sector>
-<Sector et="263.9">(103) set new best for sector 1</Sector>
-<Sector et="263.9">Andre Heiler(32) set new best for sector 1</Sector>
-<Sector et="263.9">Martin Felix(57) set new best for sector 1</Sector>
-<Sector et="263.9">Maino Takao(50) set new best for sector 1</Sector>
-<Sector et="263.9">Oliver Bolvron(60) set new best for sector 1</Sector>
-<Sector et="263.9">Sandro Raffa(39) set new best for sector 1</Sector>
-<Sector et="263.9">Tobias Thiele(41) set new best for sector 1</Sector>
-<Sector et="263.9">Jomaso Heller(45) set new best for sector 1</Sector>
-<Sector et="263.9">(103) set new best for sector 1</Sector>
-<Sector et="263.9">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="263.8">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="263.8">Akil Aravinth(42) set new best for sector 1</Sector>
+<Sector et="263.8">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="263.8">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="263.8">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="263.8">(103) set new best for sector 1</Sector>
+<Sector et="263.8">Andre Heiler(32) set new best for sector 1</Sector>
+<Sector et="263.8">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="263.8">Maino Takao(50) set new best for sector 1</Sector>
+<Sector et="263.8">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="263.8">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="263.8">Tobias Thiele(41) set new best for sector 1</Sector>
+<Sector et="263.8">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="263.8">(103) set new best for sector 1</Sector>
+<Sector et="263.8">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="263.9">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Score et="268.7">Sandro Raffa(39) lap=2 point=0 t=-1.000 et=268.637</Score>
-<Sector et="275.2">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="275.2">Andre Heiler(32) set new best for sector 2</Sector>
-<Score et="275.2">Andre Heiler(32) lap=2 point=1 t=32.620 et=275.105</Score>
-<Sector et="275.2">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="275.2">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="275.1">Andre Heiler(32) set new best for sector 2</Sector>
+<Score et="275.1">Andre Heiler(32) lap=2 point=1 t=32.620 et=275.105</Score>
+<Sector et="275.1">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="275.1">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="275.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="275.2">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="275.2">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="275.2">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="275.2">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="275.2">(103) set new best for sector 2</Sector>
 <Sector et="275.2">Hannes Mathuni(56) set new best for sector 2</Sector>
@@ -463,7 +570,6 @@
 <Sector et="275.2">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="275.2">(103) set new best for sector 2</Sector>
 <Sector et="275.3">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="277.6">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Score et="277.6">Lea Luxemburg(46) lap=2 point=0 t=109.108 et=277.572</Score>
 <Sector et="277.6">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="277.6">Lea Luxemburg(46) set new best for sector 1</Sector>
@@ -479,10 +585,13 @@
 <Sector et="277.6">Sharl Riccalo(55) set new best for sector 1</Sector>
 <Sector et="277.6">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="277.6">(103) set new best for sector 1</Sector>
-<Sector et="277.7">Sandro Raffa(39) set new best for sector 1</Sector>
-<Sector et="277.7">Tobias Thiele(41) set new best for sector 1</Sector>
-<Sector et="277.7">Jomaso Heller(45) set new best for sector 1</Sector>
-<Sector et="279.7">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="277.6">(103) set new best for sector 1</Sector>
+<Sector et="277.6">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="277.6">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="277.6">Tobias Thiele(41) set new best for sector 1</Sector>
+<Sector et="277.6">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="277.6">Julian Gerlach(53) set new best for sector 1</Sector>
+<Sector et="277.6">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="279.7">Martin Felix(57) set new best for sector 1</Sector>
 <Score et="279.7">Martin Felix(57) lap=2 point=0 t=103.756 et=279.602</Score>
 <Sector et="279.7">Martin Felix(57) set new best for sector 1</Sector>
@@ -502,56 +611,76 @@
 <Sector et="279.7">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="279.7">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="279.7">Tobias Thiele(41) set new best for sector 1</Sector>
+<Sector et="279.7">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="279.7">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="279.8">(103) set new best for sector 1</Sector>
-<Sector et="280.6">Julian Gerlach(53) set new best for sector 2</Sector>
-<Score et="280.6">Julian Gerlach(53) lap=2 point=1 t=32.723 et=280.503</Score>
-<Sector et="280.6">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="280.6">Julian Gerlach(53) set new best for sector 2</Sector>
+<Score et="280.5">Julian Gerlach(53) lap=2 point=1 t=32.723 et=280.503</Score>
+<Sector et="280.5">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="280.5">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="280.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="280.6">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="280.6">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="280.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="280.6">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="280.6">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="280.6">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="280.6">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="280.6">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="280.6">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="280.6">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="280.6">(103) set new best for sector 2</Sector>
 <Sector et="280.6">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="280.6">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="280.6">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="280.6">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="280.6">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="280.6">(103) set new best for sector 2</Sector>
 <Sector et="280.6">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="286.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
-<Sector et="286.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Score et="286.3">Dennis Castillo Sims(31) lap=2 point=1 t=31.718 et=286.289</Score>
 <Sector et="286.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="286.3">Florian Paul(43) set new best for sector 2</Sector>
-<Sector et="286.4">Akil Aravinth(42) set new best for sector 2</Sector>
-<Sector et="286.4">Noah Nebling(51) set new best for sector 2</Sector>
-<Sector et="286.4">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Sector et="286.4">Kenny Gomez(61) set new best for sector 2</Sector>
-<Sector et="286.4">Hannes Mathuni(56) set new best for sector 2</Sector>
-<Sector et="286.4">Sharl Riccalo(55) set new best for sector 2</Sector>
-<Sector et="286.4">(103) set new best for sector 2</Sector>
-<Sector et="286.4">Sandro Raffa(39) set new best for sector 2</Sector>
-<Sector et="286.4">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="286.4">(103) set new best for sector 2</Sector>
+<Sector et="286.3">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="286.3">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="286.3">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="286.3">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="286.3">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="286.3">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="286.3">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="286.3">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="286.3">(103) set new best for sector 2</Sector>
+<Sector et="286.3">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="286.3">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="286.3">(103) set new best for sector 2</Sector>
+<Sector et="286.3">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="286.3">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="286.4">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="286.4">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="286.4">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="286.4">Julian Gerlach(53) set new best for sector 2</Sector>
 <Score et="290.4">Florian Paul(43) lap=2 point=1 t=-1.000 et=290.376</Score>
-<Score et="296.7">Cedryk Paetzold(54) lap=2 point=1 t=32.863 et=296.636</Score>
-<Sector et="296.7">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="296.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Score et="296.6">Cedryk Paetzold(54) lap=2 point=1 t=32.863 et=296.636</Score>
+<Sector et="296.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="296.7">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="296.7">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="296.7">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="296.7">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="296.7">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="296.7">(103) set new best for sector 2</Sector>
+<Sector et="296.7">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="296.7">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="296.7">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="296.7">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="296.7">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="296.7">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="296.7">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="296.7">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="296.7">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="296.7">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="296.7">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="296.7">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="301.0">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="296.7">(103) set new best for sector 2</Sector>
 <Sector et="301.0">Sandro Raffa(39) set new best for sector 2</Sector>
 <Score et="301.0">Sandro Raffa(39) lap=2 point=1 t=32.315 et=300.952</Score>
 <Sector et="301.0">Sandro Raffa(39) set new best for sector 2</Sector>
@@ -565,16 +694,19 @@
 <Sector et="301.0">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="301.0">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="301.0">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="301.0">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="301.0">(103) set new best for sector 2</Sector>
+<Sector et="301.0">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="301.0">(103) set new best for sector 2</Sector>
 <Sector et="301.0">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="301.0">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="301.0">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="301.0">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="301.0">Julian Gerlach(53) set new best for sector 2</Sector>
-<Score et="308.1">Oliver Bolvron(60) lap=2 point=1 t=-1.000 et=308.006</Score>
+<Score et="308.0">Oliver Bolvron(60) lap=2 point=1 t=-1.000 et=308.006</Score>
+<Score et="312.5">Lea Luxemburg(46) lap=2 point=1 t=34.939 et=312.511</Score>
 <Sector et="312.5">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Score et="312.6">Lea Luxemburg(46) lap=2 point=1 t=34.939 et=312.511</Score>
-<Sector et="312.6">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="312.6">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="312.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="312.6">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="312.6">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="312.6">Joshua Preuss(49) set new best for sector 2</Sector>
@@ -582,17 +714,20 @@
 <Sector et="312.6">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="312.6">(103) set new best for sector 2</Sector>
 <Sector et="312.6">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="312.6">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="312.6">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="312.6">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="312.6">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="312.6">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="312.6">(103) set new best for sector 2</Sector>
 <Sector et="312.6">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="312.6">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="312.6">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="312.6">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="312.6">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="312.6">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="314.3">Martin Felix(57) set new best for sector 2</Sector>
 <Score et="314.3">Martin Felix(57) lap=2 point=1 t=34.624 et=314.226</Score>
+<Sector et="314.3">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="314.3">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="314.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="314.3">Kenny Gomez(61) set new best for sector 2</Sector>
@@ -606,16 +741,18 @@
 <Sector et="314.3">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="314.3">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="314.3">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="314.3">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="314.3">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="314.3">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="314.3">(103) set new best for sector 2</Sector>
 <Sector et="314.3">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="314.3">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="314.4">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="317.3">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="317.3">Andre Heiler(32) set new best for sector 3</Sector>
-<Score et="317.3">Andre Heiler(32) lap=2 point=2 t=74.716 et=317.201</Score>
-<Sector et="317.3">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="317.2">Andre Heiler(32) set new best for sector 3</Sector>
+<Score et="317.2">Andre Heiler(32) lap=2 point=2 t=74.716 et=317.201</Score>
+<Sector et="317.2">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="317.3">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="317.3">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="317.3">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="317.3">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="317.3">Cedryk Paetzold(54) set new best for sector 3</Sector>
@@ -629,12 +766,15 @@
 <Sector et="317.3">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="317.3">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="317.3">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="317.3">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="317.3">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="317.3">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="317.5">Lea Luxemburg(46) set new best for sector 3</Sector>
-<Sector et="323.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Score et="323.2">Julian Gerlach(53) lap=2 point=2 t=75.377 et=323.157</Score>
 <Sector et="323.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="323.2">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="323.2">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="323.2">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="323.2">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="323.2">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="323.2">Joshua Preuss(49) set new best for sector 3</Sector>
@@ -645,16 +785,17 @@
 <Sector et="323.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="323.2">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="323.2">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="323.2">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="323.2">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="323.2">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="323.2">(103) set new best for sector 3</Sector>
 <Sector et="323.2">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="323.2">Maino Takao(50) set new best for sector 3</Sector>
-<Sector et="323.5">Lea Luxemburg(46) set new best for sector 3</Sector>
-<Sector et="327.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="327.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Score et="327.9">Dennis Castillo Sims(31) lap=2 point=2 t=73.266 et=327.837</Score>
-<Sector et="327.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="323.4">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="327.8">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Score et="327.8">Dennis Castillo Sims(31) lap=2 point=2 t=73.266 et=327.837</Score>
+<Sector et="327.8">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="327.9">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="327.9">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="327.9">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="327.9">Florian Paul(43) set new best for sector 3</Sector>
@@ -671,13 +812,14 @@
 <Sector et="327.9">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="327.9">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="327.9">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="327.9">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="328.0">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Score et="333.9">Florian Paul(43) lap=2 point=2 t=-1.000 et=333.867</Score>
-<Sector et="339.6">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="339.6">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Score et="339.6">Cedryk Paetzold(54) lap=2 point=2 t=75.794 et=339.567</Score>
 <Sector et="339.6">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="339.6">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="339.6">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="339.6">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="339.6">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="339.6">(103) set new best for sector 3</Sector>
@@ -692,42 +834,55 @@
 <Sector et="339.6">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="339.6">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="339.6">Julian Gerlach(53) set new best for sector 3</Sector>
-<Sector et="339.7">(103) set new best for sector 3</Sector>
-<Sector et="339.7">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="339.6">(103) set new best for sector 3</Sector>
+<Sector et="339.6">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="339.7">Hannes Mathuni(56) set new best for sector 3</Sector>
-<Sector et="343.9">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="343.9">Sandro Raffa(39) set new best for sector 3</Sector>
 <Score et="343.9">Sandro Raffa(39) lap=2 point=2 t=75.199 et=343.836</Score>
 <Sector et="343.9">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="343.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="343.9">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="343.9">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="343.9">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="343.9">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="343.9">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="343.9">(103) set new best for sector 3</Sector>
 <Sector et="343.9">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="343.9">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="343.9">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="343.9">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="343.9">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="343.9">(103) set new best for sector 3</Sector>
 <Sector et="343.9">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="343.9">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="343.9">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="343.9">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="343.9">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="344.1">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="344.5">Andre Heiler(32) set new best for sector 1</Sector>
 <Score et="344.5">Andre Heiler(32) lap=3 point=0 t=101.992 et=344.477</Score>
 <Sector et="344.5">Andre Heiler(32) set new best for sector 1</Sector>
 <Sector et="344.5">Dennis Castillo Sims(31) set new best for sector 1</Sector>
-<Sector et="344.6">Cedryk Paetzold(54) set new best for sector 1</Sector>
-<Sector et="344.6">(103) set new best for sector 1</Sector>
-<Sector et="344.6">Noah Nebling(51) set new best for sector 1</Sector>
-<Sector et="344.6">Hannes Mathuni(56) set new best for sector 1</Sector>
-<Sector et="344.6">Akil Aravinth(42) set new best for sector 1</Sector>
-<Sector et="344.6">Kenny Gomez(61) set new best for sector 1</Sector>
-<Sector et="344.6">Sharl Riccalo(55) set new best for sector 1</Sector>
-<Sector et="344.6">(103) set new best for sector 1</Sector>
-<Sector et="344.6">Martin Felix(57) set new best for sector 1</Sector>
-<Sector et="344.6">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="344.5">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="344.5">Florian Paul(43) set new best for sector 1</Sector>
+<Sector et="344.5">Joshua Preuss(49) set new best for sector 1</Sector>
+<Sector et="344.5">(103) set new best for sector 1</Sector>
+<Sector et="344.5">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="344.5">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="344.5">Akil Aravinth(42) set new best for sector 1</Sector>
+<Sector et="344.5">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="344.5">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="344.5">(103) set new best for sector 1</Sector>
+<Sector et="344.5">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="344.5">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="344.6">Maino Takao(50) set new best for sector 1</Sector>
+<Sector et="344.6">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="344.6">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="344.6">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="344.6">Jomaso Heller(45) set new best for sector 1</Sector>
+<Sector et="344.8">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Score et="355.1">Julian Gerlach(53) lap=3 point=0 t=-1.000 et=355.085</Score>
 <Score et="357.1">Oliver Bolvron(60) lap=2 point=2 t=-1.000 et=357.109</Score>
-<Sector et="359.2">Martin Felix(57) set new best for sector 3</Sector>
 <Score et="359.2">Martin Felix(57) lap=2 point=2 t=79.548 et=359.150</Score>
 <Sector et="359.2">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="359.2">Martin Felix(57) set new best for sector 3</Sector>
@@ -736,49 +891,63 @@
 <Sector et="359.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="359.2">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="359.2">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="359.2">(103) set new best for sector 3</Sector>
 <Sector et="359.2">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="359.2">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="359.2">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="359.2">Andre Heiler(32) set new best for sector 3</Sector>
 <Sector et="359.2">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="359.2">(103) set new best for sector 3</Sector>
+<Sector et="359.2">Tobias Thiele(41) set new best for sector 3</Sector>
+<Sector et="359.2">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="359.2">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="359.2">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="359.2">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="359.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="359.3">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Score et="359.7">Dennis Castillo Sims(31) lap=3 point=0 t=-1.000 et=359.681</Score>
-<Sector et="361.6">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Score et="361.6">Lea Luxemburg(46) lap=2 point=2 t=84.028 et=361.600</Score>
 <Sector et="361.6">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="361.6">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="361.7">Hannes Mathuni(56) set new best for sector 3</Sector>
-<Sector et="361.7">(103) set new best for sector 3</Sector>
-<Sector et="361.7">Joshua Preuss(49) set new best for sector 3</Sector>
-<Sector et="361.7">Kenny Gomez(61) set new best for sector 3</Sector>
-<Sector et="361.7">Noah Nebling(51) set new best for sector 3</Sector>
-<Sector et="361.7">Akil Aravinth(42) set new best for sector 3</Sector>
-<Sector et="361.7">Sharl Riccalo(55) set new best for sector 3</Sector>
-<Sector et="361.7">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="361.7">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="361.7">Martin Felix(57) set new best for sector 3</Sector>
-<Sector et="361.7">Tobias Thiele(41) set new best for sector 3</Sector>
-<Sector et="361.7">Maino Takao(50) set new best for sector 3</Sector>
-<Sector et="361.7">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="361.6">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="361.6">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="361.6">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="361.6">(103) set new best for sector 3</Sector>
+<Sector et="361.6">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="361.6">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="361.6">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="361.6">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="361.6">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="361.6">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="361.6">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="361.6">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="361.6">Tobias Thiele(41) set new best for sector 3</Sector>
+<Sector et="361.6">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="361.6">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="361.7">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="361.7">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="361.7">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="361.7">(103) set new best for sector 3</Sector>
 <Score et="366.5">Florian Paul(43) lap=3 point=0 t=-1.000 et=366.465</Score>
 <Score et="367.8">Cedryk Paetzold(54) lap=3 point=0 t=103.965 et=367.739</Score>
 <Score et="371.8">Sandro Raffa(39) lap=3 point=0 t=103.158 et=371.795</Score>
 <Sector et="371.8">Sandro Raffa(39) set new best for sector 1</Sector>
-<Sector et="371.9">Dennis Castillo Sims(31) set new best for sector 1</Sector>
-<Sector et="371.9">Noah Nebling(51) set new best for sector 1</Sector>
-<Sector et="371.9">Cedryk Paetzold(54) set new best for sector 1</Sector>
-<Sector et="371.9">Florian Paul(43) set new best for sector 1</Sector>
-<Sector et="371.9">Akil Aravinth(42) set new best for sector 1</Sector>
-<Sector et="371.9">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="371.8">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="371.8">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="371.8">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="371.8">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="371.8">Florian Paul(43) set new best for sector 1</Sector>
+<Sector et="371.8">Akil Aravinth(42) set new best for sector 1</Sector>
+<Sector et="371.8">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="371.8">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="371.8">(103) set new best for sector 1</Sector>
+<Sector et="371.8">Joshua Preuss(49) set new best for sector 1</Sector>
+<Sector et="371.8">(103) set new best for sector 1</Sector>
 <Sector et="371.9">Sharl Riccalo(55) set new best for sector 1</Sector>
 <Sector et="371.9">Andre Heiler(32) set new best for sector 1</Sector>
 <Sector et="371.9">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="371.9">Maino Takao(50) set new best for sector 1</Sector>
+<Sector et="371.9">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="371.9">Jomaso Heller(45) set new best for sector 1</Sector>
 <Sector et="371.9">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="371.9">Julian Gerlach(53) set new best for sector 1</Sector>
@@ -787,6 +956,10 @@
 <Score et="377.2">Andre Heiler(32) lap=3 point=1 t=32.701 et=377.178</Score>
 <Sector et="377.2">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="377.2">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="377.2">(103) set new best for sector 2</Sector>
+<Sector et="377.2">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="377.2">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="377.2">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="377.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="377.2">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="377.2">Kenny Gomez(61) set new best for sector 2</Sector>
@@ -795,35 +968,44 @@
 <Sector et="377.2">(103) set new best for sector 2</Sector>
 <Sector et="377.2">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="377.2">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="377.3">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="377.3">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="377.3">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="377.3">Jomaso Heller(45) set new best for sector 2</Sector>
-<Score et="390.3">Oliver Bolvron(60) lap=3 point=0 t=-1.000 et=390.173</Score>
+<Sector et="377.2">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="377.2">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="377.2">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="377.2">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="377.2">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="377.4">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Score et="390.2">Oliver Bolvron(60) lap=3 point=0 t=-1.000 et=390.173</Score>
 <Score et="392.1">Martin Felix(57) lap=3 point=0 t=-1.000 et=392.045</Score>
 <Score et="395.9">Lea Luxemburg(46) lap=3 point=0 t=-1.000 et=395.858</Score>
 <Sector et="399.9">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Score et="399.9">Cedryk Paetzold(54) lap=3 point=1 t=32.153 et=399.892</Score>
 <Sector et="399.9">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Score et="400.0">Cedryk Paetzold(54) lap=3 point=1 t=32.153 et=399.892</Score>
-<Sector et="400.0">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Sector et="400.0">Dennis Castillo Sims(31) set new best for sector 2</Sector>
-<Sector et="400.0">Florian Paul(43) set new best for sector 2</Sector>
-<Sector et="400.0">Akil Aravinth(42) set new best for sector 2</Sector>
-<Sector et="400.0">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="399.9">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="399.9">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="399.9">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="399.9">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="400.0">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="400.0">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="400.0">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="400.0">(103) set new best for sector 2</Sector>
+<Sector et="400.0">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="400.0">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="400.0">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="400.0">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="400.0">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="400.0">(103) set new best for sector 2</Sector>
+<Sector et="400.0">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="400.0">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="400.0">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="400.0">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="400.0">Andre Heiler(32) set new best for sector 2</Sector>
 <Score et="403.9">Sandro Raffa(39) lap=3 point=1 t=-1.000 et=403.859</Score>
 <Score et="410.4">Julian Gerlach(53) lap=3 point=1 t=-1.000 et=410.335</Score>
 <Score et="414.3">Dennis Castillo Sims(31) lap=3 point=1 t=-1.000 et=414.270</Score>
 <Sector et="419.4">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="419.4">Andre Heiler(32) set new best for sector 3</Sector>
 <Score et="419.4">Andre Heiler(32) lap=3 point=2 t=74.873 et=419.350</Score>
 <Sector et="419.4">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="419.4">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="419.4">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="419.4">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="419.4">Florian Paul(43) set new best for sector 3</Sector>
@@ -835,38 +1017,44 @@
 <Sector et="419.4">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="419.4">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="419.4">(103) set new best for sector 3</Sector>
+<Sector et="419.4">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="419.4">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="419.4">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="419.4">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="419.4">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="419.4">Sandro Raffa(39) set new best for sector 3</Sector>
-<Sector et="422.5">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="419.4">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="422.5">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Score et="422.5">Oliver Bolvron(60) lap=3 point=1 t=32.307 et=422.480</Score>
 <Sector et="422.5">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="422.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="422.5">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="422.5">Akil Aravinth(42) set new best for sector 2</Sector>
-<Sector et="422.6">Kenny Gomez(61) set new best for sector 2</Sector>
-<Sector et="422.6">Florian Paul(43) set new best for sector 2</Sector>
-<Sector et="422.6">Hannes Mathuni(56) set new best for sector 2</Sector>
-<Sector et="422.6">Sharl Riccalo(55) set new best for sector 2</Sector>
-<Sector et="422.6">Noah Nebling(51) set new best for sector 2</Sector>
-<Sector et="422.6">Joshua Preuss(49) set new best for sector 2</Sector>
-<Sector et="422.6">(103) set new best for sector 2</Sector>
-<Sector et="422.6">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="422.6">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="422.6">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="422.6">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="422.6">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="422.6">Jomaso Heller(45) set new best for sector 2</Sector>
-<Sector et="422.6">(103) set new best for sector 2</Sector>
-<Score et="425.3">Florian Paul(43) lap=3 point=1 t=-1.000 et=425.203</Score>
+<Sector et="422.5">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="422.5">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="422.5">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="422.5">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="422.5">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="422.5">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="422.5">(103) set new best for sector 2</Sector>
+<Sector et="422.5">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="422.5">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="422.5">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="422.5">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="422.5">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="422.5">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="422.5">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="422.5">(103) set new best for sector 2</Sector>
+<Sector et="422.6">Julian Gerlach(53) set new best for sector 2</Sector>
+<Score et="425.2">Florian Paul(43) lap=3 point=1 t=-1.000 et=425.203</Score>
 <Score et="442.9">Lea Luxemburg(46) lap=3 point=1 t=-1.000 et=442.837</Score>
-<Sector et="443.1">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="443.1">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Score et="443.1">Cedryk Paetzold(54) lap=3 point=2 t=75.308 et=443.046</Score>
 <Sector et="443.1">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="443.1">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="443.1">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="443.1">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="443.1">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="443.1">(103) set new best for sector 3</Sector>
 <Sector et="443.1">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="443.1">Sandro Raffa(39) set new best for sector 3</Sector>
@@ -878,23 +1066,27 @@
 <Sector et="443.1">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="443.1">(103) set new best for sector 3</Sector>
 <Sector et="443.1">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="443.1">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="443.1">Maino Takao(50) set new best for sector 3</Sector>
-<Sector et="443.2">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="443.1">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="443.1">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Score et="446.9">Andre Heiler(32) lap=4 point=0 t=102.353 et=446.830</Score>
-<Score et="452.6">Sandro Raffa(39) lap=3 point=2 t=-1.000 et=452.519</Score>
+<Score et="452.5">Sandro Raffa(39) lap=3 point=2 t=-1.000 et=452.519</Score>
 <Score et="456.0">Julian Gerlach(53) lap=3 point=2 t=-1.000 et=455.924</Score>
 <Score et="457.1">Dennis Castillo Sims(31) lap=3 point=2 t=-1.000 et=457.071</Score>
-<Sector et="465.2">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="465.2">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Score et="465.2">Oliver Bolvron(60) lap=3 point=2 t=74.928 et=465.101</Score>
-<Sector et="465.2">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="465.2">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="465.2">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="465.1">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Score et="465.1">Oliver Bolvron(60) lap=3 point=2 t=74.928 et=465.101</Score>
+<Sector et="465.1">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="465.1">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="465.1">Noah Nebling(51) set new best for sector 3</Sector>
 <Sector et="465.2">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="465.2">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="465.2">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="465.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="465.2">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="465.2">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="465.2">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="465.2">(103) set new best for sector 3</Sector>
 <Sector et="465.2">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="465.2">(103) set new best for sector 3</Sector>
 <Sector et="465.2">Sandro Raffa(39) set new best for sector 3</Sector>
@@ -902,47 +1094,57 @@
 <Sector et="465.2">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="465.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="465.2">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="465.2">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="465.3">Maino Takao(50) set new best for sector 3</Sector>
 <Score et="468.3">Florian Paul(43) lap=3 point=2 t=-1.000 et=468.267</Score>
-<Sector et="471.1">Cedryk Paetzold(54) set new best for sector 1</Sector>
-<Sector et="471.1">Cedryk Paetzold(54) set new best for sector 1</Sector>
-<Score et="471.1">Cedryk Paetzold(54) lap=4 point=0 t=103.276 et=471.015</Score>
-<Sector et="471.1">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="471.0">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Score et="471.0">Cedryk Paetzold(54) lap=4 point=0 t=103.276 et=471.015</Score>
+<Sector et="471.0">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="471.1">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="471.1">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="471.1">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="471.1">Akil Aravinth(42) set new best for sector 1</Sector>
 <Sector et="471.1">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="471.1">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="471.1">Noah Nebling(51) set new best for sector 1</Sector>
 <Sector et="471.1">Sharl Riccalo(55) set new best for sector 1</Sector>
-<Sector et="471.1">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="471.1">Hannes Mathuni(56) set new best for sector 1</Sector>
 <Sector et="471.1">Florian Paul(43) set new best for sector 1</Sector>
 <Sector et="471.1">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="471.1">(103) set new best for sector 1</Sector>
+<Sector et="471.1">Maino Takao(50) set new best for sector 1</Sector>
+<Sector et="471.1">Andre Heiler(32) set new best for sector 1</Sector>
 <Sector et="471.1">(103) set new best for sector 1</Sector>
 <Sector et="471.1">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="471.1">Jomaso Heller(45) set new best for sector 1</Sector>
 <Sector et="471.1">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="471.1">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="479.3">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="479.3">Andre Heiler(32) set new best for sector 2</Sector>
 <Score et="479.3">Andre Heiler(32) lap=4 point=1 t=32.444 et=479.274</Score>
 <Sector et="479.3">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="479.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="479.3">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="479.3">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="479.3">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="479.3">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="479.3">(103) set new best for sector 2</Sector>
 <Sector et="479.3">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="479.3">(103) set new best for sector 2</Sector>
 <Sector et="479.3">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="479.3">Sharl Riccalo(55) set new best for sector 2</Sector>
-<Sector et="479.4">Akil Aravinth(42) set new best for sector 2</Sector>
-<Sector et="479.4">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="479.4">Oliver Bolvron(60) set new best for sector 2</Sector>
-<Sector et="479.4">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="479.4">Jomaso Heller(45) set new best for sector 2</Sector>
-<Sector et="479.4">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="479.3">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="479.3">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="479.3">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="479.3">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="479.3">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="479.3">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="479.3">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="479.3">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="479.4">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Score et="480.7">Sandro Raffa(39) lap=4 point=0 t=-1.000 et=480.700</Score>
 <Score et="485.3">Dennis Castillo Sims(31) lap=4 point=0 t=-1.000 et=485.276</Score>
 <Score et="486.7">Lea Luxemburg(46) lap=3 point=2 t=-1.000 et=486.631</Score>
 <Score et="489.7">Julian Gerlach(53) lap=4 point=0 t=-1.000 et=489.690</Score>
-<Sector et="492.5">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Sector et="492.5">Oliver Bolvron(60) set new best for sector 1</Sector>
 <Score et="492.5">Oliver Bolvron(60) lap=4 point=0 t=102.251 et=492.424</Score>
 <Sector et="492.5">Oliver Bolvron(60) set new best for sector 1</Sector>
@@ -952,17 +1154,21 @@
 <Sector et="492.5">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="492.5">Kenny Gomez(61) set new best for sector 1</Sector>
 <Sector et="492.5">Akil Aravinth(42) set new best for sector 1</Sector>
+<Sector et="492.5">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="492.5">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="492.5">Andre Heiler(32) set new best for sector 1</Sector>
+<Sector et="492.5">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Sector et="492.5">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="492.5">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="492.5">(103) set new best for sector 1</Sector>
 <Sector et="492.5">Tobias Thiele(41) set new best for sector 1</Sector>
+<Sector et="492.5">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="492.5">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="492.5">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="492.5">Jomaso Heller(45) set new best for sector 1</Sector>
 <Score et="497.4">Florian Paul(43) lap=4 point=0 t=-1.000 et=497.335</Score>
+<Sector et="505.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Score et="505.2">Cedryk Paetzold(54) lap=4 point=1 t=34.147 et=505.162</Score>
-<Sector et="505.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
-<Sector et="505.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="505.2">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="505.2">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="505.2">Florian Paul(43) set new best for sector 2</Sector>
@@ -971,13 +1177,17 @@
 <Sector et="505.2">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="505.2">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="505.2">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="505.2">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="505.2">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="505.2">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="505.2">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="505.2">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="505.2">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="505.2">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="505.2">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="505.2">(103) set new best for sector 2</Sector>
+<Sector et="505.2">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="505.3">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="513.0">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="513.0">Sandro Raffa(39) set new best for sector 2</Sector>
 <Score et="513.0">Sandro Raffa(39) lap=4 point=1 t=32.241 et=512.941</Score>
 <Sector et="513.0">Sandro Raffa(39) set new best for sector 2</Sector>
@@ -985,6 +1195,8 @@
 <Sector et="513.0">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="513.0">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="513.0">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="513.0">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="513.0">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="513.0">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="513.0">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="513.0">Sharl Riccalo(55) set new best for sector 2</Sector>
@@ -994,13 +1206,15 @@
 <Sector et="513.0">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="513.0">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="513.0">Jomaso Heller(45) set new best for sector 2</Sector>
+<Sector et="513.0">(103) set new best for sector 2</Sector>
 <Sector et="513.0">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="513.0">Julian Gerlach(53) set new best for sector 2</Sector>
 <Score et="514.6">Lea Luxemburg(46) lap=4 point=0 t=-1.000 et=514.531</Score>
+<Sector et="517.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Score et="517.4">Dennis Castillo Sims(31) lap=4 point=1 t=32.075 et=517.351</Score>
 <Sector et="517.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
-<Sector et="517.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
-<Sector et="517.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="517.4">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="517.4">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="517.4">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="517.4">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="517.4">(103) set new best for sector 2</Sector>
@@ -1013,13 +1227,16 @@
 <Sector et="517.4">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="517.4">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="517.4">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="517.4">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="517.4">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="517.4">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="517.4">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="521.4">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="521.4">Andre Heiler(32) set new best for sector 3</Sector>
-<Score et="521.4">Andre Heiler(32) lap=4 point=2 t=74.482 et=521.312</Score>
-<Sector et="521.4">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="521.3">Andre Heiler(32) set new best for sector 3</Sector>
+<Score et="521.3">Andre Heiler(32) lap=4 point=2 t=74.482 et=521.312</Score>
+<Sector et="521.3">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="521.3">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="521.4">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="521.4">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="521.4">Hannes Mathuni(56) set new best for sector 3</Sector>
 <Sector et="521.4">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="521.4">Kenny Gomez(61) set new best for sector 3</Sector>
@@ -1035,15 +1252,18 @@
 <Sector et="521.4">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="521.4">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="521.4">(103) set new best for sector 3</Sector>
-<Score et="521.5">Julian Gerlach(53) lap=4 point=1 t=31.711 et=521.401</Score>
-<Sector et="521.5">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="521.5">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="521.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Score et="521.4">Julian Gerlach(53) lap=4 point=1 t=31.711 et=521.401</Score>
+<Sector et="521.4">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="521.4">Julian Gerlach(53) set new best for sector 2</Sector>
+<Sector et="521.4">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="521.5">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="521.5">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="521.5">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="521.5">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="521.5">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="521.5">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="521.5">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="521.5">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="521.5">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="521.5">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="521.5">Martin Felix(57) set new best for sector 2</Sector>
@@ -1051,10 +1271,12 @@
 <Sector et="521.5">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="521.5">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="521.5">(103) set new best for sector 2</Sector>
+<Sector et="521.5">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="521.5">Lea Luxemburg(46) set new best for sector 2</Sector>
-<Sector et="525.0">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Score et="525.0">Oliver Bolvron(60) lap=4 point=1 t=32.535 et=524.959</Score>
 <Sector et="525.0">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="525.0">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="525.0">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="525.0">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="525.0">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="525.0">Joshua Preuss(49) set new best for sector 2</Sector>
@@ -1066,31 +1288,38 @@
 <Sector et="525.0">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="525.0">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="525.0">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="525.0">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="525.0">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="525.0">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="525.0">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="525.0">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="539.3">Florian Paul(43) set new best for sector 2</Sector>
+<Sector et="525.1">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="539.3">Florian Paul(43) set new best for sector 2</Sector>
 <Score et="539.3">Florian Paul(43) lap=4 point=1 t=41.963 et=539.298</Score>
 <Sector et="539.3">Florian Paul(43) set new best for sector 2</Sector>
-<Sector et="539.4">Kenny Gomez(61) set new best for sector 2</Sector>
-<Sector et="539.4">Hannes Mathuni(56) set new best for sector 2</Sector>
-<Sector et="539.4">(103) set new best for sector 2</Sector>
-<Sector et="539.4">Joshua Preuss(49) set new best for sector 2</Sector>
-<Sector et="539.4">Sharl Riccalo(55) set new best for sector 2</Sector>
-<Sector et="539.4">Noah Nebling(51) set new best for sector 2</Sector>
-<Sector et="539.4">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="539.4">Oliver Bolvron(60) set new best for sector 2</Sector>
-<Sector et="539.4">Maino Takao(50) set new best for sector 2</Sector>
-<Sector et="539.4">Sandro Raffa(39) set new best for sector 2</Sector>
-<Sector et="539.4">Martin Felix(57) set new best for sector 2</Sector>
-<Sector et="539.4">Tobias Thiele(41) set new best for sector 2</Sector>
+<Sector et="539.3">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="539.3">Cedryk Paetzold(54) set new best for sector 2</Sector>
+<Sector et="539.3">Kenny Gomez(61) set new best for sector 2</Sector>
+<Sector et="539.3">Hannes Mathuni(56) set new best for sector 2</Sector>
+<Sector et="539.3">(103) set new best for sector 2</Sector>
+<Sector et="539.3">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="539.3">Sharl Riccalo(55) set new best for sector 2</Sector>
+<Sector et="539.3">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="539.3">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="539.3">Akil Aravinth(42) set new best for sector 2</Sector>
+<Sector et="539.3">Oliver Bolvron(60) set new best for sector 2</Sector>
+<Sector et="539.3">Maino Takao(50) set new best for sector 2</Sector>
+<Sector et="539.3">Sandro Raffa(39) set new best for sector 2</Sector>
+<Sector et="539.3">Martin Felix(57) set new best for sector 2</Sector>
+<Sector et="539.3">Tobias Thiele(41) set new best for sector 2</Sector>
 <Sector et="539.4">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="539.4">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="547.5">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="539.4">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Score et="547.5">Lea Luxemburg(46) lap=4 point=1 t=32.883 et=547.415</Score>
 <Sector et="547.5">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="547.5">Dennis Castillo Sims(31) set new best for sector 2</Sector>
 <Sector et="547.5">Lea Luxemburg(46) set new best for sector 2</Sector>
+<Sector et="547.5">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="547.5">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="547.5">Joshua Preuss(49) set new best for sector 2</Sector>
 <Sector et="547.5">Kenny Gomez(61) set new best for sector 2</Sector>
@@ -1099,13 +1328,14 @@
 <Sector et="547.5">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="547.5">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="547.5">Noah Nebling(51) set new best for sector 2</Sector>
+<Sector et="547.5">Martin Felix(57) set new best for sector 2</Sector>
 <Sector et="547.5">Oliver Bolvron(60) set new best for sector 2</Sector>
 <Sector et="547.5">(103) set new best for sector 2</Sector>
 <Sector et="547.5">Sandro Raffa(39) set new best for sector 2</Sector>
 <Sector et="547.5">Maino Takao(50) set new best for sector 2</Sector>
 <Sector et="547.5">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="547.5">Tobias Thiele(41) set new best for sector 2</Sector>
-<Sector et="548.7">Andre Heiler(32) set new best for sector 1</Sector>
+<Sector et="547.5">Julian Gerlach(53) set new best for sector 2</Sector>
 <Sector et="548.7">Andre Heiler(32) set new best for sector 1</Sector>
 <Score et="548.7">Andre Heiler(32) lap=5 point=0 t=101.786 et=548.616</Score>
 <Sector et="548.7">Andre Heiler(32) set new best for sector 1</Sector>
@@ -1116,16 +1346,21 @@
 <Sector et="548.7">Kenny Gomez(61) set new best for sector 1</Sector>
 <Sector et="548.7">Noah Nebling(51) set new best for sector 1</Sector>
 <Sector et="548.7">Joshua Preuss(49) set new best for sector 1</Sector>
+<Sector et="548.7">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="548.7">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="548.7">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="548.7">(103) set new best for sector 1</Sector>
 <Sector et="548.7">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="548.7">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="548.7">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="548.7">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="548.7">Jomaso Heller(45) set new best for sector 1</Sector>
 <Sector et="548.7">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="548.7">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="550.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
-<Sector et="550.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Score et="550.2">Cedryk Paetzold(54) lap=4 point=2 t=79.122 et=550.137</Score>
 <Sector et="550.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="550.2">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="550.2">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="550.2">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="550.2">Hannes Mathuni(56) set new best for sector 3</Sector>
@@ -1137,27 +1372,32 @@
 <Sector et="550.2">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="550.2">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="550.2">(103) set new best for sector 3</Sector>
+<Sector et="550.2">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="550.2">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="550.2">Jomaso Heller(45) set new best for sector 3</Sector>
+<Sector et="550.2">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="550.2">Sandro Raffa(39) set new best for sector 3</Sector>
-<Sector et="555.4">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="550.2">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="555.4">Sandro Raffa(39) set new best for sector 3</Sector>
 <Score et="555.4">Sandro Raffa(39) lap=4 point=2 t=74.698 et=555.398</Score>
 <Sector et="555.4">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="555.4">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="555.5">Florian Paul(43) set new best for sector 3</Sector>
-<Sector et="555.5">Kenny Gomez(61) set new best for sector 3</Sector>
-<Sector et="555.5">Akil Aravinth(42) set new best for sector 3</Sector>
-<Sector et="555.5">Joshua Preuss(49) set new best for sector 3</Sector>
-<Sector et="555.5">Sharl Riccalo(55) set new best for sector 3</Sector>
-<Sector et="555.5">Hannes Mathuni(56) set new best for sector 3</Sector>
-<Sector et="555.5">Noah Nebling(51) set new best for sector 3</Sector>
-<Sector et="555.5">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="555.5">Martin Felix(57) set new best for sector 3</Sector>
-<Sector et="555.5">(103) set new best for sector 3</Sector>
+<Sector et="555.4">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="555.4">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="555.4">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="555.4">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="555.4">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="555.4">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="555.4">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="555.4">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="555.4">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="555.4">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="555.4">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="555.4">(103) set new best for sector 3</Sector>
 <Sector et="555.5">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="555.5">Maino Takao(50) set new best for sector 3</Sector>
-<Sector et="559.0">Dennis Castillo Sims(31) set new best for sector 3</Sector>
+<Sector et="555.5">Julian Gerlach(53) set new best for sector 3</Sector>
+<Sector et="555.5">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="559.0">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Score et="559.0">Dennis Castillo Sims(31) lap=4 point=2 t=73.681 et=558.957</Score>
 <Sector et="559.0">Dennis Castillo Sims(31) set new best for sector 3</Sector>
@@ -1170,19 +1410,23 @@
 <Sector et="559.0">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="559.0">Andre Heiler(32) set new best for sector 3</Sector>
 <Sector et="559.0">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="559.0">(103) set new best for sector 3</Sector>
+<Sector et="559.0">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="559.0">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="559.0">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="559.0">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="559.0">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="559.0">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="559.0">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="559.0">Julian Gerlach(53) set new best for sector 3</Sector>
-<Sector et="563.7">Julian Gerlach(53) set new best for sector 3</Sector>
 <Score et="563.7">Julian Gerlach(53) lap=4 point=2 t=73.945 et=563.635</Score>
 <Sector et="563.7">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="563.7">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="563.7">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="563.7">Kenny Gomez(61) set new best for sector 3</Sector>
 <Sector et="563.7">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="563.7">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="563.7">Joshua Preuss(49) set new best for sector 3</Sector>
 <Sector et="563.7">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="563.7">Sharl Riccalo(55) set new best for sector 3</Sector>
 <Sector et="563.7">Noah Nebling(51) set new best for sector 3</Sector>
@@ -1191,12 +1435,15 @@
 <Sector et="563.7">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="563.7">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="563.7">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="563.7">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="563.7">(103) set new best for sector 3</Sector>
+<Sector et="563.7">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="563.7">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="563.7">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="567.5">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="567.5">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Score et="567.5">Oliver Bolvron(60) lap=4 point=2 t=75.040 et=567.465</Score>
 <Sector et="567.5">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="567.5">Dennis Castillo Sims(31) set new best for sector 3</Sector>
 <Sector et="567.5">Cedryk Paetzold(54) set new best for sector 3</Sector>
 <Sector et="567.5">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="567.5">Noah Nebling(51) set new best for sector 3</Sector>
@@ -1208,20 +1455,23 @@
 <Sector et="567.5">Andre Heiler(32) set new best for sector 3</Sector>
 <Sector et="567.5">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="567.5">Martin Felix(57) set new best for sector 3</Sector>
+<Sector et="567.5">Tobias Thiele(41) set new best for sector 3</Sector>
+<Sector et="567.5">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="567.5">Maino Takao(50) set new best for sector 3</Sector>
 <Sector et="567.5">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="567.5">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="567.5">(103) set new best for sector 3</Sector>
-<Score et="583.7">Cedryk Paetzold(54) lap=5 point=0 t=-1.000 et=583.638</Score>
-<Sector et="585.8">Andre Heiler(32) set new best for sector 2</Sector>
-<Sector et="585.8">Andre Heiler(32) set new best for sector 2</Sector>
+<Score et="583.6">Cedryk Paetzold(54) lap=5 point=0 t=-1.000 et=583.638</Score>
 <Score et="585.8">Andre Heiler(32) lap=5 point=1 t=37.106 et=585.722</Score>
 <Sector et="585.8">Andre Heiler(32) set new best for sector 2</Sector>
+<Sector et="585.8">Andre Heiler(32) set new best for sector 2</Sector>
 <Sector et="585.8">Dennis Castillo Sims(31) set new best for sector 2</Sector>
+<Sector et="585.8">Florian Paul(43) set new best for sector 2</Sector>
 <Sector et="585.8">Hannes Mathuni(56) set new best for sector 2</Sector>
 <Sector et="585.8">Noah Nebling(51) set new best for sector 2</Sector>
 <Sector et="585.8">Akil Aravinth(42) set new best for sector 2</Sector>
 <Sector et="585.8">Joshua Preuss(49) set new best for sector 2</Sector>
+<Sector et="585.8">Cedryk Paetzold(54) set new best for sector 2</Sector>
 <Sector et="585.8">Kenny Gomez(61) set new best for sector 2</Sector>
 <Sector et="585.8">Sharl Riccalo(55) set new best for sector 2</Sector>
 <Sector et="585.8">Martin Felix(57) set new best for sector 2</Sector>
@@ -1233,14 +1483,15 @@
 <Sector et="585.8">Lea Luxemburg(46) set new best for sector 2</Sector>
 <Sector et="585.8">Jomaso Heller(45) set new best for sector 2</Sector>
 <Sector et="585.8">Julian Gerlach(53) set new best for sector 2</Sector>
-<Sector et="586.2">Dennis Castillo Sims(31) set new best for sector 1</Sector>
-<Sector et="586.2">Dennis Castillo Sims(31) set new best for sector 1</Sector>
-<Score et="586.2">Dennis Castillo Sims(31) lap=5 point=0 t=100.832 et=586.108</Score>
-<Sector et="586.2">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Sector et="586.1">Dennis Castillo Sims(31) set new best for sector 1</Sector>
+<Score et="586.1">Dennis Castillo Sims(31) lap=5 point=0 t=100.832 et=586.108</Score>
+<Sector et="586.1">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Sector et="586.2">Florian Paul(43) set new best for sector 1</Sector>
 <Sector et="586.2">Akil Aravinth(42) set new best for sector 1</Sector>
 <Sector et="586.2">Cedryk Paetzold(54) set new best for sector 1</Sector>
 <Sector et="586.2">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="586.2">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="586.2">Noah Nebling(51) set new best for sector 1</Sector>
 <Sector et="586.2">Joshua Preuss(49) set new best for sector 1</Sector>
 <Sector et="586.2">Sharl Riccalo(55) set new best for sector 1</Sector>
 <Sector et="586.2">(103) set new best for sector 1</Sector>
@@ -1249,44 +1500,60 @@
 <Sector et="586.2">Martin Felix(57) set new best for sector 1</Sector>
 <Sector et="586.2">Sandro Raffa(39) set new best for sector 1</Sector>
 <Sector et="586.2">Maino Takao(50) set new best for sector 1</Sector>
+<Sector et="586.2">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="586.2">Lea Luxemburg(46) set new best for sector 1</Sector>
 <Sector et="586.2">Jomaso Heller(45) set new best for sector 1</Sector>
 <Sector et="586.2">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="587.2">Florian Paul(43) set new best for sector 3</Sector>
-<Sector et="587.2">Florian Paul(43) set new best for sector 3</Sector>
 <Score et="587.2">Florian Paul(43) lap=4 point=2 t=89.864 et=587.199</Score>
 <Sector et="587.2">Florian Paul(43) set new best for sector 3</Sector>
 <Sector et="587.2">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="587.3">Joshua Preuss(49) set new best for sector 3</Sector>
-<Sector et="587.3">Sharl Riccalo(55) set new best for sector 3</Sector>
-<Sector et="587.3">Oliver Bolvron(60) set new best for sector 3</Sector>
-<Sector et="587.3">Akil Aravinth(42) set new best for sector 3</Sector>
-<Sector et="587.3">Andre Heiler(32) set new best for sector 3</Sector>
-<Sector et="587.3">(103) set new best for sector 3</Sector>
+<Sector et="587.2">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="587.2">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="587.2">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="587.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
+<Sector et="587.2">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="587.2">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="587.2">Oliver Bolvron(60) set new best for sector 3</Sector>
+<Sector et="587.2">Akil Aravinth(42) set new best for sector 3</Sector>
+<Sector et="587.2">Andre Heiler(32) set new best for sector 3</Sector>
+<Sector et="587.2">(103) set new best for sector 3</Sector>
+<Sector et="587.2">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="587.2">Martin Felix(57) set new best for sector 3</Sector>
 <Sector et="587.3">Sandro Raffa(39) set new best for sector 3</Sector>
 <Sector et="587.3">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="587.3">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="587.3">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="587.3">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Score et="587.5">Sandro Raffa(39) lap=5 point=0 t=-1.000 et=587.451</Score>
-<Sector et="590.9">Julian Gerlach(53) set new best for sector 1</Sector>
 <Score et="590.9">Julian Gerlach(53) lap=5 point=0 t=101.171 et=590.860</Score>
 <Sector et="590.9">Julian Gerlach(53) set new best for sector 1</Sector>
 <Sector et="590.9">Julian Gerlach(53) set new best for sector 1</Sector>
-<Sector et="590.9">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="590.9">Dennis Castillo Sims(31) set new best for sector 1</Sector>
 <Score et="590.9">Lea Luxemburg(46) lap=4 point=2 t=76.358 et=590.890</Score>
 <Sector et="590.9">Lea Luxemburg(46) set new best for sector 3</Sector>
 <Sector et="590.9">Dennis Castillo Sims(31) set new best for sector 3</Sector>
-<Sector et="591.0">Noah Nebling(51) set new best for sector 1</Sector>
-<Sector et="591.0">Hannes Mathuni(56) set new best for sector 1</Sector>
-<Sector et="591.0">Sharl Riccalo(55) set new best for sector 1</Sector>
-<Sector et="591.0">Oliver Bolvron(60) set new best for sector 1</Sector>
-<Sector et="591.0">Lea Luxemburg(46) set new best for sector 1</Sector>
-<Sector et="591.0">Andre Heiler(32) set new best for sector 1</Sector>
-<Sector et="591.0">Florian Paul(43) set new best for sector 3</Sector>
-<Sector et="591.0">Sandro Raffa(39) set new best for sector 1</Sector>
-<Sector et="591.0">Sharl Riccalo(55) set new best for sector 3</Sector>
-<Sector et="591.0">Tobias Thiele(41) set new best for sector 1</Sector>
+<Sector et="590.9">Lea Luxemburg(46) set new best for sector 3</Sector>
+<Sector et="590.9">Cedryk Paetzold(54) set new best for sector 1</Sector>
+<Sector et="590.9">Florian Paul(43) set new best for sector 1</Sector>
+<Sector et="590.9">Joshua Preuss(49) set new best for sector 1</Sector>
+<Sector et="590.9">Kenny Gomez(61) set new best for sector 1</Sector>
+<Sector et="590.9">Noah Nebling(51) set new best for sector 1</Sector>
+<Sector et="590.9">Hannes Mathuni(56) set new best for sector 1</Sector>
+<Sector et="590.9">Sharl Riccalo(55) set new best for sector 1</Sector>
+<Sector et="590.9">Oliver Bolvron(60) set new best for sector 1</Sector>
+<Sector et="590.9">Lea Luxemburg(46) set new best for sector 1</Sector>
+<Sector et="590.9">Andre Heiler(32) set new best for sector 1</Sector>
+<Sector et="590.9">Florian Paul(43) set new best for sector 3</Sector>
+<Sector et="590.9">Hannes Mathuni(56) set new best for sector 3</Sector>
+<Sector et="590.9">Joshua Preuss(49) set new best for sector 3</Sector>
+<Sector et="590.9">Kenny Gomez(61) set new best for sector 3</Sector>
+<Sector et="590.9">Noah Nebling(51) set new best for sector 3</Sector>
+<Sector et="590.9">Akil Aravinth(42) set new best for sector 1</Sector>
+<Sector et="590.9">Martin Felix(57) set new best for sector 1</Sector>
+<Sector et="590.9">Sandro Raffa(39) set new best for sector 1</Sector>
+<Sector et="590.9">Sharl Riccalo(55) set new best for sector 3</Sector>
+<Sector et="590.9">Tobias Thiele(41) set new best for sector 1</Sector>
 <Sector et="591.0">Oliver Bolvron(60) set new best for sector 3</Sector>
 <Sector et="591.0">Maino Takao(50) set new best for sector 1</Sector>
 <Sector et="591.0">Martin Felix(57) set new best for sector 3</Sector>
@@ -1295,6 +1562,9 @@
 <Sector et="591.0">Akil Aravinth(42) set new best for sector 3</Sector>
 <Sector et="591.0">(103) set new best for sector 1</Sector>
 <Sector et="591.0">(103) set new best for sector 3</Sector>
+<Sector et="591.0">Maino Takao(50) set new best for sector 3</Sector>
+<Sector et="591.0">Sandro Raffa(39) set new best for sector 3</Sector>
+<Sector et="591.0">Jomaso Heller(45) set new best for sector 3</Sector>
 <Sector et="591.0">Tobias Thiele(41) set new best for sector 3</Sector>
 <Sector et="591.0">Julian Gerlach(53) set new best for sector 3</Sector>
 <Sector et="591.2">Cedryk Paetzold(54) set new best for sector 3</Sector>
@@ -1303,6 +1573,7 @@
 <MostLapsCompleted>5</MostLapsCompleted>
 <Driver>
 <Name>Dennis Castillo Sims</Name>
+<SteamID>76561198028310414</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_31.VEH</VehFile>
 <UpgradeCode>e5270000 00000000 00000000 00000000</UpgradeCode>
@@ -1326,12 +1597,13 @@
 <Lap num="5" p="1" et="485.2761" s1="32.0746" s2="41.6060" s3="27.1509" fuel="0.071" twfl="0.945" twfr="0.953" twrl="0.957" twrr="0.961" fcompound="4,Wet" rcompound="4,Wet">100.8315</Lap>
 <BestLapTime>100.8315</BestLapTime>
 <Laps>5</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="5">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Julian Gerlach</Name>
+<SteamID>76561198215701952</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_32.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1361,6 +1633,7 @@
 </Driver>
 <Driver>
 <Name>Andre Heiler</Name>
+<SteamID>76561198269354097</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_07_1.VEH</VehFile>
 <UpgradeCode>e5170000 00000000 00000000 00000000</UpgradeCode>
@@ -1390,6 +1663,7 @@
 </Driver>
 <Driver>
 <Name>Oliver Bolvron</Name>
+<SteamID>76561198285253229</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_17.VEH</VehFile>
 <UpgradeCode>e5071000 00000000 00000000 00000000</UpgradeCode>
@@ -1413,12 +1687,13 @@
 <Lap num="5" p="4" et="492.4243" s1="32.5348" s2="42.5057" s3="27.5089" fuel="0.067" twfl="0.914" twfr="0.929" twrl="0.922" twrr="0.925" fcompound="4,Wet" rcompound="4,Wet">102.5494</Lap>
 <BestLapTime>102.2515</BestLapTime>
 <Laps>5</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Florian Paul</Name>
+<SteamID>76561199251020559</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_73.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1447,6 +1722,7 @@
 </Driver>
 <Driver>
 <Name>Sandro Raffa</Name>
+<SteamID>76561198161535393</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_91.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1476,6 +1752,7 @@
 </Driver>
 <Driver>
 <Name>Cedryk Paetzold</Name>
+<SteamID>76561198411488184</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_42.VEH</VehFile>
 <UpgradeCode>e5270000 00000000 00000000 00000000</UpgradeCode>
@@ -1505,6 +1782,7 @@
 </Driver>
 <Driver>
 <Name>Martin Felix</Name>
+<SteamID>76561199735955201</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_89.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1532,6 +1810,7 @@
 </Driver>
 <Driver>
 <Name>Lea Luxemburg</Name>
+<SteamID>76561199165916648</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_48.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1560,6 +1839,7 @@
 </Driver>
 <Driver>
 <Name>Joshua Preuss</Name>
+<SteamID>76561198072312130</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_16_1.VEH</VehFile>
 <UpgradeCode>e5970000 00000000 00000000 00000000</UpgradeCode>
@@ -1582,6 +1862,7 @@
 </Driver>
 <Driver>
 <Name>Noah Nebling</Name>
+<SteamID>76561198198890734</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_35.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1604,6 +1885,7 @@
 </Driver>
 <Driver>
 <Name>Hannes Mathuni</Name>
+<SteamID>76561198327991706</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_09.VEH</VehFile>
 <UpgradeCode>e5170000 00000000 00000000 00000000</UpgradeCode>
@@ -1626,6 +1908,7 @@
 </Driver>
 <Driver>
 <Name>Jomaso Heller</Name>
+<SteamID>76561199022498544</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_08.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1648,6 +1931,7 @@
 </Driver>
 <Driver>
 <Name>Tobias Thiele</Name>
+<SteamID>76561198088746398</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_15.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1670,6 +1954,7 @@
 </Driver>
 <Driver>
 <Name>Maino Takao</Name>
+<SteamID>76561198346739695</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_21.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1692,6 +1977,7 @@
 </Driver>
 <Driver>
 <Name>Sharl Riccalo</Name>
+<SteamID>76561198073671871</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_27.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1714,6 +2000,7 @@
 </Driver>
 <Driver>
 <Name>Kenny Gomez</Name>
+<SteamID>76561198079355033</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_25.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>
@@ -1736,6 +2023,7 @@
 </Driver>
 <Driver>
 <Name>Akil Aravinth</Name>
+<SteamID>76561198385438048</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_36.VEH</VehFile>
 <UpgradeCode>e5070000 00000000 00000000 00000000</UpgradeCode>

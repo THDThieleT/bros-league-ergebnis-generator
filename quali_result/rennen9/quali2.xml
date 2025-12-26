@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>F1 Bros S13</ServerName>
+<ClientFuelVisible>3</ClientFuelVisible>
+<PlayerFile>player3</PlayerFile>
+<DateTime>1765124430</DateTime>
+<TimeString>2025/12/07 17:20:30</TimeString>
+<Mod>S13_V2_10</Mod>
+<Season></Season>
+<TrackVenue>GPVWC, 2024 Season</TrackVenue>
+<TrackCourse>Red Bull Ring (GPVWC)</TrackCourse>
+<TrackEvent>Red Bull Ring (2024)</TrackEvent>
+<TrackData>D:\rfactor2-dedicated\Installed\Locations\GPVWC24_Spielberg\13.01FB\S13_OS_Layout.mas</TrackData>
+<TrackLength>4307.5</TrackLength>
+<GameVersion>1.1134</GameVersion>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="30000" download="10000">Custom</ConnectionType>
+<RaceLaps>47</RaceLaps>
+<RaceTime>75</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>65</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|Alpine_F1_Team|AstonGT4SC|Audi_F1_Team|BMW_Williams|Cadillac_F1_Team|Jordan_Grand_Prix|LUNZiT_Red_Bull_Racing|McLaren_F1_Team|Mercedes-AMGSC|Mercedes_AMG|Scuderia_Ferrari|Scuderia_Toro_Rosso|Toyota_F1_Team</VehiclesAllowed>
+<ParcFerme>1</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>255</FreeSettings>
+<FixedUpgrades>1</FixedUpgrades>
+<Qualify2>
+<DateTime>1765133131</DateTime>
+<TimeString>2025/12/07 19:45:31</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>10</Minutes>
+<Stream>
+<Chat et="0.0">Cedryk Paetzold: 2l</Chat>
+<Chat et="16.3">Dennis Castillo Sims: 2l</Chat>
+<Score et="49.8">Julian Klaffenboeck(22) lap=0 point=1 t=-1.000 et=49.822</Score>
+<Score et="51.1">Sandro Raffa(0) lap=0 point=1 t=-1.000 et=51.181</Score>
+<Score et="52.1">Florian Paul(15) lap=0 point=1 t=-1.000 et=52.046</Score>
+<Score et="52.5">Kenny Gomez(17) lap=0 point=1 t=-1.000 et=52.420</Score>
+<Score et="53.9">Cedryk Paetzold(19) lap=0 point=1 t=-1.000 et=53.849</Score>
+<Score et="54.2">Noah Nebling(26) lap=0 point=1 t=-1.000 et=54.105</Score>
+<Score et="54.4">Philipp Stange(11) lap=0 point=1 t=-1.000 et=54.454</Score>
+<Score et="56.9">Jomaso Heller(16) lap=0 point=1 t=-1.000 et=56.887</Score>
+<Score et="60.9">Dennis Castillo Sims(3) lap=0 point=1 t=-1.000 et=60.926</Score>
+<Score et="65.4">Julian Gerlach(4) lap=0 point=1 t=-1.000 et=65.381</Score>
+<Chat et="67.2">Noah Nebling: 2l</Chat>
+<Command from="Simon Kaufmann" nodeid="17" et="72.2">/dq Jan-Niklas Weiter</Command>
+<Vote et="72.2">Simon Kaufmann: /dq Jan-Niklas Weiter</Vote>
+<Command from="Simon Kaufmann" nodeid="17" et="75.8">/dq Lea Luxemburg</Command>
+<Vote et="75.8">Simon Kaufmann: /dq Lea Luxemburg</Vote>
+<Command from="Simon Kaufmann" nodeid="17" et="80.2">/dq Maino Takao</Command>
+<Vote et="80.2">Simon Kaufmann: /dq Maino Takao</Vote>
+<Score et="81.1">Julian Klaffenboeck(22) lap=0 point=2 t=-1.000 et=81.136</Score>
+<Score et="83.2">Sandro Raffa(0) lap=0 point=2 t=-1.000 et=83.214</Score>
+<Command from="Simon Kaufmann" nodeid="17" et="83.3">/dq Mario Wolf</Command>
+<Vote et="83.3">Simon Kaufmann: /dq Mario Wolf</Vote>
+<Score et="84.3">Kenny Gomez(17) lap=0 point=2 t=-1.000 et=84.274</Score>
+<Score et="86.0">Florian Paul(15) lap=0 point=2 t=-1.000 et=86.011</Score>
+<Command from="Simon Kaufmann" nodeid="17" et="86.6">/dq Martin Felix</Command>
+<Vote et="86.6">Simon Kaufmann: /dq Martin Felix</Vote>
+<Score et="87.0">Cedryk Paetzold(19) lap=0 point=2 t=-1.000 et=86.946</Score>
+<Score et="87.5">Noah Nebling(26) lap=0 point=2 t=-1.000 et=87.490</Score>
+<Score et="88.4">Philipp Stange(11) lap=0 point=2 t=-1.000 et=88.422</Score>
+<Score et="89.6">Jomaso Heller(16) lap=0 point=2 t=-1.000 et=89.570</Score>
+<Score et="101.9">Dennis Castillo Sims(3) lap=0 point=2 t=-1.000 et=101.868</Score>
+<Score et="102.3">Julian Klaffenboeck(22) lap=1 point=0 t=-1.000 et=102.310</Score>
+<Score et="104.2">Sandro Raffa(0) lap=1 point=0 t=-1.000 et=104.157</Score>
+<Score et="104.8">Julian Gerlach(4) lap=0 point=2 t=-1.000 et=104.812</Score>
+<Score et="106.0">Kenny Gomez(17) lap=1 point=0 t=-1.000 et=106.020</Score>
+<Score et="108.1">Florian Paul(15) lap=1 point=0 t=-1.000 et=108.058</Score>
+<Score et="111.8">Cedryk Paetzold(19) lap=1 point=0 t=-1.000 et=111.815</Score>
+<Score et="117.2">Noah Nebling(26) lap=1 point=0 t=-1.000 et=117.178</Score>
+<Sector et="118.3">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Score et="118.3">Julian Klaffenboeck(22) lap=1 point=1 t=15.934 et=118.244</Score>
+<Sector et="118.3">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="118.3">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="118.3">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="118.3">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="118.3">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="118.3">(103) set new best for sector 2</Sector>
+<Sector et="118.3">(103) set new best for sector 2</Sector>
+<Sector et="118.3">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="118.3">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="118.3">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="118.3">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="118.3">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="118.3">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="118.3">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="118.3">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="118.3">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="118.3">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="120.2">Sandro Raffa(0) lap=1 point=1 t=16.042 et=120.199</Score>
+<Sector et="120.2">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="120.2">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="120.2">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="120.2">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="120.2">(103) set new best for sector 2</Sector>
+<Sector et="120.2">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="120.2">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="120.2">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="120.2">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="120.2">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="120.2">(103) set new best for sector 2</Sector>
+<Sector et="120.2">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="120.2">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="120.2">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="120.2">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="120.2">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="120.2">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="120.3">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="121.1">Philipp Stange(11) lap=1 point=0 t=-1.000 et=121.079</Score>
+<Score et="122.5">Kenny Gomez(17) lap=1 point=1 t=16.412 et=122.432</Score>
+<Score et="124.0">Jomaso Heller(16) lap=1 point=0 t=-1.000 et=123.933</Score>
+<Score et="124.4">Florian Paul(15) lap=1 point=1 t=16.316 et=124.374</Score>
+<Score et="127.9">Cedryk Paetzold(19) lap=1 point=1 t=16.106 et=127.922</Score>
+<Score et="131.4">Dennis Castillo Sims(3) lap=1 point=0 t=-1.000 et=131.394</Score>
+<Score et="133.4">Noah Nebling(26) lap=1 point=1 t=16.167 et=133.344</Score>
+<Score et="137.3">Philipp Stange(11) lap=1 point=1 t=16.249 et=137.328</Score>
+<Score et="137.7">Julian Gerlach(4) lap=1 point=0 t=-1.000 et=137.656</Score>
+<Score et="140.2">Jomaso Heller(16) lap=1 point=1 t=16.223 et=140.156</Score>
+<Sector et="146.4">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Score et="146.4">Julian Klaffenboeck(22) lap=1 point=2 t=44.046 et=146.356</Score>
+<Sector et="146.4">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="146.4">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="146.4">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="146.4">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="146.4">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="146.4">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="146.4">(103) set new best for sector 3</Sector>
+<Sector et="146.4">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="146.4">(103) set new best for sector 3</Sector>
+<Sector et="146.4">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="146.4">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="146.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="146.4">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="146.4">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="146.4">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="146.4">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="146.4">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="147.5">Dennis Castillo Sims(3) lap=1 point=1 t=16.100 et=147.494</Score>
+<Score et="148.4">Sandro Raffa(0) lap=1 point=2 t=44.245 et=148.402</Score>
+<Sector et="148.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="148.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="148.4">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="148.5">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="148.5">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="148.5">(103) set new best for sector 3</Sector>
+<Sector et="148.5">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="148.5">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="148.5">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="148.5">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="148.5">(103) set new best for sector 3</Sector>
+<Sector et="148.5">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="148.5">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="148.5">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="148.5">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="148.5">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="148.5">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="148.5">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="151.4">Kenny Gomez(17) lap=1 point=2 t=45.370 et=151.390</Score>
+<Score et="153.1">Florian Paul(15) lap=1 point=2 t=45.046 et=153.105</Score>
+<Score et="153.9">Julian Gerlach(4) lap=1 point=1 t=16.176 et=153.832</Score>
+<Score et="156.7">Cedryk Paetzold(19) lap=1 point=2 t=44.828 et=156.643</Score>
+<Score et="162.1">Noah Nebling(26) lap=1 point=2 t=44.857 et=162.035</Score>
+<Sector et="165.6">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Score et="165.6">Julian Klaffenboeck(22) lap=2 point=0 t=63.273 et=165.583</Score>
+<Sector et="165.6">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="165.6">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="165.6">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="165.6">(103) set new best for sector 1</Sector>
+<Sector et="165.6">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="165.6">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="165.6">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="165.6">(103) set new best for sector 1</Sector>
+<Sector et="165.6">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="165.7">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="165.7">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="165.7">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="165.7">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="165.7">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="165.7">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="165.7">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="165.8">Noah Nebling(26) set new best for sector 1</Sector>
+<Score et="166.0">Philipp Stange(11) lap=1 point=2 t=44.873 et=165.952</Score>
+<Score et="167.6">Sandro Raffa(0) lap=2 point=0 t=-1.000 et=167.555</Score>
+<Score et="168.7">Jomaso Heller(16) lap=1 point=2 t=44.764 et=168.697</Score>
+<Sector et="171.8">Kenny Gomez(17) set new best for sector 1</Sector>
+<Score et="171.8">Kenny Gomez(17) lap=2 point=0 t=65.790 et=171.810</Score>
+<Sector et="171.8">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="171.9">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="171.9">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="171.9">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="171.9">(103) set new best for sector 1</Sector>
+<Sector et="171.9">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="171.9">(103) set new best for sector 1</Sector>
+<Sector et="171.9">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="171.9">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="171.9">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="171.9">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="171.9">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="171.9">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="171.9">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="171.9">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="171.9">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="171.9">Noah Nebling(26) set new best for sector 1</Sector>
+<Score et="174.4">Florian Paul(15) lap=2 point=0 t=-1.000 et=174.345</Score>
+<Sector et="175.6">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Score et="175.6">Dennis Castillo Sims(3) lap=1 point=2 t=44.174 et=175.568</Score>
+<Sector et="175.6">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="175.6">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="175.6">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="175.6">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="175.6">(103) set new best for sector 3</Sector>
+<Sector et="175.6">(103) set new best for sector 3</Sector>
+<Sector et="175.6">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="175.6">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="175.6">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="175.6">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="175.6">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="175.6">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="175.6">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="175.6">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="175.6">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="175.6">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="175.7">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="176.4">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Score et="176.4">Cedryk Paetzold(19) lap=2 point=0 t=64.573 et=176.389</Score>
+<Sector et="176.4">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="176.4">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="176.5">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="176.5">(103) set new best for sector 1</Sector>
+<Sector et="176.5">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="176.5">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="176.5">(103) set new best for sector 1</Sector>
+<Sector et="176.5">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="176.5">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="176.5">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="176.5">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="176.5">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="176.5">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="176.5">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="176.5">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="176.5">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="176.5">Noah Nebling(26) set new best for sector 1</Sector>
+<Score et="181.6">Julian Klaffenboeck(22) lap=2 point=1 t=15.939 et=181.523</Score>
+<Sector et="181.6">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="181.6">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="181.6">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="181.6">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="181.6">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="181.6">(103) set new best for sector 2</Sector>
+<Sector et="181.6">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="181.6">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="181.6">(103) set new best for sector 2</Sector>
+<Sector et="181.6">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="181.6">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="181.6">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="181.6">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="181.6">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="181.6">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="181.6">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="181.6">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="181.6">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="181.6">Noah Nebling(26) lap=2 point=0 t=-1.000 et=181.599</Score>
+<Score et="182.0">Julian Gerlach(4) lap=1 point=2 t=44.321 et=181.977</Score>
+<Score et="183.9">Sandro Raffa(0) lap=2 point=1 t=-1.000 et=183.856</Score>
+<Sector et="186.5">Philipp Stange(11) set new best for sector 1</Sector>
+<Score et="186.5">Philipp Stange(11) lap=2 point=0 t=65.409 et=186.489</Score>
+<Sector et="186.5">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="186.5">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="186.5">(103) set new best for sector 1</Sector>
+<Sector et="186.5">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="186.5">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="186.5">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="186.6">(103) set new best for sector 1</Sector>
+<Sector et="186.6">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="186.6">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="186.6">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="186.6">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="186.6">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="186.6">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="186.6">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="186.6">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="186.6">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="186.6">Noah Nebling(26) set new best for sector 1</Sector>
+<Score et="188.4">Jomaso Heller(16) lap=2 point=0 t=64.476 et=188.409</Score>
+<Sector et="188.4">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="188.5">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="188.5">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="188.5">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="188.5">(103) set new best for sector 1</Sector>
+<Sector et="188.5">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="188.5">(103) set new best for sector 1</Sector>
+<Sector et="188.5">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="188.5">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="188.5">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="188.5">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="188.5">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="188.5">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="188.5">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="188.5">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="188.5">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="188.5">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="188.5">Noah Nebling(26) set new best for sector 1</Sector>
+<Sector et="188.7">Kenny Gomez(17) set new best for sector 2</Sector>
+<Score et="188.7">Kenny Gomez(17) lap=2 point=1 t=16.860 et=188.670</Score>
+<Sector et="188.7">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="188.7">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="188.7">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="188.7">(103) set new best for sector 2</Sector>
+<Sector et="188.7">(103) set new best for sector 2</Sector>
+<Sector et="188.7">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="188.7">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="188.7">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="188.7">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="188.7">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="188.7">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="188.7">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="188.7">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="188.7">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="188.7">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="188.8">Noah Nebling(26) set new best for sector 2</Sector>
+<Sector et="188.8">Mario Wolf(14) set new best for sector 2</Sector>
+<Incident et="189.9">Dennis Castillo Sims(3) reported contact (1180.61) with Immovable</Incident>
+<Incident et="189.9">Dennis Castillo Sims(3) reported contact (3450.40) with Immovable</Incident>
+<Incident et="190.0">Dennis Castillo Sims(3) reported contact (32.06) with Wheel</Incident>
+<Sector et="192.6">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Score et="192.6">Cedryk Paetzold(19) lap=2 point=1 t=16.203 et=192.592</Score>
+<Sector et="192.6">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="192.6">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="192.6">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="192.6">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="192.6">(103) set new best for sector 2</Sector>
+<Sector et="192.6">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="192.6">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="192.6">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="192.6">(103) set new best for sector 2</Sector>
+<Sector et="192.6">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="192.6">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="192.6">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="192.6">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="192.7">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="192.7">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="192.7">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="192.7">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="194.4">Florian Paul(15) lap=2 point=1 t=-1.000 et=194.328</Score>
+<Score et="198.1">Noah Nebling(26) lap=2 point=1 t=-1.000 et=198.078</Score>
+<Sector et="201.5">Julian Gerlach(4) set new best for sector 1</Sector>
+<Score et="201.5">Julian Gerlach(4) lap=2 point=0 t=63.777 et=201.433</Score>
+<Sector et="201.5">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="201.5">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="201.5">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="201.5">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="201.5">(103) set new best for sector 1</Sector>
+<Sector et="201.5">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="201.5">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="201.5">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="201.5">(103) set new best for sector 1</Sector>
+<Sector et="201.5">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="201.5">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="201.5">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="201.5">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="201.5">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="201.5">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="201.5">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="201.7">Noah Nebling(26) set new best for sector 1</Sector>
+<Sector et="202.7">Philipp Stange(11) set new best for sector 2</Sector>
+<Score et="202.7">Philipp Stange(11) lap=2 point=1 t=16.133 et=202.622</Score>
+<Sector et="202.7">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="202.7">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="202.7">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="202.7">(103) set new best for sector 2</Sector>
+<Sector et="202.7">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="202.7">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="202.7">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="202.7">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="202.7">(103) set new best for sector 2</Sector>
+<Sector et="202.7">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="202.7">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="202.7">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="202.7">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="202.7">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="202.7">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="202.7">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="202.7">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="203.2">Dennis Castillo Sims(3) lap=2 point=0 t=-1.000 et=203.205</Score>
+<Score et="203.2">Dennis Castillo Sims(3) lap=2 point=1 t=-1.000 et=203.205</Score>
+<Score et="203.2">Dennis Castillo Sims(3) lap=2 point=2 t=-1.000 et=203.205</Score>
+<Score et="203.2">Dennis Castillo Sims(3) lap=3 point=0 t=-1.000 et=203.205</Score>
+<Score et="205.3">Jomaso Heller(16) lap=2 point=1 t=16.811 et=205.220</Score>
+<Score et="209.7">Julian Klaffenboeck(22) lap=2 point=2 t=44.079 et=209.662</Score>
+<Sector et="209.7">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="209.7">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="209.7">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="209.7">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="209.7">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="209.7">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="209.7">(103) set new best for sector 3</Sector>
+<Sector et="209.7">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="209.7">(103) set new best for sector 3</Sector>
+<Sector et="209.7">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="209.7">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="209.7">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="209.7">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="209.7">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="209.7">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="209.7">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="209.7">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="209.8">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="213.3">Sandro Raffa(0) lap=2 point=2 t=-1.000 et=213.272</Score>
+<Sector et="217.6">Kenny Gomez(17) set new best for sector 3</Sector>
+<Score et="217.6">Kenny Gomez(17) lap=2 point=2 t=45.741 et=217.551</Score>
+<Sector et="217.6">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="217.6">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="217.6">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="217.6">(103) set new best for sector 3</Sector>
+<Sector et="217.6">(103) set new best for sector 3</Sector>
+<Sector et="217.6">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="217.6">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="217.6">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="217.6">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="217.6">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="217.6">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="217.6">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="217.6">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="217.6">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="217.6">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="217.6">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="217.7">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="218.3">Julian Gerlach(4) lap=2 point=1 t=16.856 et=218.288</Score>
+<Sector et="221.5">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Score et="221.5">Cedryk Paetzold(19) lap=2 point=2 t=45.095 et=221.483</Score>
+<Sector et="221.5">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="221.5">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="221.5">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="221.5">(103) set new best for sector 3</Sector>
+<Sector et="221.5">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="221.5">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="221.5">(103) set new best for sector 3</Sector>
+<Sector et="221.5">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="221.5">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="221.5">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="221.5">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="221.5">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="221.5">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="221.6">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="221.6">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="221.6">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="221.6">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="226.8">Noah Nebling(26) lap=2 point=2 t=-1.000 et=226.798</Score>
+<Sector et="231.2">Philipp Stange(11) set new best for sector 3</Sector>
+<Score et="231.2">Philipp Stange(11) lap=2 point=2 t=44.666 et=231.155</Score>
+<Sector et="231.2">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="231.2">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="231.2">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="231.2">(103) set new best for sector 3</Sector>
+<Sector et="231.2">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="231.2">(103) set new best for sector 3</Sector>
+<Sector et="231.2">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="231.2">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="231.2">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="231.2">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="231.2">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="231.2">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="231.2">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="231.2">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="231.2">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="231.2">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="231.3">Maino Takao(18) set new best for sector 3</Sector>
+<Score et="234.8">Julian Klaffenboeck(22) lap=3 point=0 t=-1.000 et=234.812</Score>
+<Score et="236.8">Jomaso Heller(16) lap=2 point=2 t=48.334 et=236.743</Score>
+<Score et="238.8">Sandro Raffa(0) lap=3 point=0 t=-1.000 et=238.768</Score>
+<Score et="239.0">Florian Paul(15) lap=2 point=2 t=-1.000 et=238.934</Score>
+<Score et="243.0">Kenny Gomez(17) lap=3 point=0 t=-1.000 et=242.992</Score>
+<Score et="246.7">Cedryk Paetzold(19) lap=3 point=0 t=-1.000 et=246.715</Score>
+<Sector et="249.4">Julian Gerlach(4) set new best for sector 3</Sector>
+<Score et="249.4">Julian Gerlach(4) lap=2 point=2 t=47.941 et=249.374</Score>
+<Sector et="249.4">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="249.4">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="249.4">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="249.4">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="249.4">(103) set new best for sector 3</Sector>
+<Sector et="249.4">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="249.4">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="249.4">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="249.4">(103) set new best for sector 3</Sector>
+<Sector et="249.4">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="249.4">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="249.4">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="249.4">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="249.4">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="249.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="249.4">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="249.5">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="250.6">Philipp Stange(11) lap=3 point=0 t=64.085 et=250.574</Score>
+<Score et="251.3">Noah Nebling(26) lap=3 point=0 t=-1.000 et=251.289</Score>
+<Score et="262.7">Jomaso Heller(16) lap=3 point=0 t=-1.000 et=262.645</Score>
+<Score et="265.3">Florian Paul(15) lap=3 point=0 t=-1.000 et=265.244</Score>
+<Sector et="267.4">Philipp Stange(11) set new best for sector 2</Sector>
+<Score et="267.4">Philipp Stange(11) lap=3 point=1 t=16.843 et=267.417</Score>
+<Sector et="267.4">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="267.4">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="267.5">(103) set new best for sector 2</Sector>
+<Sector et="267.5">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="267.5">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="267.5">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="267.5">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="267.5">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="267.5">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="267.5">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="267.5">(103) set new best for sector 2</Sector>
+<Sector et="267.5">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="267.5">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="267.5">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="267.5">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="267.5">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="267.5">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="270.1">Julian Klaffenboeck(22) lap=3 point=1 t=-1.000 et=270.091</Score>
+<Score et="275.3">Julian Gerlach(4) lap=3 point=0 t=-1.000 et=275.308</Score>
+<Score et="276.6">Sandro Raffa(0) lap=3 point=1 t=-1.000 et=276.601</Score>
+<Score et="289.4">Noah Nebling(26) lap=3 point=1 t=-1.000 et=289.383</Score>
+<Score et="294.5">Kenny Gomez(17) lap=3 point=1 t=-1.000 et=294.432</Score>
+<Score et="297.4">Philipp Stange(11) lap=3 point=2 t=46.827 et=297.401</Score>
+<Score et="299.4">Cedryk Paetzold(19) lap=3 point=1 t=-1.000 et=299.416</Score>
+<Score et="300.6">Julian Klaffenboeck(22) lap=3 point=2 t=-1.000 et=300.599</Score>
+<Chat et="301.6">Noah Nebling: 2l</Chat>
+<Chat et="307.1">Sandro Raffa: 2l</Chat>
+<Score et="307.8">Sandro Raffa(0) lap=3 point=2 t=-1.000 et=307.800</Score>
+<Score et="309.5">Florian Paul(15) lap=3 point=1 t=-1.000 et=309.476</Score>
+<Score et="313.0">Jomaso Heller(16) lap=3 point=1 t=-1.000 et=312.969</Score>
+<Chat et="317.1">Julian Gerlach: 2l</Chat>
+<Score et="320.3">Noah Nebling(26) lap=3 point=2 t=-1.000 et=320.257</Score>
+<Score et="321.4">Julian Klaffenboeck(22) lap=4 point=0 t=-1.000 et=321.388</Score>
+<Score et="322.6">Philipp Stange(11) lap=4 point=0 t=-1.000 et=322.575</Score>
+<Score et="324.8">Kenny Gomez(17) lap=3 point=2 t=-1.000 et=324.737</Score>
+<Score et="329.1">Sandro Raffa(0) lap=4 point=0 t=-1.000 et=329.043</Score>
+<Score et="331.0">Cedryk Paetzold(19) lap=3 point=2 t=-1.000 et=331.021</Score>
+<Sector et="337.9">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Score et="337.9">Julian Klaffenboeck(22) lap=4 point=1 t=16.474 et=337.863</Score>
+<Sector et="337.9">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="337.9">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="337.9">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="337.9">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="337.9">(103) set new best for sector 2</Sector>
+<Sector et="337.9">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="337.9">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="337.9">(103) set new best for sector 2</Sector>
+<Sector et="337.9">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="337.9">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="337.9">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="337.9">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="337.9">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="337.9">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="337.9">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="337.9">Jomaso Heller(16) set new best for sector 2</Sector>
+<Score et="340.1">Florian Paul(15) lap=3 point=2 t=-1.000 et=340.054</Score>
+<Score et="341.0">Noah Nebling(26) lap=4 point=0 t=-1.000 et=340.902</Score>
+<Sector et="344.1">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="344.4">Jomaso Heller(16) lap=3 point=2 t=-1.000 et=344.370</Score>
+<Score et="345.3">Sandro Raffa(0) lap=4 point=1 t=-1.000 et=345.250</Score>
+<Score et="345.4">Kenny Gomez(17) lap=4 point=0 t=-1.000 et=345.334</Score>
+<Score et="347.3">Julian Gerlach(4) lap=3 point=1 t=-1.000 et=347.236</Score>
+<Score et="352.9">Cedryk Paetzold(19) lap=4 point=0 t=-1.000 et=352.880</Score>
+<Sector et="357.1">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="357.1">Noah Nebling(26) lap=4 point=1 t=16.102 et=357.004</Score>
+<Sector et="357.1">Noah Nebling(26) set new best for sector 2</Sector>
+<Sector et="357.2">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="357.2">(103) set new best for sector 2</Sector>
+<Sector et="357.2">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="357.2">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="357.2">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="357.2">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="357.2">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="357.2">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="357.2">(103) set new best for sector 2</Sector>
+<Sector et="357.2">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="357.2">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="357.2">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="357.2">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="357.2">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="357.2">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="357.3">Maino Takao(18) set new best for sector 2</Sector>
+<Score et="358.6">Philipp Stange(11) lap=4 point=1 t=-1.000 et=358.550</Score>
+<Score et="359.7">Florian Paul(15) lap=4 point=0 t=-1.000 et=359.659</Score>
+<Score et="361.6">Kenny Gomez(17) lap=4 point=1 t=16.267 et=361.601</Score>
+<Sector et="361.6">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="361.6">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="361.6">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="361.6">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="361.6">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="361.6">(103) set new best for sector 2</Sector>
+<Sector et="361.7">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="361.7">(103) set new best for sector 2</Sector>
+<Sector et="361.7">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="361.7">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="361.7">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="361.7">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="361.7">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="361.7">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="361.7">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="361.7">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="361.7">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="362.0">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="365.9">Jomaso Heller(16) lap=4 point=0 t=-1.000 et=365.897</Score>
+<Sector et="366.1">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Score et="366.1">Julian Klaffenboeck(22) lap=4 point=2 t=44.715 et=366.104</Score>
+<Sector et="366.1">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="366.1">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="366.2">(103) set new best for sector 3</Sector>
+<Sector et="366.2">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="366.2">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="366.2">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="366.2">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="366.2">(103) set new best for sector 3</Sector>
+<Sector et="366.2">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="366.2">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="366.2">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="366.2">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="366.2">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="366.2">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="366.2">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="366.2">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="366.4">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="368.9">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Score et="368.9">Cedryk Paetzold(19) lap=4 point=1 t=16.038 et=368.918</Score>
+<Sector et="368.9">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="368.9">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="368.9">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="369.0">(103) set new best for sector 2</Sector>
+<Sector et="369.0">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="369.0">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="369.0">(103) set new best for sector 2</Sector>
+<Sector et="369.0">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="369.0">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="369.0">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="369.0">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="369.0">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="369.0">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="369.0">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="369.0">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="369.0">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="369.0">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="375.5">Sandro Raffa(0) lap=4 point=2 t=-1.000 et=375.423</Score>
+<Sector et="376.0">Florian Paul(15) set new best for sector 2</Sector>
+<Score et="376.0">Florian Paul(15) lap=4 point=1 t=16.361 et=376.020</Score>
+<Sector et="376.0">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="376.0">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="376.0">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="376.0">(103) set new best for sector 2</Sector>
+<Sector et="376.1">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="376.1">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="376.1">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="376.1">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="376.1">(103) set new best for sector 2</Sector>
+<Sector et="376.1">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="376.1">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="376.1">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="376.1">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="376.1">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="376.1">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="376.1">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="376.2">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="379.5">Julian Gerlach(4) lap=3 point=2 t=-1.000 et=379.456</Score>
+<Score et="382.2">Jomaso Heller(16) lap=4 point=1 t=16.228 et=382.125</Score>
+<Sector et="382.2">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="382.2">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="382.2">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="382.2">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="382.2">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="382.2">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="382.2">(103) set new best for sector 2</Sector>
+<Sector et="382.2">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="382.2">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="382.2">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="382.2">(103) set new best for sector 2</Sector>
+<Sector et="382.2">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="382.2">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="382.2">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="382.2">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="382.2">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="382.2">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="382.2">Noah Nebling(26) set new best for sector 2</Sector>
+<Sector et="385.5">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="385.5">Noah Nebling(26) lap=4 point=2 t=44.516 et=385.419</Score>
+<Sector et="385.5">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="385.5">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="385.5">(103) set new best for sector 3</Sector>
+<Sector et="385.5">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="385.5">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="385.5">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="385.5">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="385.5">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="385.5">(103) set new best for sector 3</Sector>
+<Sector et="385.5">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="385.5">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="385.5">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="385.5">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="385.5">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="385.5">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="385.5">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="385.5">Mario Wolf(14) set new best for sector 3</Sector>
+<Score et="388.6">Philipp Stange(11) lap=4 point=2 t=-1.000 et=388.536</Score>
+<Score et="390.2">Julian Klaffenboeck(22) lap=5 point=0 t=-1.000 et=390.127</Score>
+<Sector et="390.5">Kenny Gomez(17) set new best for sector 3</Sector>
+<Score et="390.5">Kenny Gomez(17) lap=4 point=2 t=45.184 et=390.518</Score>
+<Sector et="390.5">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="390.5">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="390.5">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="390.5">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="390.5">(103) set new best for sector 3</Sector>
+<Sector et="390.6">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="390.6">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="390.6">(103) set new best for sector 3</Sector>
+<Sector et="390.6">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="390.6">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="390.6">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="390.6">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="390.6">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="390.6">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="390.6">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="390.6">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="390.6">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="395.3">Sandro Raffa(0) lap=5 point=0 t=-1.000 et=395.205</Score>
+<Sector et="397.7">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Score et="397.7">Cedryk Paetzold(19) lap=4 point=2 t=44.836 et=397.716</Score>
+<Sector et="397.7">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="397.7">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="397.8">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="397.8">(103) set new best for sector 3</Sector>
+<Sector et="397.8">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="397.8">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="397.8">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="397.8">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="397.8">(103) set new best for sector 3</Sector>
+<Sector et="397.8">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="397.8">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="397.8">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="397.8">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="397.8">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="397.8">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="397.8">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="397.8">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="401.1">Julian Gerlach(4) lap=4 point=0 t=-1.000 et=401.071</Score>
+<Sector et="404.8">Florian Paul(15) set new best for sector 3</Sector>
+<Score et="404.8">Florian Paul(15) lap=4 point=2 t=45.065 et=404.724</Score>
+<Sector et="404.8">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="404.8">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="404.8">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="404.8">(103) set new best for sector 3</Sector>
+<Sector et="404.8">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="404.8">(103) set new best for sector 3</Sector>
+<Sector et="404.8">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="404.8">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="404.8">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="404.8">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="404.8">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="404.8">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="404.8">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="404.8">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="404.8">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="404.8">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="404.8">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="405.2">Noah Nebling(26) lap=5 point=0 t=64.191 et=405.094</Score>
+<Score et="410.4">Kenny Gomez(17) lap=5 point=0 t=65.018 et=410.352</Score>
+<Score et="410.9">Jomaso Heller(16) lap=4 point=2 t=44.933 et=410.830</Score>
+<Sector et="410.9">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="410.9">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="410.9">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="410.9">(103) set new best for sector 3</Sector>
+<Sector et="410.9">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="410.9">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="410.9">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="410.9">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="410.9">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="410.9">(103) set new best for sector 3</Sector>
+<Sector et="410.9">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="410.9">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="410.9">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="410.9">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="410.9">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="410.9">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="410.9">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="410.9">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="411.3">Sandro Raffa(0) set new best for sector 2</Sector>
+<Score et="411.3">Sandro Raffa(0) lap=5 point=1 t=16.056 et=411.261</Score>
+<Sector et="411.3">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="411.3">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="411.3">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="411.3">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="411.3">(103) set new best for sector 2</Sector>
+<Sector et="411.3">(103) set new best for sector 2</Sector>
+<Sector et="411.3">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="411.3">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="411.3">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="411.3">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="411.3">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="411.3">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="411.3">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="411.3">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="411.3">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="411.4">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="411.4">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="412.7">Philipp Stange(11) lap=5 point=0 t=-1.000 et=412.671</Score>
+<Score et="417.3">Julian Gerlach(4) lap=4 point=1 t=16.168 et=417.239</Score>
+<Score et="417.4">Cedryk Paetzold(19) lap=5 point=0 t=64.464 et=417.344</Score>
+<Score et="421.6">Noah Nebling(26) lap=5 point=1 t=-1.000 et=421.564</Score>
+<Score et="424.1">Florian Paul(15) lap=5 point=0 t=64.425 et=424.084</Score>
+<Score et="426.7">Kenny Gomez(17) lap=5 point=1 t=16.321 et=426.673</Score>
+<Score et="428.9">Philipp Stange(11) lap=5 point=1 t=16.170 et=428.841</Score>
+<Score et="430.3">Jomaso Heller(16) lap=5 point=0 t=64.418 et=430.315</Score>
+<Sector et="433.4">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Score et="433.4">Cedryk Paetzold(19) lap=5 point=1 t=16.065 et=433.410</Score>
+<Sector et="433.4">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="433.4">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="433.5">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="433.5">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="433.5">(103) set new best for sector 2</Sector>
+<Sector et="433.5">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="433.5">(103) set new best for sector 2</Sector>
+<Sector et="433.5">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="433.5">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="433.5">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="433.5">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="433.5">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="433.5">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="433.5">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="433.5">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="433.5">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="433.5">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="439.4">Sandro Raffa(0) lap=5 point=2 t=44.151 et=439.356</Score>
+<Sector et="439.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="439.4">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="439.4">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="439.4">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="439.4">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="439.4">(103) set new best for sector 3</Sector>
+<Sector et="439.4">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="439.4">(103) set new best for sector 3</Sector>
+<Sector et="439.4">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="439.4">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="439.4">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="439.4">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="439.4">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="439.4">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="439.4">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="439.4">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="439.4">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="439.4">Noah Nebling(26) set new best for sector 3</Sector>
+<Sector et="440.3">Florian Paul(15) set new best for sector 2</Sector>
+<Score et="440.3">Florian Paul(15) lap=5 point=1 t=16.223 et=440.307</Score>
+<Sector et="440.3">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="440.3">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="440.4">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="440.4">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="440.4">(103) set new best for sector 2</Sector>
+<Sector et="440.4">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="440.4">(103) set new best for sector 2</Sector>
+<Sector et="440.4">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="440.4">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="440.4">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="440.4">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="440.4">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="440.4">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="440.4">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="440.4">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="440.4">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="440.5">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="441.6">Julian Klaffenboeck(22) lap=5 point=1 t=-1.000 et=441.574</Score>
+<Score et="445.4">Julian Gerlach(4) lap=4 point=2 t=44.269 et=445.340</Score>
+<Score et="449.6">Jomaso Heller(16) lap=5 point=1 t=19.246 et=449.562</Score>
+<Sector et="449.6">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="449.6">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="449.6">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="449.6">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="449.6">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="449.6">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="449.6">(103) set new best for sector 2</Sector>
+<Sector et="449.6">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="449.6">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="449.6">(103) set new best for sector 2</Sector>
+<Sector et="449.6">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="449.6">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="449.6">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="449.6">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="449.6">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="449.6">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="449.6">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="449.9">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="451.7">Noah Nebling(26) lap=5 point=2 t=-1.000 et=451.654</Score>
+<Score et="455.4">Kenny Gomez(17) lap=5 point=2 t=45.048 et=455.400</Score>
+<Sector et="458.6">Sandro Raffa(0) set new best for sector 1</Sector>
+<Score et="458.6">Sandro Raffa(0) lap=6 point=0 t=63.329 et=458.534</Score>
+<Sector et="458.6">Sandro Raffa(0) set new best for sector 1</Sector>
+<Sector et="458.6">Dennis Castillo Sims(3) set new best for sector 1</Sector>
+<Sector et="458.6">Kenny Gomez(17) set new best for sector 1</Sector>
+<Sector et="458.6">Mario Wolf(14) set new best for sector 1</Sector>
+<Sector et="458.6">Florian Paul(15) set new best for sector 1</Sector>
+<Sector et="458.6">(103) set new best for sector 1</Sector>
+<Sector et="458.6">(103) set new best for sector 1</Sector>
+<Sector et="458.6">Jan-Niklas Weiter(24) set new best for sector 1</Sector>
+<Sector et="458.6">Cedryk Paetzold(19) set new best for sector 1</Sector>
+<Sector et="458.6">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Sector et="458.6">Lea Luxemburg(25) set new best for sector 1</Sector>
+<Sector et="458.6">Maino Takao(18) set new best for sector 1</Sector>
+<Sector et="458.6">Philipp Stange(11) set new best for sector 1</Sector>
+<Sector et="458.6">Martin Felix(23) set new best for sector 1</Sector>
+<Sector et="458.6">Julian Gerlach(4) set new best for sector 1</Sector>
+<Sector et="458.6">Jomaso Heller(16) set new best for sector 1</Sector>
+<Sector et="458.7">Noah Nebling(26) set new best for sector 1</Sector>
+<Score et="458.8">Philipp Stange(11) lap=5 point=2 t=46.120 et=458.791</Score>
+<Score et="462.0">Cedryk Paetzold(19) lap=5 point=2 t=44.592 et=461.936</Score>
+<Score et="465.0">Julian Gerlach(4) lap=5 point=0 t=63.871 et=464.942</Score>
+<Score et="468.7">Florian Paul(15) lap=5 point=2 t=44.622 et=468.705</Score>
+<Score et="473.8">Julian Klaffenboeck(22) lap=5 point=2 t=-1.000 et=473.795</Score>
+<Sector et="474.6">Sandro Raffa(0) set new best for sector 2</Sector>
+<Score et="474.6">Sandro Raffa(0) lap=6 point=1 t=16.074 et=474.608</Score>
+<Sector et="474.6">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="474.6">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="474.7">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="474.7">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="474.7">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="474.7">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="474.7">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="474.7">(103) set new best for sector 2</Sector>
+<Sector et="474.7">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="474.7">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="474.7">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="474.7">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="474.7">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="474.7">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="474.7">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="474.7">(103) set new best for sector 2</Sector>
+<Sector et="474.8">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="475.2">Kenny Gomez(17) lap=6 point=0 t=64.812 et=475.164</Score>
+<Score et="477.2">Noah Nebling(26) lap=6 point=0 t=-1.000 et=477.155</Score>
+<Score et="479.5">Philipp Stange(11) lap=6 point=0 t=66.752 et=479.424</Score>
+<Score et="481.1">Julian Gerlach(4) lap=5 point=1 t=16.121 et=481.063</Score>
+<Score et="481.6">Cedryk Paetzold(19) lap=6 point=0 t=64.212 et=481.556</Score>
+<Score et="483.0">Jomaso Heller(16) lap=5 point=2 t=52.641 et=482.956</Score>
+<Score et="495.1">Kenny Gomez(17) lap=6 point=1 t=19.885 et=495.048</Score>
+<Score et="495.8">Philipp Stange(11) lap=6 point=1 t=16.352 et=495.776</Score>
+<Score et="496.2">Julian Klaffenboeck(22) lap=6 point=0 t=-1.000 et=496.165</Score>
+<Sector et="497.9">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Score et="497.9">Cedryk Paetzold(19) lap=6 point=1 t=16.317 et=497.872</Score>
+<Sector et="497.9">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="497.9">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="497.9">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="497.9">(103) set new best for sector 2</Sector>
+<Sector et="497.9">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="497.9">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="497.9">(103) set new best for sector 2</Sector>
+<Sector et="497.9">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="497.9">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="497.9">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="497.9">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="497.9">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="497.9">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="497.9">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="497.9">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="497.9">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="498.0">Noah Nebling(26) set new best for sector 2</Sector>
+<Sector et="502.7">Sandro Raffa(0) set new best for sector 3</Sector>
+<Score et="502.7">Sandro Raffa(0) lap=6 point=2 t=44.164 et=502.698</Score>
+<Sector et="502.7">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="502.7">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="502.8">(103) set new best for sector 3</Sector>
+<Sector et="502.8">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="502.8">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="502.8">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="502.8">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="502.8">(103) set new best for sector 3</Sector>
+<Sector et="502.8">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="502.8">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="502.8">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="502.8">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="502.8">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="502.8">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="502.8">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="502.8">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="502.8">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="506.6">Florian Paul(15) lap=6 point=0 t=-1.000 et=506.554</Score>
+<Incident et="508.9">Sandro Raffa(0) reported contact (3525.21) with Immovable</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (2472.10) with Immovable</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (844.92) with Wing</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (143.48) with Wing</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (70.10) with Wing</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (330.07) with Wing</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (2327.07) with Immovable</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (1502.21) with Immovable</Incident>
+<Incident et="508.9">Sandro Raffa(0) reported contact (42.90) with Wing</Incident>
+<Incident et="509.0">Sandro Raffa(0) reported contact (19.32) with Wing</Incident>
+<Score et="509.2">Julian Gerlach(4) lap=5 point=2 t=44.206 et=509.148</Score>
+<Score et="510.4">Jomaso Heller(16) lap=6 point=0 t=-1.000 et=510.405</Score>
+<Incident et="512.2">Sandro Raffa(0) reported contact (21.78) with Wing</Incident>
+<Incident et="512.2">Sandro Raffa(0) reported contact (14.12) with Wing</Incident>
+<Incident et="512.2">Sandro Raffa(0) reported contact (15.47) with Wing</Incident>
+<Incident et="512.2">Sandro Raffa(0) reported contact (45.11) with Wing</Incident>
+<Incident et="512.2">Sandro Raffa(0) reported contact (42.22) with Wing</Incident>
+<Sector et="512.2">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Score et="512.2">Julian Klaffenboeck(22) lap=6 point=1 t=16.031 et=512.196</Score>
+<Sector et="512.2">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="512.2">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="512.2">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="512.2">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="512.2">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="512.2">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="512.2">(103) set new best for sector 2</Sector>
+<Sector et="512.2">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="512.2">(103) set new best for sector 2</Sector>
+<Sector et="512.2">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="512.2">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="512.3">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="512.3">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="512.3">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="512.3">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="512.3">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="512.3">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="524.3">Philipp Stange(11) lap=6 point=2 t=44.808 et=524.231</Score>
+<Score et="528.2">Cedryk Paetzold(19) lap=6 point=2 t=46.629 et=528.185</Score>
+<Score et="528.3">Julian Gerlach(4) lap=6 point=0 t=63.354 et=528.296</Score>
+<Score et="529.4">Kenny Gomez(17) lap=6 point=2 t=54.180 et=529.344</Score>
+<Sector et="540.1">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Score et="540.1">Julian Klaffenboeck(22) lap=6 point=2 t=43.935 et=540.100</Score>
+<Sector et="540.1">Julian Klaffenboeck(22) set new best for sector 3</Sector>
+<Sector et="540.1">Dennis Castillo Sims(3) set new best for sector 3</Sector>
+<Sector et="540.2">Cedryk Paetzold(19) set new best for sector 3</Sector>
+<Sector et="540.2">Mario Wolf(14) set new best for sector 3</Sector>
+<Sector et="540.2">(103) set new best for sector 3</Sector>
+<Sector et="540.2">Kenny Gomez(17) set new best for sector 3</Sector>
+<Sector et="540.2">Florian Paul(15) set new best for sector 3</Sector>
+<Sector et="540.2">(103) set new best for sector 3</Sector>
+<Sector et="540.2">Lea Luxemburg(25) set new best for sector 3</Sector>
+<Sector et="540.2">Jan-Niklas Weiter(24) set new best for sector 3</Sector>
+<Sector et="540.2">Martin Felix(23) set new best for sector 3</Sector>
+<Sector et="540.2">Philipp Stange(11) set new best for sector 3</Sector>
+<Sector et="540.2">Sandro Raffa(0) set new best for sector 3</Sector>
+<Sector et="540.2">Maino Takao(18) set new best for sector 3</Sector>
+<Sector et="540.2">Julian Gerlach(4) set new best for sector 3</Sector>
+<Sector et="540.2">Jomaso Heller(16) set new best for sector 3</Sector>
+<Sector et="540.9">Noah Nebling(26) set new best for sector 3</Sector>
+<Score et="543.6">Philipp Stange(11) lap=7 point=0 t=64.177 et=543.600</Score>
+<Score et="543.8">Sandro Raffa(0) lap=7 point=0 t=-1.000 et=543.760</Score>
+<Sector et="547.5">Julian Gerlach(4) set new best for sector 2</Sector>
+<Score et="547.5">Julian Gerlach(4) lap=6 point=1 t=19.172 et=547.468</Score>
+<Sector et="547.5">Julian Gerlach(4) set new best for sector 2</Sector>
+<Sector et="547.5">Dennis Castillo Sims(3) set new best for sector 2</Sector>
+<Sector et="547.5">Mario Wolf(14) set new best for sector 2</Sector>
+<Sector et="547.5">Kenny Gomez(17) set new best for sector 2</Sector>
+<Sector et="547.5">Jan-Niklas Weiter(24) set new best for sector 2</Sector>
+<Sector et="547.5">Cedryk Paetzold(19) set new best for sector 2</Sector>
+<Sector et="547.5">(103) set new best for sector 2</Sector>
+<Sector et="547.5">(103) set new best for sector 2</Sector>
+<Sector et="547.5">Julian Klaffenboeck(22) set new best for sector 2</Sector>
+<Sector et="547.5">Florian Paul(15) set new best for sector 2</Sector>
+<Sector et="547.5">Philipp Stange(11) set new best for sector 2</Sector>
+<Sector et="547.5">Maino Takao(18) set new best for sector 2</Sector>
+<Sector et="547.5">Sandro Raffa(0) set new best for sector 2</Sector>
+<Sector et="547.5">Lea Luxemburg(25) set new best for sector 2</Sector>
+<Sector et="547.5">Martin Felix(23) set new best for sector 2</Sector>
+<Sector et="547.5">Jomaso Heller(16) set new best for sector 2</Sector>
+<Sector et="548.2">Noah Nebling(26) set new best for sector 2</Sector>
+<Score et="553.5">Cedryk Paetzold(19) lap=7 point=0 t=-1.000 et=553.467</Score>
+<Score et="554.1">Kenny Gomez(17) lap=7 point=0 t=-1.000 et=554.097</Score>
+<Penalty et="554.1">Kenny Gomez received Drive Thru penalty, 10s, 0laps for &quot;Speeding In Pitlane&quot;. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Penalty et="554.1">Kenny Gomez finished before serving penalty, added 35 seconds to totalET</Penalty>
+<Penalty et="554.1">Kenny Gomez served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,10s</Penalty>
+<Sector et="559.0">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+<Score et="559.0">Julian Klaffenboeck(22) lap=7 point=0 t=62.761 et=558.926</Score>
+<Sector et="559.0">Julian Klaffenboeck(22) set new best for sector 1</Sector>
+</Stream>
+<MostLapsCompleted>7</MostLapsCompleted>
+<Driver>
+<Name>Julian Klaffenboeck</Name>
+<SteamID>76561198127506782</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_07_1.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#7 - André Heiler</VehName>
+<Category>F1 Bros,F1S13,Mercedes AMG</Category>
+<CarType>Mercedes AMG</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>7</CarNumber>
+<TeamName>Mercedes AMG</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>1</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="--.---" fuel="0.063" twfl="0.976" twfr="0.984" twrl="0.973" twrr="0.973" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="1" et="102.3100" s1="15.9336" s2="28.1119" s3="19.2278" fuel="0.043" twfl="0.910" twfr="0.906" twrl="0.871" twrr="0.878" fcompound="0,C5" rcompound="0,C5">63.2733</Lap>
+<Lap num="3" p="1" et="165.5833" s1="15.9395" s2="28.1392" fuel="0.027" twfl="0.859" twfr="0.859" twrl="0.780" twrr="0.804" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="1" et="234.8122" fuel="0.063" twfl="0.969" twfr="0.976" twrl="0.976" twrr="0.976" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="1" et="321.3884" s1="16.4743" s2="28.2410" fuel="0.043" twfl="0.902" twfr="0.855" twrl="0.890" twrr="0.898" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="6" p="1" et="390.1268" fuel="0.055" twfl="0.976" twfr="0.984" twrl="0.980" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="7" p="1" et="496.1649" s1="16.0310" s2="27.9043" s3="18.8259" fuel="0.035" twfl="0.894" twfr="0.906" twrl="0.871" twrr="0.871" fcompound="0,C5" rcompound="0,C5">62.7612</Lap>
+<BestLapTime>62.7612</BestLapTime>
+<Laps>7</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="7">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Sandro Raffa</Name>
+<SteamID>76561198161535393</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_91.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#91 - Sandro Raffa</VehName>
+<Category>F1 Bros,F1S13,Scuderia Ferrari</Category>
+<CarType>Scuderia Ferrari</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>91</CarNumber>
+<TeamName>Scuderia Ferrari</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>2</Position>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="--.---" fuel="0.071" twfl="0.973" twfr="0.984" twrl="0.976" twrr="0.976" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="3" et="104.1572" s1="16.0421" s2="28.2032" fuel="0.055" twfl="0.918" twfr="0.925" twrl="0.918" twrr="0.922" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="3" p="8" et="167.5546" fuel="0.035" twfl="0.878" twfr="0.804" twrl="0.878" twrr="0.878" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="8" et="238.7675" fuel="0.071" twfl="0.965" twfr="0.976" twrl="0.969" twrr="0.973" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="8" et="329.0429" fuel="0.055" twfl="0.925" twfr="0.949" twrl="0.933" twrr="0.937" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="6" p="2" et="395.2048" s1="16.0562" s2="28.0952" s3="19.1777" fuel="0.035" twfl="0.875" twfr="0.898" twrl="0.882" twrr="0.886" fcompound="0,C5" rcompound="0,C5">63.3292</Lap>
+<Lap num="7" p="2" et="458.5340" s1="16.0737" s2="28.0905" fuel="0.020" twfl="0.804" twfr="0.761" twrl="0.804" twrr="0.804" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>63.3292</BestLapTime>
+<Laps>7</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="7">PlayerControl,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Julian Gerlach</Name>
+<SteamID>76561198215701952</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_32.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#32 - Julian Gerlach</VehName>
+<Category>F1 Bros,F1S13,Toyota F1 Team</Category>
+<CarType>Toyota F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>32</CarNumber>
+<TeamName>Toyota F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>3</Position>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="--.---" fuel="0.047" twfl="0.984" twfr="0.992" twrl="0.984" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="2" et="137.6560" s1="16.1763" s2="28.1448" s3="19.4558" fuel="0.027" twfl="0.918" twfr="0.929" twrl="0.906" twrr="0.922" fcompound="0,C5" rcompound="0,C5">63.7769</Lap>
+<Lap num="3" p="2" et="201.4329" s1="16.8556" s2="31.0853" fuel="0.012" twfl="0.890" twfr="0.847" twrl="0.882" twrr="0.894" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="2" et="275.3083" fuel="0.051" twfl="0.976" twfr="0.984" twrl="0.984" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="3" et="401.0707" s1="16.1679" s2="28.1011" s3="19.6023" fuel="0.035" twfl="0.933" twfr="0.941" twrl="0.937" twrr="0.937" fcompound="0,C5" rcompound="0,C5">63.8713</Lap>
+<Lap num="6" p="3" et="464.9420" s1="16.1208" s2="28.0850" s3="19.1486" fuel="0.016" twfl="0.867" twfr="0.878" twrl="0.875" twrr="0.878" fcompound="0,C5" rcompound="0,C5">63.3543</Lap>
+<BestLapTime>63.3543</BestLapTime>
+<Laps>6</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="6">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Philipp Stange</Name>
+<SteamID>76561198863574951</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_27.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#27 - Philipp Stange</VehName>
+<Category>F1 Bros,F1S13,Scuderia Ferrari</Category>
+<CarType>Scuderia Ferrari</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>27</CarNumber>
+<TeamName>Scuderia Ferrari</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>4</Position>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="--.---" fuel="0.063" twfl="0.984" twfr="0.988" twrl="0.988" twrr="0.984" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="3" et="121.0795" s1="16.2487" s2="28.6239" s3="20.5367" fuel="0.047" twfl="0.929" twfr="0.941" twrl="0.933" twrr="0.933" fcompound="0,C5" rcompound="0,C5">65.4094</Lap>
+<Lap num="3" p="3" et="186.4889" s1="16.1330" s2="28.5328" s3="19.4191" fuel="0.027" twfl="0.867" twfr="0.886" twrl="0.859" twrr="0.875" fcompound="0,C5" rcompound="0,C5">64.0849</Lap>
+<Lap num="4" p="3" et="250.5738" s1="16.8429" s2="29.9839" fuel="0.012" twfl="0.839" twfr="0.851" twrl="0.820" twrr="0.839" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="5" p="3" et="322.5751" fuel="0.063" twfl="0.973" twfr="0.973" twrl="0.980" twrr="0.976" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="6" p="4" et="412.6712" s1="16.1698" s2="29.9499" s3="20.6325" fuel="0.043" twfl="0.933" twfr="0.933" twrl="0.953" twrr="0.945" fcompound="0,C5" rcompound="0,C5">66.7523</Lap>
+<Lap num="7" p="4" et="479.4235" s1="16.3522" s2="28.4555" s3="19.3691" fuel="0.027" twfl="0.878" twfr="0.878" twrl="0.894" twrr="0.890" fcompound="0,C5" rcompound="0,C5">64.1769</Lap>
+<BestLapTime>64.0849</BestLapTime>
+<Laps>7</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="7">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Noah Nebling</Name>
+<SteamID>76561198198890734</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_35.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#35 - Noah Nebling</VehName>
+<Category>F1 Bros,F1S13,McLaren F1 Team</Category>
+<CarType>McLaren F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>35</CarNumber>
+<TeamName>McLaren F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>5</Position>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="--.---" fuel="0.063" twfl="0.980" twfr="0.984" twrl="0.973" twrr="0.973" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="8" et="117.1778" s1="16.1666" s2="28.6902" fuel="0.043" twfl="0.906" twfr="0.929" twrl="0.922" twrr="0.929" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="3" p="9" et="181.5995" fuel="0.027" twfl="0.855" twfr="0.871" twrl="0.882" twrr="0.890" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="9" et="251.2894" fuel="0.063" twfl="0.969" twfr="0.976" twrl="0.976" twrr="0.973" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="4" et="340.9025" s1="16.1018" s2="28.4144" s3="19.6752" fuel="0.043" twfl="0.890" twfr="0.910" twrl="0.925" twrr="0.929" fcompound="0,C5" rcompound="0,C5">64.1914</Lap>
+<Lap num="6" p="5" et="405.0939" fuel="0.027" twfl="0.839" twfr="0.863" twrl="0.886" twrr="0.894" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>64.1914</BestLapTime>
+<Laps>6</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="6">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Cedryk Paetzold</Name>
+<SteamID>76561198411488184</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_42.VEH</VehFile>
+<UpgradeCode>e4272000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#42 - Cedryk Paetzold</VehName>
+<Category>F1 Bros,F1S13,McLaren F1 Team</Category>
+<CarType>McLaren F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>42</CarNumber>
+<TeamName>McLaren F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>6</Position>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="--.---" fuel="0.063" twfl="0.976" twfr="0.980" twrl="0.980" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="2" et="111.8153" s1="16.1065" s2="28.7213" s3="19.7457" fuel="0.047" twfl="0.925" twfr="0.929" twrl="0.929" twrr="0.929" fcompound="0,C5" rcompound="0,C5">64.5734</Lap>
+<Lap num="3" p="4" et="176.3887" s1="16.2029" s2="28.8918" fuel="0.027" twfl="0.875" twfr="0.878" twrl="0.867" twrr="0.859" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="5" et="246.7148" fuel="0.063" twfl="0.976" twfr="0.984" twrl="0.980" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="5" et="352.8799" s1="16.0382" s2="28.7980" s3="19.6281" fuel="0.043" twfl="0.910" twfr="0.922" twrl="0.914" twrr="0.918" fcompound="0,C5" rcompound="0,C5">64.4644</Lap>
+<Lap num="6" p="6" et="417.3443" s1="16.0654" s2="28.5263" s3="19.6198" fuel="0.027" twfl="0.855" twfr="0.871" twrl="0.863" twrr="0.863" fcompound="0,C5" rcompound="0,C5">64.2115</Lap>
+<Lap num="7" p="6" et="481.5558" s1="16.3165" s2="30.3125" fuel="0.012" twfl="0.808" twfr="0.824" twrl="0.812" twrr="0.816" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>64.2115</BestLapTime>
+<Laps>7</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="7">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jomaso Heller</Name>
+<SteamID>76561199022498544</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_08.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#8 - Jomaso Heller</VehName>
+<Category>F1 Bros,F1S13,Hugo Bros BMW Williams</Category>
+<CarType>Hugo Bros BMW Williams</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>8</CarNumber>
+<TeamName>Hugo Bros BMW Williams</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>7</Position>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="--.---" fuel="0.055" twfl="0.984" twfr="0.988" twrl="0.988" twrr="0.984" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="2" et="123.9328" s1="16.2230" s2="28.5409" s3="19.7126" fuel="0.035" twfl="0.925" twfr="0.925" twrl="0.945" twrr="0.941" fcompound="0,C5" rcompound="0,C5">64.4765</Lap>
+<Lap num="3" p="4" et="188.4092" s1="16.8112" s2="31.5228" fuel="0.020" twfl="0.894" twfr="0.894" twrl="0.910" twrr="0.906" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="4" et="262.6447" fuel="0.043" twfl="0.976" twfr="0.984" twrl="0.984" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="5" et="365.8971" s1="16.2276" s2="28.7053" s3="19.4851" fuel="0.024" twfl="0.922" twfr="0.918" twrl="0.937" twrr="0.937" fcompound="0,C5" rcompound="0,C5">64.4180</Lap>
+<Lap num="6" p="7" et="430.3151" s1="19.2464" s2="33.3947" fuel="0.012" twfl="0.867" twfr="0.886" twrl="0.918" twrr="0.906" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>64.4180</BestLapTime>
+<Laps>6</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="6">PlayerControl,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Florian Paul</Name>
+<SteamID>76561199251020559</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_73.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#73 - Florian Paul</VehName>
+<Category>F1 Bros,F1S13,Mercedes AMG</Category>
+<CarType>Mercedes AMG</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>73</CarNumber>
+<TeamName>Mercedes AMG</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>8</Position>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="9" et="--.---" fuel="0.051" twfl="0.976" twfr="0.984" twrl="0.980" twrr="0.980" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="10" et="108.0585" s1="16.3157" s2="28.7304" fuel="0.035" twfl="0.925" twfr="0.945" twrl="0.937" twrr="0.941" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="3" p="10" et="174.3446" fuel="0.020" twfl="0.894" twfr="0.929" twrl="0.918" twrr="0.925" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="10" et="265.2443" fuel="0.063" twfl="0.961" twfr="0.961" twrl="0.973" twrr="0.969" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="5" et="359.6588" s1="16.3612" s2="28.7037" s3="19.3602" fuel="0.043" twfl="0.902" twfr="0.918" twrl="0.918" twrr="0.922" fcompound="0,C5" rcompound="0,C5">64.4251</Lap>
+<Lap num="6" p="8" et="424.0839" s1="16.2228" s2="28.3987" fuel="0.027" twfl="0.847" twfr="0.808" twrl="0.839" twrr="0.796" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>64.4251</BestLapTime>
+<Laps>6</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="6">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Kenny Gomez</Name>
+<SteamID>76561198079355033</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_25.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#25 - Kenny Gomez</VehName>
+<Category>F1 Bros,F1S13,LUNZiT Red Bull Racing</Category>
+<CarType>LUNZiT Red Bull Racing</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>25</CarNumber>
+<TeamName>LUNZiT Red Bull Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>9</Position>
+<ClassPosition>9</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="--.---" fuel="0.059" twfl="0.973" twfr="0.976" twrl="0.969" twrr="0.965" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="2" et="106.0198" s1="16.4117" s2="28.9587" s3="20.4198" fuel="0.043" twfl="0.898" twfr="0.929" twrl="0.902" twrr="0.910" fcompound="0,C5" rcompound="0,C5">65.7902</Lap>
+<Lap num="3" p="6" et="171.8100" s1="16.8597" s2="28.8817" fuel="0.027" twfl="0.847" twfr="0.878" twrl="0.851" twrr="0.851" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<Lap num="4" p="6" et="242.9919" fuel="0.078" twfl="0.965" twfr="0.969" twrl="0.969" twrr="0.965" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="5" p="7" et="345.3338" s1="16.2673" s2="28.9169" s3="19.8335" fuel="0.063" twfl="0.898" twfr="0.922" twrl="0.906" twrr="0.910" fcompound="0,C5" rcompound="0,C5">65.0177</Lap>
+<Lap num="6" p="9" et="410.3515" s1="16.3213" s2="28.7269" s3="19.7640" fuel="0.043" twfl="0.831" twfr="0.859" twrl="0.859" twrr="0.859" fcompound="0,C5" rcompound="0,C5">64.8122</Lap>
+<Lap num="7" p="9" et="475.1637" s1="19.8846" s2="34.2957" fuel="0.027" twfl="0.624" twfr="0.757" twrl="0.808" twrr="0.808" fcompound="0,C5" rcompound="0,C5" pit="1">--.----</Lap>
+<BestLapTime>64.8122</BestLapTime>
+<Laps>7</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="7">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Dennis Castillo Sims</Name>
+<SteamID>76561198028310414</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_31.VEH</VehFile>
+<UpgradeCode>e4272000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#31 - Dennis Castillo Sims</VehName>
+<Category>F1 Bros,F1S13,Toyota F1 Team</Category>
+<CarType>Toyota F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>31</CarNumber>
+<TeamName>Toyota F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>10</Position>
+<ClassPosition>10</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>10</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="--.---" fuel="0.055" twfl="0.988" twfr="0.996" twrl="0.996" twrr="0.992" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="2" p="7" et="131.3942" s1="16.0999" s2="28.0739" fuel="0.071" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Lap num="3" p="7" et="203.2051" fuel="0.071" twfl="1.000" twfr="1.000" twrl="1.000" twrr="1.000" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
+<Laps>3</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="2">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+<ControlAndAids startLap="3" endLap="3">UnknownControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Martin Felix</Name>
+<SteamID>76561199735955201</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_89.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#89 - Martin Felix</VehName>
+<Category>F1 Bros,F1S13,Audi F1 Team</Category>
+<CarType>Audi F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>89</CarNumber>
+<TeamName>Audi F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>11</Position>
+<ClassPosition>11</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>11</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+</Driver>
+<Driver>
+<Name>Mario Wolf</Name>
+<SteamID>76561198111003009</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_09.VEH</VehFile>
+<UpgradeCode>e4073800 00000000 00000000 00000000</UpgradeCode>
+<VehName>#9 - Mario Wolf</VehName>
+<Category>F1 Bros,F1S13,Audi F1 Team</Category>
+<CarType>Audi F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>9</CarNumber>
+<TeamName>Audi F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>12</Position>
+<ClassPosition>12</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>12</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+</Driver>
+<Driver>
+<Name>Maino Takao</Name>
+<SteamID>76561198346739695</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_21.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#21 - Maino Takao</VehName>
+<Category>F1 Bros,F1S13,Alpine F1 Team</Category>
+<CarType>Alpine F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>21</CarNumber>
+<TeamName>Alpine F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>13</Position>
+<ClassPosition>13</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>13</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+</Driver>
+<Driver>
+<Name>Lea Luxemburg</Name>
+<SteamID>76561199165916648</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_48.VEH</VehFile>
+<UpgradeCode>e4072000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#48 - Lea Luxemburg</VehName>
+<Category>F1 Bros,F1S13,Alpine F1 Team</Category>
+<CarType>Alpine F1 Team</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>48</CarNumber>
+<TeamName>Alpine F1 Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>14</Position>
+<ClassPosition>14</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>14</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+</Driver>
+<Driver>
+<Name>Jan-Niklas Weiter</Name>
+<SteamID>76561198072408345</SteamID>
+<Connected>1</Connected>
+<VehFile>MERCEDESSC.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Mercedes-AMG GT Black Series Safety Car</VehName>
+<Category>Safety Car</Category>
+<CarType>Safety Car</CarType>
+<CarClass>Safety Car</CarClass>
+<CarNumber>187</CarNumber>
+<TeamName>Mercedes-AMG GT Black Series Safety Car</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>15</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>15</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+</Driver>
+</Qualify2>
+</RaceResults>
+</rFactorXML>
