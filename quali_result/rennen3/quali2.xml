@@ -563,6 +563,7 @@
 <VehFile>F1BS13_32.VEH</VehFile>
 <UpgradeCode>01090000 00000000 00000000 00000000</UpgradeCode>
 <VehName>#32 - Julian Gerlach</VehName>
+<r2la_penalty>3</r2la_penalty>
 <Category>F1 Bros,F1S13,Toyota F1 Team</Category>
 <CarType>Toyota F1 Team</CarType>
 <CarClass>F1 2025</CarClass>

@@ -1320,6 +1320,7 @@
 <VehFile>F1BS13_21.VEH</VehFile>
 <UpgradeCode>01091800 00000000 00000000 00000000</UpgradeCode>
 <VehName>#21 - Maino Takao</VehName>
+<r2la_penalty>DSQ</r2la_penalty>
 <Category>F1 Bros,F1S13,Alpine F1 Team</Category>
 <CarType>Alpine F1 Team</CarType>
 <CarClass>F1 2025</CarClass>
@@ -1349,6 +1350,7 @@
 <VehFile>F1BS13_75.VEH</VehFile>
 <UpgradeCode>01090800 00000000 00000000 00000000</UpgradeCode>
 <VehName>#75 - Francesco Madeo</VehName>
+<r2la_penalty>DSQ</r2la_penalty>
 <Category>F1 Bros,F1S13,Cadillac F1 Team</Category>
 <CarType>Cadillac F1 Team</CarType>
 <CarClass>F1 2025</CarClass>
