@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Kanada"
+file_prefix = "Bahrain"
 
 ### Arrays
 xml_export = []
@@ -1238,7 +1238,7 @@ def read_quali_xml():
     quali1 = []
     quali2 = []
     ### Finde die XML Datei zum letzten Rennen ###
-    folder = 'quali_result'
+    folder = 'quali_result/rennen' + str(current_race_number)
 
 ### Quali1 Ergegbnis
 
@@ -1327,10 +1327,16 @@ def read_quali_xml():
 
     qualiergebnis = quali2 + quali1[10:]
 
-def read_driver_config():    
-    global driver_config
+def read_driver_config(race_number):    
+    global driver_config, current_race_number
     # read driver_config.csv
-    with open("configs/driver_config.csv", encoding="utf-8") as csvfile:
+    
+    if (race_number >= 7):
+        filename = "configs/driver_config_from_frankreich.csv"
+    else:
+        filename = "configs/driver_config.csv"
+    
+    with open(filename, encoding="utf-8") as csvfile:
         driver_config.clear()  # Clear existing data
         csvreader = csv.reader(csvfile, delimiter=";")
         # skip header1
@@ -1497,7 +1503,7 @@ def calculate_wm_rankings():
         xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
 
         ### Get driver config again    
-        read_driver_config()
+        read_driver_config(race_number)
         _, fastest = result_preprocessing_wm()     
         finish_position = 0
         #print("\nRennergebnis:")
@@ -1523,9 +1529,6 @@ def calculate_wm_rankings():
                 item = next(entry for entry in driver_standings if entry[0].get_driver_name() == driver.get_driver_name())                  
                 team = "reserve"
                 if(driver.Stammfahrer):                    
-                    team = driver.Team
-
-                if(race_number < 7 and (driver.Nachname == "Rutishauser")):
                     team = driver.Team
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
@@ -1686,6 +1689,14 @@ def calculate_wm_rankings():
     #    else:
     #        print(constructor[0] + " - " + str(math.ceil(constructor[-1])) + " Punkte")
 
+    read_driver_config(race_number)
+    for driver in driver_standings:
+        for racer in driver_config:
+            if(driver[0].get_driver_name() == racer.get_driver_name()):
+                if(driver[0].Team != racer.Team):
+                    print(f"Teamwechsel erkannt: {driver[0].get_driver_name()} von {driver[0].Team} zu {racer.Team}")
+                    driver[0].Team = racer.Team
+
     generate_drivers_championship(driver_standings_last_race, driver_standings)
     generate_constructor_championship(team_standings_last_race, team_standings_sorted)
 
@@ -1729,10 +1740,7 @@ def generate_drivers_championship(last_race_standings, driver_standings):
             name = driver_selec.Vorname
             lastname = driver_selec.Nachname.upper()
 
-            if(lastname == "RUTISHAUSER"):
-                team = "Reserve"
-            else:
-                team = driver_selec.Team
+            team = driver_selec.Team
 
             flag = driver_selec.Nation
             team_filename = get_team_logo(team)
@@ -1847,10 +1855,7 @@ def driver_championship_insta(last_race_standings, relevant_drivers):
         name = driver_selec.Vorname
         lastname = driver_selec.Nachname.upper()
 
-        if(lastname == "RUTISHAUSER"):
-            team = "Reserve"
-        else:
-            team = driver_selec.Team
+        team = driver_selec.Team
 
         flag = driver_selec.Nation
         team_filename = get_team_logo(team)
@@ -2045,7 +2050,7 @@ def generate_constructor_championship(last_race_standings, team_standings):
 if __name__ == "__main__":
 
     read_raceresult_xml()
-    read_driver_config()
+    read_driver_config(0)
 
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile)        
@@ -2067,7 +2072,7 @@ if __name__ == "__main__":
     create_insta_rennergebnis_page_2(fahrer_seite2)
     calculate_wm_rankings()
     
-    read_driver_config()
+    read_driver_config(current_race_number)
     read_quali_xml()
     quali_preprocessing()
     create_quali_page_1(qualiergebnis[:12])

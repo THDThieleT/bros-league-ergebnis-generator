@@ -7,13 +7,13 @@ Oliver;Bolvron;17;Hugo Bros BMW Williams;Island;Bolvron.png;True
 Jomaso;Heller;8;Hugo Bros BMW Williams;Deutschland;Heller.png;True
 
 Joshua;Preuss;0;Scuderia Toro Rosso;Deutschland;Preuss.png;True
-Andre;Heiler;52;Scuderia Toro Rosso;Deutschland;Heiler.png;True
+Francesco;Madeo;0;Scuderia Toro Rosso;Italien;Madeo.png;True
 
 Lea;Luxemburg;48;Alpine F1 Team;Kuba;Luxemburg.png;True
 Maino;Takao;21;Alpine F1 Team;Deutschland;Takao.png;True
 
 Florian;Paul;73;Mercedes AMG;Deutschland;Paul.png;True
-Fabian;Rutishauser;87;Mercedes AMG;Schweiz;Rutishauser.png;False
+Andre;Heiler;52;Mercedes AMG;Deutschland;Heiler.png;True
 
 Sandro;Raffa;91;Scuderia Ferrari;Italien;Raffa.png;True
 Philipp;Stange;27;Scuderia Ferrari;Deutschland;Stange.png;True
@@ -27,13 +27,10 @@ Tobias;Thiele;15;LUNZiT Red Bull Racing;Deutschland;Thiele.png;True
 Dominik Heinz;Porbadnik;36;Jordan Grand Prix;Deutschland;DH_Porbadnik.png;True
 Dennis;Porbadnik;69;Jordan Grand Prix;Deutschland;Dennis_Porbadnik;True
 
-David;Holm;26;Cadillac F1 Team;Deutschland;Holm.png;True
-Francesco;Madeo;0;Cadillac F1 Team;Italien;Madeo.png;True
-
 Mario;Wolf;9;Audi F1 Team;Deutschland;Wolf.png;True
 Martin;Felix;89;Audi F1 Team;Deutschland;Felix.png;True
 
-
+David;Holm;26;Reserve;Deutschland;Holm.png;False
 Dennis;Binder;11;Reserve;Deutschland;Reserve.png;False
 Leonardo;Lucky;13;Reserve;Italien;Reserve.png;False
 Christian;Beckmann;19;Reserve;Deutschland;Reserve.png;False
@@ -54,3 +51,4 @@ Philipp;Maier;61;Reserve;Schweiz;Reserve.png;False
 Hendrik;Lauer;6;Reserve;Deutschland;Reserve.png;False
 Akil;Aravinth;34;Reserve;Indien;Reserve.png;False
 Julian;Poschalko;56;Reserve;Oesterreich;Reserve.png;False
+Fabian;Rutishauser;87;Reserve;Schweiz;Rutishauser.png;False
