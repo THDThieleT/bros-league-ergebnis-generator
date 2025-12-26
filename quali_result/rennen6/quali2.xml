@@ -1297,6 +1297,7 @@
 <VehFile>F1BS13_91.VEH</VehFile>
 <UpgradeCode>e50b0000 00000000 00000000 00000000</UpgradeCode>
 <VehName>#91 - Sandro Raffa</VehName>
+<r2la_penalty>DSQ</r2la_penalty>
 <Category>F1 Bros,F1S13,Scuderia Ferrari</Category>
 <CarType>Scuderia Ferrari</CarType>
 <CarClass>F1 2025</CarClass>
@@ -1304,8 +1305,8 @@
 <TeamName>Scuderia Ferrari</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>2</Position>
-<ClassPosition>2</ClassPosition>
+<Position>10</Position>
+<ClassPosition>10</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
 <LapRankIncludingDiscos>2</LapRankIncludingDiscos>
@@ -1335,7 +1336,7 @@
 <TeamName>Mercedes AMG</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>3</Position>
+<Position>2</Position>
 <ClassPosition>3</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
@@ -1365,7 +1366,7 @@
 <TeamName>Toyota F1 Team</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>4</Position>
+<Position>2</Position>
 <ClassPosition>4</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
@@ -1395,7 +1396,7 @@
 <TeamName>Scuderia Ferrari</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>5</Position>
+<Position>4</Position>
 <ClassPosition>5</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
@@ -1543,7 +1544,7 @@
 <TeamName>Scuderia Toro Rosso</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>10</Position>
+<Position>9</Position>
 <ClassPosition>10</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>

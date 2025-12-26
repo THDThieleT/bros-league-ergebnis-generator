@@ -1917,6 +1917,7 @@
 </Driver>
 <Driver>
 <Name>Akil Aravinth</Name>
+<r2la_penalty>3</r2la_penalty>
 <SteamID>76561198385438048</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_87.VEH</VehFile>
