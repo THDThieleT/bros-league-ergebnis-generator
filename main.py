@@ -196,7 +196,7 @@ insta_y_offset = (insta_row_height + insta_row_gap)
 insta_left_allignment = 100
 insta_first_name = 218
 insta_race_titel_pos =(30, 70)
-insta_team_name_allignment = 540
+insta_team_name_allignment = 560
 insta_team_alignment = (insta_team_name_allignment,int(230 - (insta_row_height / 2)))
 insta_driver_wm_info_pos = (45, 1045)
 insta_quali_time_allignment = 1040
@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Bahrain"
+file_prefix = "Silverstone"
 
 ### Arrays
 xml_export = []
@@ -1044,6 +1044,9 @@ def create_insta_quali_page_1(data, filename="insta/" + file_prefix + "_insta_qu
                 draw.text((insta_quali_time_allignment , insta_team_alignment[1] + (position * insta_y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
             else:
                 draw.text((insta_quali_time_allignment , insta_team_alignment[1] + (position * insta_y_offset)), "No Time", font=regular, fill=(0, 0, 0, 255), anchor="rm")
+            if (winner.penalty is not None):
+                draw.text((insta_quali_penalty_x , insta_team_alignment[1] + (position * insta_y_offset)), winner.penalty, font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
+
         else:
             #Draw Position
             draw.text((insta_position_text, insta_first_name + (position * insta_y_offset)), str(position + 1), font=position_font, fill=(255, 255, 255, 255), anchor="lb")            
@@ -1112,6 +1115,8 @@ def create_insta_quali_page_2(data, filename="insta/" + file_prefix + "_insta_qu
         draw.text((insta_quali_time_allignment , insta_team_alignment[1] + (position * insta_y_offset)), formatted, font=regular, fill=(0, 0, 0, 255), anchor="rm")
     else:
         draw.text((insta_quali_time_allignment , insta_team_alignment[1] + (position * insta_y_offset)), "No Time", font=regular, fill=(0, 0, 0, 255), anchor="rm")
+    if (winner.penalty is not None):
+            draw.text((insta_quali_penalty_x , insta_team_alignment[1] + (position * insta_y_offset)), winner.penalty, font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
 
 
     ### Fill Positions
@@ -1328,7 +1333,7 @@ def read_quali_xml():
     qualiergebnis = quali2 + quali1[10:]
 
 def read_driver_config(race_number):    
-    global driver_config, current_race_number
+    global driver_config
     # read driver_config.csv
     
     if (race_number >= 7):
@@ -2050,7 +2055,7 @@ def generate_constructor_championship(last_race_standings, team_standings):
 if __name__ == "__main__":
 
     read_raceresult_xml()
-    read_driver_config(0)
+    
 
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile)        
@@ -2059,7 +2064,8 @@ if __name__ == "__main__":
             print("Mehr Rennergebnis.xml als Renntitel in Race_Names.csv")
         else:
             name_rennen = race_titels[current_race_number - 1][0]        
-
+    
+    read_driver_config(current_race_number)
     winner, fastest_lap_driver = result_preprocessing()    
     print(fastest_lap_driver)
     
