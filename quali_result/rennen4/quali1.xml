@@ -1525,6 +1525,7 @@
 </Driver>
 <Driver>
 <Name>Julian Poschalko</Name>
+<r2la_penalty>DSQ</r2la_penalty>
 <SteamID>76561199200512246</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_07.VEH</VehFile>
