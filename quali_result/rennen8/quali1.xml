@@ -1038,6 +1038,7 @@
 <VehFile>F1BS13_25.VEH</VehFile>
 <UpgradeCode>9c0a2000 00000000 00000000 00000000</UpgradeCode>
 <VehName>#25 - Kenny Gomez</VehName>
+<r2la_penalty>DSQ</r2la_penalty>
 <Category>F1 Bros,F1S13,LUNZiT Red Bull Racing</Category>
 <CarType>LUNZiT Red Bull Racing</CarType>
 <CarClass>F1 2025</CarClass>
@@ -1045,7 +1046,7 @@
 <TeamName>LUNZiT Red Bull Racing</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>13</Position>
+<Position>15</Position>
 <ClassPosition>13</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
@@ -1074,7 +1075,7 @@
 <TeamName>Alpine F1 Team</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>14</Position>
+<Position>13</Position>
 <ClassPosition>14</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
@@ -1104,7 +1105,7 @@
 <TeamName>Hugo Bros BMW Williams</TeamName>
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
-<Position>15</Position>
+<Position>14</Position>
 <ClassPosition>15</ClassPosition>
 <Points>0</Points>
 <ClassPoints>0</ClassPoints>
