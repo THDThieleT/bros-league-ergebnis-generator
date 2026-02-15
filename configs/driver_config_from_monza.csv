@@ -16,7 +16,8 @@ Florian;Paul;73;Mercedes AMG;Deutschland;Paul.png;True
 Andre;Heiler;52;Mercedes AMG;Deutschland;Heiler.png;True
 
 Sandro;Raffa;91;Scuderia Ferrari;Italien;Raffa.png;True
-Philipp;Stange;27;Scuderia Ferrari;Deutschland;Stange.png;True
+Aaron;Doering;67;Scuderia Ferrari;Deutschland;Reserve.png;True
+Philipp;Stange;27;Reserve;Deutschland;Stange.png;False
 
 Noah;Nebling;35;McLaren F1 Team;Deutschland;Nebling.png;True
 Cedryk;Paetzold;0;McLaren F1 Team;Deutschland;Paetzold.png;True
@@ -55,4 +56,5 @@ Fabian;Rutishauser;87;Reserve;Schweiz;Rutishauser.png;False
 Nils;Haertl;20;Reserve;Deutschland;Reserve.png;False
 Julian;Trappmann;99;Reserve;Belgien;Reserve.png;False
 Fabian;Walter;97;Reserve;Deutschland;Reserve.png;False
-Aaron;Doering;67;Reserve;Deutschland;Reserve.png;False
+Rick;David;88;Reserve;Deutschland;Reserve.png;False
+Lucas;Budde;99;Reserve;Deutschland;Reserve.png;False

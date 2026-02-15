@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Silverstone"
+file_prefix = "Monza"
 
 ### Arrays
 xml_export = []
@@ -1336,10 +1336,13 @@ def read_driver_config(race_number):
     global driver_config
     # read driver_config.csv
     
+    filename = "configs/driver_config.csv"
+
     if (race_number >= 7):
         filename = "configs/driver_config_from_frankreich.csv"
-    else:
-        filename = "configs/driver_config.csv"
+    if (race_number >= 12):
+        filename = "configs/driver_config_from_monza.csv"    
+        
     
     with open(filename, encoding="utf-8") as csvfile:
         driver_config.clear()  # Clear existing data
