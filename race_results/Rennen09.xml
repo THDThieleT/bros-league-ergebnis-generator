@@ -37,7 +37,7 @@
 <Laps>47</Laps>
 <Minutes>75</Minutes>
 <Stream>
-<Penalty et="16.8">Jan-Niklas Weiter received Drive Thru penalty, 10s, 0laps for &quot;Exiting Pits Under Red&quot;. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Penalty et="16.8">Jan-Niklas Weiter received Drive Thru penalty, 10s, 0laps for "Exiting Pits Under Red". Result: penalties=1, 1st=Drive Thru,10s</Penalty>
 <Command from="Simon Kaufmann" nodeid="17" et="32.2">/subpenalty 3 Jan-Niklas Weiter</Command>
 <Vote et="32.2">Simon Kaufmann: /subpenalty 3 Jan-Niklas Weiter</Vote>
 <Penalty et="32.2">Jan-Niklas Weiter served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,10s</Penalty>
@@ -8531,7 +8531,7 @@
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Noah Nebling</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Noah Nebling</Name>
 <SteamID>76561198198890734</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_35.VEH</VehFile>
@@ -8599,7 +8599,7 @@
 <Lap num="46" p="5" et="3683.2808" s1="16.7136" s2="29.9150" s3="20.4727" fuel="0.055" twfl="0.204" twfr="0.294" twrl="0.400" twrr="0.435" fcompound="0,C5" rcompound="0,C5">67.1013</Lap>
 <Lap num="47" p="5" et="3750.3821" s1="17.0132" s2="29.5857" s3="20.4082" fuel="0.039" twfl="0.173" twfr="0.263" twrl="0.357" twrr="0.392" fcompound="0,C5" rcompound="0,C5">67.0071</Lap>
 <BestLapTime>66.0750</BestLapTime>
-<FinishTime>3198.7915</FinishTime>
+<FinishTime>3203.7915</FinishTime>
 <Laps>47</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -8754,7 +8754,7 @@
 <ControlAndAids startLap="1" endLap="46">PlayerControl,Clutch</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Lea Luxemburg</Name>
+<r2la_penalty>10.0</r2la_penalty><Name>Lea Luxemburg</Name>
 <SteamID>76561199165916648</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_48.VEH</VehFile>
@@ -8821,7 +8821,7 @@
 <Lap num="45" p="13" et="3718.3833" s1="16.7383" s2="29.6721" s3="20.5127" fuel="0.188" twfl="0.463" twfr="0.514" twrl="0.600" twrr="0.588" fcompound="0,C5" rcompound="0,C5">66.9231</Lap>
 <Lap num="46" p="12" et="3785.3064" s1="16.7983" s2="30.0149" s3="20.5828" fuel="0.169" twfl="0.412" twfr="0.463" twrl="0.553" twrr="0.541" fcompound="0,C5" rcompound="0,C5">67.3960</Lap>
 <BestLapTime>66.5007</BestLapTime>
-<FinishTime>3234.1045</FinishTime>
+<FinishTime>3244.1045</FinishTime>
 <Laps>46</Laps>
 <Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -8895,7 +8895,7 @@
 <Lap num="45" p="12" et="3716.7959" fuel="0.125" twfl="0.525" twfr="0.565" twrl="0.635" twrr="0.635" fcompound="0,C5" rcompound="0,C5">--.----</Lap>
 <Lap num="46" p="13" et="3784.1326" s1="16.8430" s2="42.8176" s3="42.6462" fuel="0.106" twfl="0.467" twfr="0.514" twrl="0.588" twrr="0.600" fcompound="0,C5" rcompound="0,C5" pit="1">102.3069</Lap>
 <BestLapTime>66.8677</BestLapTime>
-<FinishTime>3267.8418</FinishTime>
+<FinishTime>3272.8418</FinishTime>
 <Laps>46</Laps>
 <Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>

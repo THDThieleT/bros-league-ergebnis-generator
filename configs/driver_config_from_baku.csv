@@ -26,18 +26,19 @@ Kenny;Gomez;25;LUNZiT Red Bull Racing;Deutschland;Gomez.png;True
 Tobias;Thiele;15;LUNZiT Red Bull Racing;Deutschland;Thiele.png;True
 
 Dominik Heinz;Porbadnik;36;Jordan Grand Prix;Deutschland;DH_Porbadnik.png;True
-Dennis;Porbadnik;69;Jordan Grand Prix;Deutschland;Dennis_Porbadnik;True
+Dennis;Porbadnik;69;Jordan Grand Prix;Deutschland;Dennis_Porbadnik.png;True
 
-Mario;Wolf;9;Audi F1 Team;Deutschland;Wolf.png;True
 Martin;Felix;89;Audi F1 Team;Deutschland;Felix.png;True
+Lucas;Budde;95;Audi F1 Team;Deutschland;Budde.png;True
+
+Jan-Niklas;Weiter;23;Cadillac F1 Team;Deutschland;Weiter.png;True
+Noah;Bergmann;49;Cadillac F1 Team;Deutschland;Bergmann.png;True
 
 David;Holm;26;Reserve;Deutschland;Holm.png;False
 Dennis;Binder;11;Reserve;Deutschland;Reserve.png;False
 Leonardo;Lucky;13;Reserve;Italien;Reserve.png;False
 Christian;Beckmann;19;Reserve;Deutschland;Reserve.png;False
-Jan-Niklas;Weiter;23;Reserve;Deutschland;Reserve.png;False
 Elias;Muecke;39;Reserve;Deutschland;Reserve.png;False
-Noah;Bergmann;49;Reserve;Deutschland;Reserve.png;False
 Julian;Boschalko;56;Reserve;Oesterreich;Reserve.png;False
 Andre;Porbadnik;77;Reserve;Deutschland;Reserve.png;False
 Leon;Kuhn;66;Reserve;Deutschland;Reserve.png;False
@@ -57,4 +58,5 @@ Nils;Haertl;20;Reserve;Deutschland;Reserve.png;False
 Julian;Trappmann;99;Reserve;Belgien;Reserve.png;False
 Fabian;Walter;97;Reserve;Deutschland;Reserve.png;False
 Rick;David;88;Reserve;Deutschland;Reserve.png;False
-Lucas;Budde;95;Reserve;Deutschland;Reserve.png;False
+Mario;Wolf;9;Reserve;Deutschland;Wolf.png;False
+

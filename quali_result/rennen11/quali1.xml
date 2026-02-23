@@ -943,6 +943,7 @@
 <VehFile>F1BS13_08.VEH</VehFile>
 <UpgradeCode>e4070000 00000000 00000000 00000000</UpgradeCode>
 <VehName>#8 - Jomaso Heller</VehName>
+<r2la_penalty>1</r2la_penalty>
 <Category>F1 Bros,F1S13,Hugo Bros BMW Williams</Category>
 <CarType>Hugo Bros BMW Williams</CarType>
 <CarClass>F1 2025</CarClass>

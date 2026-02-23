@@ -509,6 +509,7 @@
 </Driver>
 <Driver>
 <Name>Aaron Doering</Name>
+<r2la_penalty>3</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_27.VEH</VehFile>
 <UpgradeCode>e4070000 00000000 00000000 00000000</UpgradeCode>
@@ -536,6 +537,7 @@
 </Driver>
 <Driver>
 <Name>Andre Heiler</Name>
+<r2la_penalty>6</r2la_penalty>
 <Connected>1</Connected>
 <VehFile>F1BS13_07_1.VEH</VehFile>
 <UpgradeCode>e4170000 00000000 00000000 00000000</UpgradeCode>

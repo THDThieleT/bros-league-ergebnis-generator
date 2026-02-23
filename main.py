@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Monza"
+file_prefix = "Baku"
 
 ### Arrays
 xml_export = []
@@ -441,7 +441,7 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
     #Vorname
     draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), winner.Vorname, font=regular, fill=(0, 0, 0, 255), anchor="lb")    
     #Nachname
-    draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
+    draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
     #Teamname
     draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
     #Team Logo
@@ -937,7 +937,7 @@ def create_quali_page_2(data, filename="output/qualifikation_seite2.png"):
     #Vorname
     draw.text((left_allignment + flag_width + spacer, first_name + (position * y_offset)), winner.Vorname, font=regular, fill=(0, 0, 0, 255), anchor="lb")    
     #Nachname
-    draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
+    draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
     #Teamname
     draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
     #Team Logo
@@ -1341,7 +1341,9 @@ def read_driver_config(race_number):
     if (race_number >= 7):
         filename = "configs/driver_config_from_frankreich.csv"
     if (race_number >= 12):
-        filename = "configs/driver_config_from_monza.csv"    
+        filename = "configs/driver_config_from_monza.csv"
+    if (race_number >= 13):
+        filename = "configs/driver_config_from_baku.csv"    
         
     
     with open(filename, encoding="utf-8") as csvfile:
