@@ -208,7 +208,7 @@ insta_fastest_lap_position = (insta_position_text, 1045)
 insta_race_info_pos = 1060
 insta_arrow_size = (18,18)
 
-file_prefix = "Baku"
+file_prefix = "Suzuka"
 
 ### Arrays
 xml_export = []
