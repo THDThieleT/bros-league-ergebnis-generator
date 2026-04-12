@@ -1536,6 +1536,34 @@
 <Pitstops>0</Pitstops>
 <FinishStatus>DQ</FinishStatus>
 </Driver>
+<Driver>
+<Name>Joshua Preuss</Name>
+<SteamID>76561198072312130</SteamID>
+<Connected>1</Connected>
+<VehFile>F1BS13_16_1.VEH</VehFile>
+<UpgradeCode>b5960000 00000000 00000000 00000000</UpgradeCode>
+<VehName>#16 - Joshua Preuss V2</VehName>
+<Category>F1 Bros,F1S13,Scuderia Toro Rosso</Category>
+<CarType>Scuderia Toro Rosso</CarType>
+<CarClass>F1 2025</CarClass>
+<CarNumber>16</CarNumber>
+<TeamName>Scuderia Toro Rosso</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>18</GridPos>
+<Position>18</Position>
+<ClassGridPos>17</ClassGridPos>
+<ClassPosition>11</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>0</LapRankIncludingDiscos>
+<BestLapTime>No Time</BestLapTime>
+<FinishTime>3723.7632</FinishTime>
+<Laps>33</Laps>
+<Pitstops>4</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="33">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
 </Qualify>
 </RaceResults>
 </rFactorXML>

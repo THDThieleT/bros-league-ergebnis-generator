@@ -4463,7 +4463,8 @@
 <ControlAndAids startLap="1" endLap="35">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<r2la_penalty>10.0</r2la_penalty><Name>Kenny Gomez</Name>
+<r2la_penalty>10.0</r2la_penalty>
+<Name>Kenny Gomez</Name>
 <SteamID>76561198079355033</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_25.VEH</VehFile>
