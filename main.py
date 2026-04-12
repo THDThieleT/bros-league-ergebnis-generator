@@ -444,7 +444,7 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
     #Nachname
     draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
     #Teamname
-    draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+    draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team.upper(), font=regular, fill=(0, 0, 0, 255), anchor="lb")
     #Team Logo
     team_filename = get_team_logo(winner.Team)
     logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
@@ -485,7 +485,7 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
         #Nachname
         draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
         #Teamname
-        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(255, 255, 255, 255), anchor="lm")
         #Team Logo
         logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
         logo = logo.resize(team_logo_scaled)
@@ -940,7 +940,7 @@ def create_quali_page_2(data, filename="output/qualifikation_seite2.png"):
     #Nachname
     draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), winner.Nachname.upper(), font=bold, fill=(0, 0, 0, 255), anchor="lb")
     #Teamname
-    draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team, font=regular, fill=(0, 0, 0, 255), anchor="lb")
+    draw.text((team_name_allignment , first_name + (position * y_offset)), winner.Team.upper(), font=regular, fill=(0, 0, 0, 255), anchor="lb")
     #Team Logo
     team_filename = get_team_logo(winner.Team)
     logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
@@ -2163,8 +2163,6 @@ def team_championship_insta(last_race_standings, team_standings):
 if __name__ == "__main__":
 
     read_raceresult_xml()
-    
-
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile)        
         race_titels = list(csvreader)

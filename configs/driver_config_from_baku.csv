@@ -12,7 +12,7 @@ Francesco;Madeo;0;Scuderia Toro Rosso;Italien;Madeo.png;True
 Lea;Luxemburg;48;Alpine F1 Team;Kuba;Luxemburg.png;True
 Maino;Takao;21;Alpine F1 Team;Deutschland;Takao.png;True
 
-Florian;Paul;73;Mercedes AMG;Deutschland;Paul.png;True
+Florian;Paul;73;Mercedes AMG;Deutschland;Reserve.png;True
 Andre;Heiler;52;Mercedes AMG;Deutschland;Heiler.png;True
 
 Sandro;Raffa;91;Scuderia Ferrari;Italien;Raffa.png;True
@@ -60,4 +60,5 @@ Fabian;Walter;97;Reserve;Deutschland;Reserve.png;False
 Rick;David;88;Reserve;Schweiz;Reserve.png;False
 Mario;Wolf;9;Reserve;Deutschland;Wolf.png;False
 Ben;Ahlers;79;Reserve;Deutschland;Ahlers.png;False
+Paul;Meissner;77;Reserve;Deutschland;Meissner.png;False
 

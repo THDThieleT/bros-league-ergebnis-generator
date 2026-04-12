@@ -37,8 +37,8 @@
 <Laps>38</Laps>
 <Minutes>75</Minutes>
 <Stream>
-<Chat et="71.0">&quot;Paul Meissner&quot; Is Pending An Open Session</Chat>
-<Sent et="71.0">&quot;Paul Meissner&quot; Is Pending An Open Session</Sent>
+<Chat et="71.0">"Paul Meissner" Is Pending An Open Session</Chat>
+<Sent et="71.0">"Paul Meissner" Is Pending An Open Session</Sent>
 <Score et="479.3">Aaron Doering(25) lap=0 point=1 t=-1.000 et=479.224</Score>
 <Score et="480.6">Kenny Gomez(17) lap=0 point=1 t=-1.000 et=480.558</Score>
 <Score et="481.4">Jan-Niklas Weiter(9) lap=0 point=1 t=-1.000 et=481.382</Score>
@@ -78,9 +78,9 @@
 <Score et="587.8">Maino Takao(1) lap=0 point=0 t=-1.000 et=587.811</Score>
 <Score et="589.7">Lea Luxemburg(22) lap=0 point=0 t=-1.000 et=589.692</Score>
 <Score et="590.7">Martin Felix(23) lap=0 point=0 t=-1.000 et=590.677</Score>
-<Penalty et="604.1">Noah Bergmann received Drive Thru penalty, 0s, 0laps for &quot;False Start&quot;. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
-<Penalty et="604.1">Ben Ahlers received Drive Thru penalty, 0s, 0laps for &quot;False Start&quot;. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
-<Penalty et="604.1">Julian Gerlach received Drive Thru penalty, 0s, 0laps for &quot;False Start&quot;. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Penalty et="604.1">Noah Bergmann received Drive Thru penalty, 0s, 0laps for "False Start". Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Penalty et="604.1">Ben Ahlers received Drive Thru penalty, 0s, 0laps for "False Start". Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Penalty et="604.1">Julian Gerlach received Drive Thru penalty, 0s, 0laps for "False Start". Result: penalties=1, 1st=Drive Thru,0s</Penalty>
 <Command from="Simon Kaufmann" nodeid="16" et="615.0">/subpenalty 3 Ben Ahlres</Command>
 <Vote et="615.0">Simon Kaufmann: /subpenalty 3 Ben Ahlres</Vote>
 <Penalty et="615.0">Ben Ahlers served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
@@ -8687,7 +8687,7 @@
 <ControlAndAids startLap="1" endLap="38">PlayerControl</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Ben Ahlers</Name>
+<r2la_penalty>10.0</r2la_penalty><Name>Ben Ahlers</Name>
 <SteamID>76561199867628317</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_07_1.VEH</VehFile>
@@ -8701,7 +8701,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>4</GridPos>
-<Position>6</Position>
+<Position>7</Position>
 <ClassGridPos>4</ClassGridPos>
 <ClassPosition>6</ClassPosition>
 <Points>0</Points>
@@ -8746,14 +8746,14 @@
 <Lap num="37" p="6" et="3833.4121" s1="18.0835" s2="35.0234" s3="30.9712" fuel="0.027" twfl="0.694" twfr="0.592" twrl="0.741" twrr="0.729" fcompound="1,C3" rcompound="1,C3">84.0781</Lap>
 <Lap num="38" p="6" et="3917.4902" s1="17.9890" s2="34.6995" s3="31.0623" fuel="0.004" twfl="0.655" twfr="0.541" twrl="0.706" twrr="0.694" fcompound="1,C3" rcompound="1,C3">83.7507</Lap>
 <BestLapTime>83.7507</BestLapTime>
-<FinishTime>3397.1389</FinishTime>
+<FinishTime>3407.1389</FinishTime>
 <Laps>38</Laps>
 <Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="38">PlayerControl</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Jan-Niklas Weiter</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Jan-Niklas Weiter</Name>
 <SteamID>76561198072408345</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_23.VEH</VehFile>
@@ -8767,7 +8767,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>3</GridPos>
-<Position>2</Position>
+<Position>4</Position>
 <ClassGridPos>3</ClassGridPos>
 <ClassPosition>2</ClassPosition>
 <Points>0</Points>
@@ -8812,14 +8812,14 @@
 <Lap num="37" p="2" et="3831.1743" s1="17.7007" s2="34.8933" s3="31.5840" fuel="0.102" twfl="0.737" twfr="0.694" twrl="0.718" twrr="0.706" fcompound="1,C3" rcompound="1,C3">84.1780</Lap>
 <Lap num="38" p="2" et="3915.3523" s1="17.8481" s2="34.7688" fuel="0.078" twfl="0.698" twfr="0.655" twrl="0.686" twrr="0.667" fcompound="1,C3" rcompound="1,C3">--.----</Lap>
 <BestLapTime>83.7615</BestLapTime>
-<FinishTime>3395.8896</FinishTime>
+<FinishTime>3400.8896</FinishTime>
 <Laps>38</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="38">PlayerControl</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Julian Gerlach</Name>
+<r2la_penalty>10.0</r2la_penalty><Name>Julian Gerlach</Name>
 <SteamID>76561198215701952</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_32_1.VEH</VehFile>
@@ -8833,7 +8833,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>7</GridPos>
-<Position>4</Position>
+<Position>6</Position>
 <ClassGridPos>7</ClassGridPos>
 <ClassPosition>4</ClassPosition>
 <Points>0</Points>
@@ -8878,14 +8878,14 @@
 <Lap num="37" p="4" et="3831.8630" s1="18.1333" s2="34.6738" s3="31.3743" fuel="0.118" twfl="0.733" twfr="0.682" twrl="0.753" twrr="0.737" fcompound="1,C3" rcompound="1,C3">84.1814</Lap>
 <Lap num="38" p="4" et="3916.0444" s1="18.1262" s2="34.3120" s3="32.3384" fuel="0.094" twfl="0.702" twfr="0.635" twrl="0.722" twrr="0.702" fcompound="1,C3" rcompound="1,C3">84.7766</Lap>
 <BestLapTime>83.7983</BestLapTime>
-<FinishTime>3396.7190</FinishTime>
+<FinishTime>3406.719</FinishTime>
 <Laps>38</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="38">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Noah Bergmann</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Noah Bergmann</Name>
 <SteamID>76561198169898767</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_49.VEH</VehFile>
@@ -8899,7 +8899,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>5</GridPos>
-<Position>7</Position>
+<Position>5</Position>
 <ClassGridPos>5</ClassGridPos>
 <ClassPosition>7</ClassPosition>
 <Points>0</Points>
@@ -8944,7 +8944,7 @@
 <Lap num="37" p="7" et="3834.1235" s1="17.9199" s2="34.4404" s3="31.6519" fuel="0.075" twfl="0.729" twfr="0.643" twrl="0.753" twrr="0.725" fcompound="1,C3" rcompound="1,C3">84.0122</Lap>
 <Lap num="38" p="7" et="3918.1357" fuel="0.051" twfl="0.690" twfr="0.596" twrl="0.718" twrr="0.686" fcompound="1,C3" rcompound="1,C3">83.9321</Lap>
 <BestLapTime>83.8499</BestLapTime>
-<FinishTime>3397.9658</FinishTime>
+<FinishTime>3402.9658</FinishTime>
 <Laps>38</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -8965,7 +8965,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>2</GridPos>
-<Position>3</Position>
+<Position>2</Position>
 <ClassGridPos>2</ClassGridPos>
 <ClassPosition>3</ClassPosition>
 <Points>0</Points>
@@ -9031,7 +9031,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>6</GridPos>
-<Position>5</Position>
+<Position>3</Position>
 <ClassGridPos>6</ClassGridPos>
 <ClassPosition>5</ClassPosition>
 <Points>0</Points>
@@ -9083,7 +9083,7 @@
 <ControlAndAids startLap="1" endLap="38">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Jomaso Heller</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Jomaso Heller</Name>
 <SteamID>76561199022498544</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_08.VEH</VehFile>
@@ -9097,7 +9097,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>9</GridPos>
-<Position>9</Position>
+<Position>10</Position>
 <ClassGridPos>9</ClassGridPos>
 <ClassPosition>9</ClassPosition>
 <Points>0</Points>
@@ -9142,7 +9142,7 @@
 <Lap num="37" p="9" et="3843.2246" s1="18.3293" s2="35.4224" s3="31.7134" fuel="0.094" twfl="0.659" twfr="0.533" twrl="0.686" twrr="0.686" fcompound="0,C4" rcompound="0,C4">85.4651</Lap>
 <Lap num="38" p="9" et="3928.6897" s1="18.3391" s2="35.2012" s3="31.4675" fuel="0.071" twfl="0.600" twfr="0.424" twrl="0.635" twrr="0.635" fcompound="0,C4" rcompound="0,C4">85.0078</Lap>
 <BestLapTime>84.9568</BestLapTime>
-<FinishTime>3409.5955</FinishTime>
+<FinishTime>3414.5955</FinishTime>
 <Laps>38</Laps>
 <Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -9229,7 +9229,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>13</GridPos>
-<Position>12</Position>
+<Position>9</Position>
 <ClassGridPos>13</ClassGridPos>
 <ClassPosition>12</ClassPosition>
 <Points>0</Points>
@@ -9281,7 +9281,7 @@
 <ControlAndAids startLap="1" endLap="38">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Rick David</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Rick David</Name>
 <SteamID>76561198049954280</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_75_1.VEH</VehFile>
@@ -9295,7 +9295,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>8</GridPos>
-<Position>10</Position>
+<Position>11</Position>
 <ClassGridPos>8</ClassGridPos>
 <ClassPosition>10</ClassPosition>
 <Points>0</Points>
@@ -9340,14 +9340,14 @@
 <Lap num="37" p="10" et="3844.6655" s1="18.2202" s2="36.4048" s3="31.7141" fuel="0.090" twfl="0.635" twfr="0.525" twrl="0.675" twrr="0.655" fcompound="1,C3" rcompound="1,C3">86.3391</Lap>
 <Lap num="38" p="10" et="3931.0046" s1="18.2461" s2="36.0239" s3="31.9768" fuel="0.067" twfl="0.596" twfr="0.478" twrl="0.643" twrr="0.620" fcompound="1,C3" rcompound="1,C3">86.2468</Lap>
 <BestLapTime>85.3079</BestLapTime>
-<FinishTime>3413.1494</FinishTime>
+<FinishTime>3418.1494</FinishTime>
 <Laps>38</Laps>
 <Pitstops>3</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="38">PlayerControl,Clutch</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Lea Luxemburg</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Lea Luxemburg</Name>
 <SteamID>76561199165916648</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_48_1.VEH</VehFile>
@@ -9361,7 +9361,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>12</GridPos>
-<Position>11</Position>
+<Position>12</Position>
 <ClassGridPos>12</ClassGridPos>
 <ClassPosition>11</ClassPosition>
 <Points>0</Points>
@@ -9406,7 +9406,7 @@
 <Lap num="37" p="12" et="3846.3459" s1="18.2478" s2="35.2947" s3="32.1096" fuel="0.133" twfl="0.725" twfr="0.651" twrl="0.749" twrr="0.741" fcompound="1,C3" rcompound="1,C3">85.6521</Lap>
 <Lap num="38" p="11" et="3931.9980" s1="18.3889" s2="35.8147" s3="31.8669" fuel="0.110" twfl="0.690" twfr="0.608" twrl="0.718" twrr="0.710" fcompound="1,C3" rcompound="1,C3">86.0706</Lap>
 <BestLapTime>85.6521</BestLapTime>
-<FinishTime>3413.9666</FinishTime>
+<FinishTime>3418.9666</FinishTime>
 <Laps>38</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
