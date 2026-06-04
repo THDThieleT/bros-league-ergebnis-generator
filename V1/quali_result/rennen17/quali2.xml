@@ -594,6 +594,7 @@
 <MostLapsCompleted>7</MostLapsCompleted>
 <Driver>
 <Name>Noah Nebling</Name>
+<r2la_penalty>3</r2la_penalty>
 <SteamID>76561198198890734</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_35.VEH</VehFile>
@@ -656,6 +657,7 @@
 </Driver>
 <Driver>
 <Name>Philipp Stange</Name>
+<r2la_penalty>3</r2la_penalty>
 <SteamID>76561198863574951</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_27.VEH</VehFile>
@@ -748,6 +750,7 @@
 </Driver>
 <Driver>
 <Name>Jomaso Heller</Name>
+<r2la_penalty>3</r2la_penalty>
 <SteamID>76561199022498544</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_08.VEH</VehFile>
@@ -810,6 +813,7 @@
 </Driver>
 <Driver>
 <Name>Andre Heiler</Name>
+<r2la_penalty>3</r2la_penalty>
 <SteamID>76561198269354097</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_07_1.VEH</VehFile>

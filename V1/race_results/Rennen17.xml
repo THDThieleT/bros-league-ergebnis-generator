@@ -23369,7 +23369,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>4</GridPos>
-<Position>10</Position>
+<Position>9</Position>
 <ClassGridPos>4</ClassGridPos>
 <ClassPosition>10</ClassPosition>
 <Points>0</Points>
@@ -23957,7 +23957,7 @@
 <ControlAndAids startLap="21" endLap="47">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Rick David</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Rick David</Name>
 <SteamID>76561198049954280</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_75_1.VEH</VehFile>
@@ -23971,7 +23971,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>12</GridPos>
-<Position>9</Position>
+<Position>11</Position>
 <ClassGridPos>12</ClassGridPos>
 <ClassPosition>9</ClassPosition>
 <Points>0</Points>
@@ -24025,7 +24025,7 @@
 <Lap num="46" p="9" et="3959.8784" s1="17.0605" s2="36.2170" s3="15.9822" fuel="0.102" twfl="0.690" twfr="0.678" twrl="0.741" twrr="0.753" fcompound="1,C3" rcompound="1,C3">69.2598</Lap>
 <Lap num="47" p="9" et="4029.1382" s1="16.9194" s2="36.3926" s3="16.0269" fuel="0.082" twfl="0.655" twfr="0.647" twrl="0.714" twrr="0.733" fcompound="1,C3" rcompound="1,C3">69.3389</Lap>
 <BestLapTime>68.9187</BestLapTime>
-<FinishTime>3500.6621</FinishTime>
+<FinishTime>3505.6621</FinishTime>
 <Laps>47</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -24092,7 +24092,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>8</GridPos>
-<Position>12</Position>
+<Position>10</Position>
 <ClassGridPos>8</ClassGridPos>
 <ClassPosition>12</ClassPosition>
 <Points>0</Points>
@@ -24228,7 +24228,7 @@
 <ControlAndAids startLap="1" endLap="47">PlayerControl,Clutch,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
-<Name>Ben Ahlers</Name>
+<r2la_penalty>5.0</r2la_penalty><Name>Ben Ahlers</Name>
 <SteamID>76561199867628317</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_36.VEH</VehFile>
@@ -24242,7 +24242,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>7</GridPos>
-<Position>11</Position>
+<Position>13</Position>
 <ClassGridPos>7</ClassGridPos>
 <ClassPosition>11</ClassPosition>
 <Points>0</Points>
@@ -24296,7 +24296,7 @@
 <Lap num="46" p="10" et="3960.5164" s1="17.1318" s2="36.0549" s3="15.9846" fuel="0.149" twfl="0.627" twfr="0.604" twrl="0.745" twrr="0.761" fcompound="1,C3" rcompound="1,C3">69.1714</Lap>
 <Lap num="47" p="11" et="4029.6877" s1="16.9128" s2="36.8083" s3="15.9827" fuel="0.129" twfl="0.584" twfr="0.561" twrl="0.722" twrr="0.737" fcompound="1,C3" rcompound="1,C3">69.7039</Lap>
 <BestLapTime>69.0452</BestLapTime>
-<FinishTime>3501.5767</FinishTime>
+<FinishTime>3506.5767</FinishTime>
 <Laps>47</Laps>
 <Pitstops>2</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
@@ -24317,7 +24317,7 @@
 <isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>16</GridPos>
-<Position>13</Position>
+<Position>12</Position>
 <ClassGridPos>16</ClassGridPos>
 <ClassPosition>13</ClassPosition>
 <Points>0</Points>
@@ -24603,6 +24603,7 @@
 </Driver>
 <Driver>
 <Name>Paul Meissner</Name>
+<FinishTime>3505.9521</FinishTime>
 <SteamID>76561199012073499</SteamID>
 <Connected>1</Connected>
 <VehFile>F1BS13_31.VEH</VehFile>

@@ -220,7 +220,7 @@ qualiergebnis = []
 starting_grid = []
 fastest_laps = []
 
-name_rennen = "Name des Rennens"
+name_rennen = "brazil"
 current_race_number = 0
 
 def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"):
@@ -497,8 +497,10 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif (driver.finish_time == "DNF"):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
+        elif (driver.finish_time == "DQ"):
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DSQ", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
         elif ("Lap" in driver.finish_time):
-            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")        
         else:
             time_behind_leader = float(driver.finish_time) - float(winner.finish_time)
             if(time_behind_leader < 10):
@@ -723,6 +725,8 @@ def create_insta_rennergebnis_page_2(data, filename="insta/" + file_prefix + "_i
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif (driver.finish_time == "DNF"):
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
+        elif (driver.finish_time == "DQ"):
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DSQ", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
         elif ("Lap" in driver.finish_time):
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
         else:
@@ -1222,6 +1226,11 @@ def read_raceresult_xml():
         if finished.text == "DNF":
             xml_export.append((name_elem.text, position.text, "DNF", fastes_lap, penalty))
             continue
+
+        if finished.text == "DQ":
+            xml_export.append((name_elem.text, position.text, "DQ", fastes_lap, penalty))
+            continue
+            
 
         if int(finished_laps.text) < int(race_laps.text):
             if (int(race_laps.text) - int(finished_laps.text) == 1):
@@ -1837,21 +1846,21 @@ def generate_drivers_championship(last_race_standings, driver_standings):
         final_image.save(filename, format="PNG")
         print("Image saved as "+ filename)
         if(i == 0):
-            driver_championship_insta(last_race_standings,driver_standings[0:12])
+            driver_championship_insta(last_race_standings,relevant_drivers, True, 0)
+        else:
+            driver_championship_insta(last_race_standings,relevant_drivers, False, i)
 
-def driver_championship_insta(last_race_standings, relevant_drivers):
+def driver_championship_insta(last_race_standings, relevant_drivers, first_page, page_number):
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (insta_width, insta_height), (0, 0, 0, 0))  # Fully transparent
-    background = Image.open("./images/Driver_WM_Insta.png").convert("RGBA")
+
+    if(first_page):
+        background = Image.open("./images/Driver_WM_Insta.png").convert("RGBA")
+    else:
+        background = Image.open("./images/WM_Stand_Insta.png").convert("RGBA")
 
     final_image.paste(background, (0, 0), background)  # The third argument is the mask for transparency
     draw = ImageDraw.Draw(final_image)
-
-    #Positionspfeile
-    arrow_up = Image.open("./images/arrow_up.png").convert("RGBA")
-    arrow_down = Image.open("./images/arrow_down.png").convert("RGBA")
-    arrow_up= arrow_up.resize(insta_arrow_size)
-    arrow_down= arrow_down.resize(insta_arrow_size)
 
     # Draw Racetitel with semi-transparency
     draw.text((insta_race_titel_pos[0], insta_race_titel_pos[1]), name_rennen, font=race_titel_insta, fill=(255, 255, 255, 255), anchor="lm")
@@ -1881,75 +1890,36 @@ def driver_championship_insta(last_race_standings, relevant_drivers):
         bbox = draw.textbbox((-100, -100), name, font=regular)
         name_length = bbox[2] - bbox[0]
         
-        if(position == 0):
-            #Draw Position
-            draw.text((insta_position_text, insta_first_name + (position * insta_y_offset)), str(position + 1), font=position_font, fill=(0, 0, 0, 255), anchor="lb")            
-            #Draw Flag
-            flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
-            flag_image = flag_image.resize((flag_width, flag_height))
-            final_image.paste(flag_image, (insta_left_allignment, insta_first_name + (position * insta_y_offset) - flag_y_offset), flag_image)
-            #Vorname
-            draw.text((insta_left_allignment + flag_width + spacer, insta_first_name + (position * insta_y_offset)), name, font=regular, fill=(0, 0, 0, 255), anchor="lb")
-            #Nachname
-            draw.text((insta_left_allignment  + flag_width + spacer + name_length + spacer, insta_first_name + (position * insta_y_offset)), lastname, font=bold, fill=(0, 0, 0, 255), anchor="lb")
-            #Teamname
-            draw.text((insta_team_alignment[0] + flag_width + 35, insta_team_alignment[1] + (position * insta_y_offset)), team, font=regular, fill=(0, 0, 0, 255), anchor="lm")
-            #Team Logo
-            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
-            logo = logo.resize(team_logo_scaled)
-            # Paste images onto the final image at specified positions
-            final_image.paste(logo, (insta_team_alignment[0], insta_team_alignment[1] + (position * insta_y_offset) - flag_y_offset), logo)
-            draw = ImageDraw.Draw(final_image)
-            #Points
-            if(entry[1] % 1) < 0.5:
-                draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="mm")
-            else:
-                draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(0, 0, 0, 255), anchor="mm")               
-            
-            if (last_race_index > 1):
-                    # Paste images onto the final image at specified positions
-                    final_image.paste(logo, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), logo)
-                    draw = ImageDraw.Draw(final_image)
-
+    
+        #Draw Position
+        draw.text((insta_position_text, insta_first_name + (position * insta_y_offset)), str(position + 1 + (page_number * 12)), font=position_font, fill=(255,255,255, 255), anchor="lb")            
+        #Draw Flag
+        flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
+        flag_image = flag_image.resize((flag_width, flag_height))
+        final_image.paste(flag_image, (insta_left_allignment, insta_first_name + (position * insta_y_offset) - flag_y_offset), flag_image)
+        #Vorname
+        draw.text((insta_left_allignment + flag_width + spacer, insta_first_name + (position * insta_y_offset)), name, font=regular, fill=(255, 255, 255, 255), anchor="lb")
+        #Nachname
+        draw.text((insta_left_allignment  + flag_width + spacer + name_length + spacer, insta_first_name + (position * insta_y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
+        #Teamname
+        draw.text((insta_team_alignment[0] + flag_width + 35, insta_team_alignment[1] + (position * insta_y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
+        #Team Logo
+        logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
+        logo = logo.resize(team_logo_scaled)
+        # Paste images onto the final image at specified positions
+        final_image.paste(logo, (insta_team_alignment[0], insta_team_alignment[1] + (position * insta_y_offset) - flag_y_offset), logo)
+        draw = ImageDraw.Draw(final_image)
+        #Points
+        if(entry[1] % 1) < 0.5:
+            draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="mm")
         else:
-            #Draw Position
-            draw.text((insta_position_text, insta_first_name + (position * insta_y_offset)), str(position + 1), font=position_font, fill=(255,255,255, 255), anchor="lb")            
-            #Draw Flag
-            flag_image = Image.open("./flags/" + flag + ".png").convert("RGBA")
-            flag_image = flag_image.resize((flag_width, flag_height))
-            final_image.paste(flag_image, (insta_left_allignment, insta_first_name + (position * insta_y_offset) - flag_y_offset), flag_image)
-            #Vorname
-            draw.text((insta_left_allignment + flag_width + spacer, insta_first_name + (position * insta_y_offset)), name, font=regular, fill=(255, 255, 255, 255), anchor="lb")
-            #Nachname
-            draw.text((insta_left_allignment  + flag_width + spacer + name_length + spacer, insta_first_name + (position * insta_y_offset)), lastname, font=bold, fill=(255, 255, 255, 255), anchor="lb")
-            #Teamname
-            draw.text((insta_team_alignment[0] + flag_width + 35, insta_team_alignment[1] + (position * insta_y_offset)), team, font=regular, fill=(255, 255, 255, 255), anchor="lm")
-            #Team Logo
-            logo = Image.open("./team_logos/" + team_filename).convert("RGBA")
-            logo = logo.resize(team_logo_scaled)
-            # Paste images onto the final image at specified positions
-            final_image.paste(logo, (insta_team_alignment[0], insta_team_alignment[1] + (position * insta_y_offset) - flag_y_offset), logo)
-            draw = ImageDraw.Draw(final_image)
-            #Points
-            if(entry[1] % 1) < 0.5:
-                draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.floor(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="mm")
-            else:
-                draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="mm")
+            draw.text((insta_points_allignment, insta_team_alignment[1] + (position * insta_y_offset)), str(math.ceil(entry[1])), font=pos_bold, fill=(255, 255, 255, 255), anchor="mm")
                         
-            #Pos Gained arrow
-            if (last_race_index > (position)):
-                # Paste images onto the final image at specified positions
-                final_image.paste(arrow_up, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_up)
-                draw = ImageDraw.Draw(final_image)
-            elif (last_race_index < (position)):
-                # Paste images onto the final image at specified positions
-                final_image.paste(arrow_down, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_down)
-                draw = ImageDraw.Draw(final_image)
             
         # Update position for the next name
         position += 1
         
-    filename = "insta/"+ file_prefix + "_insta_driver_standings.png"
+    filename = "insta/"+ page_number.__str__() + "_insta_driver_standings.png"
     final_image.save(filename, format="PNG")
     print("Image saved as "+ filename)
 
@@ -2192,4 +2162,3 @@ if __name__ == "__main__":
     create_insta_quali_page_1(qualiergebnis[:12])
     create_quali_page_2(qualiergebnis[12:])
     create_insta_quali_page_2(qualiergebnis[12:])    
-    team_championship_insta
