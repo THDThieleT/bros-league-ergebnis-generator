@@ -22,12 +22,10 @@ class Winner:
     def get_team_short(self):
         if(self.Team == "Toyota F1 Team"):
             return "TOYOTA"
-        if(self.Team == "Hugo Bros BMW Williams"):
+        if(self.Team == "BMW Williams"):
             return "WILLIAMS"
-        if(self.Team == "Scuderia Toro Rosso"):
-            return "TORO ROSSO"
-        if(self.Team == "Alpine F1 Team"):
-            return "ALPINE"
+        if(self.Team == "Racing Bulls"):
+            return "RACING BULLS"        
         if(self.Team == "Mercedes AMG"):
             return "MERCEDES"
         if(self.Team == "Scuderia Ferrari"):
@@ -35,13 +33,13 @@ class Winner:
         if(self.Team == "McLaren F1 Team"):
             return "MCLAREN"
         if(self.Team == "LUNZiT Red Bull Racing"):
-            return "RED BULL"
-        if(self.Team == "Jordan Grand Prix"):
-            return "JORDAN"
+            return "RED BULL"        
         if(self.Team == "Cadillac F1 Team"):
             return "CADILLAC"
         if(self.Team == "Audi F1 Team"):
             return "AUDI"
+        if(self.Team == "Aston Martin"):
+                    return "ASTON MARTIN"
         if(self.Team == "Reserve"):
             return "ERSATZ"
 
@@ -63,30 +61,28 @@ class Driver:
         return self.Vorname + " " + self.Nachname
 
     def get_team_short(self):
-        if(self.Team == "Toyota F1 Team"):
-            return "TOYOTA"
-        if(self.Team == "Hugo Bros BMW Williams"):
-            return "WILLIAMS"
-        if(self.Team == "Scuderia Toro Rosso"):
-            return "TORO ROSSO"
-        if(self.Team == "Alpine F1 Team"):
-            return "ALPINE"
-        if(self.Team == "Mercedes AMG"):
-            return "MERCEDES"
-        if(self.Team == "Scuderia Ferrari"):
-            return "FERRARI"
-        if(self.Team == "McLaren F1 Team"):
-            return "MCLAREN"
-        if(self.Team == "LUNZiT Red Bull Racing"):
-            return "RED BULL"
-        if(self.Team == "Jordan Grand Prix"):
-            return "JORDAN"
-        if(self.Team == "Cadillac F1 Team"):
-            return "CADILLAC"
-        if(self.Team == "Audi F1 Team"):
-            return "AUDI"
-        if(self.Team == "Reserve"):
-            return "ERSATZ"
+            if(self.Team == "Toyota F1 Team"):
+                return "TOYOTA"
+            if(self.Team == "BMW Williams"):
+                return "WILLIAMS"
+            if(self.Team == "Racing Bulls"):
+                return "RACING BULLS"        
+            if(self.Team == "Mercedes AMG"):
+                return "MERCEDES"
+            if(self.Team == "Scuderia Ferrari"):
+                return "FERRARI"
+            if(self.Team == "McLaren F1 Team"):
+                return "MCLAREN"
+            if(self.Team == "LUNZiT Red Bull Racing"):
+                return "RED BULL"        
+            if(self.Team == "Cadillac F1 Team"):
+                return "CADILLAC"
+            if(self.Team == "Audi F1 Team"):
+                return "AUDI"
+            if(self.Team == "Aston Martin"):
+                        return "ASTON MARTIN"
+            if(self.Team == "Reserve"):
+                return "ERSATZ"
 
 class fastest_lap:
     def __init__(self, Vorname="Vorname", Nachname="Nachname", Team="Test Team", lap_time="1000.0"):
@@ -102,7 +98,9 @@ class fastest_lap:
         return f"{int(minutes):02}:{sec:06.3f}"
 
 #Setup Variables
-
+name_rennen = "Name des Rennens"
+generating_race = 8
+current_race_number = 0
 sprint_race = False
 
 width, height = 1920, 1080
@@ -222,10 +220,10 @@ qualiergebnis = []
 starting_grid = []
 fastest_laps = []
 
-name_rennen = "Name des Rennens"
-current_race_number = 0
+
 
 def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"):
+    global sprint_race
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
     classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
@@ -364,7 +362,7 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
             draw.text((left_allignment  + flag_width + spacer + name_length + spacer, first_name + (position * y_offset)), driver.Nachname.upper(), font=bold, fill=(255, 255, 255, 255), anchor="lb")
             #Teamname
             draw.text((team_name_allignment , first_team_and_points + (position * y_offset)), driver.Team.upper(), font=regular, fill=(255, 255, 255, 255), anchor="lm")
-            #Team Logo
+            #Team Logo            
             logo = Image.open("./team_logos/" + get_team_logo(driver.Team)).convert("RGBA")
             logo = logo.resize(team_logo_scaled)
             # Paste images onto the final image at specified positions
@@ -519,6 +517,8 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif (driver.finish_time == "DNF"):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
+        elif (driver.finish_time == "DQ"):
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DQ", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif ("Lap" in driver.finish_time):
             draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
         else:
@@ -745,6 +745,8 @@ def create_insta_rennergebnis_page_2(data, filename="insta/" + file_prefix + "_i
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
         elif (driver.finish_time == "DNF"):
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
+        elif (driver.finish_time == "DQ"):
+            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DQ", font=regular, fill=(255, 255, 255, 255), anchor="rm")                        
         elif ("Lap" in driver.finish_time):
             draw.text((insta_racetime_alignment , insta_team_alignment[1] + (position * insta_y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
         else:
@@ -1177,6 +1179,19 @@ def create_insta_quali_page_2(data, filename="insta/" + file_prefix + "_insta_qu
     final_image.save(filename, format="PNG")
     print("Image saved as "+ filename)
 
+def generate_race_number():
+    global current_race_number
+
+    # Read the current race number from the CSV file
+    with open("Race_Names.csv", "r") as f:
+        reader = csv.reader(f)
+        race_titels = list(reader)
+
+    if(len(race_titels) > 0):
+        current_race_number = int(race_titels[-1][0].split(" ")[-1])
+    else:
+        current_race_number = 1
+
 def read_raceresult_xml():
     global current_race_number, xml_export, starting_grid
 
@@ -1192,16 +1207,17 @@ def read_raceresult_xml():
 
     # Extract the number and find the file with the highest number
     if files:
-        max_file = max(files, key=lambda f: int(pattern.match(f).group(1)))
-        print(f"Öffne Datei: {max_file}")
+        #max_file = max(files, key=lambda f: int(pattern.match(f).group(1)))
+        file = files[generating_race - 1]
+        print(f"Öffne Datei: {file}")
         # Beispiel: XML parsen
         import xml.etree.ElementTree as ET
-        tree = ET.parse(os.path.join(folder, max_file))
+        tree = ET.parse(os.path.join(folder, file))
         root = tree.getroot()
     else:
         print("Keine passenden XML-Dateien gefunden.")
     
-    current_race_number = int(str.split(max_file, "Rennen")[1][0:2])
+    current_race_number = generating_race
 
     race_laps = root.find('.//RaceLaps')
     ### Extract Drivers from XML ###    
@@ -1216,7 +1232,7 @@ def read_raceresult_xml():
         penalty = driver.find('r2la_penalty')
         grid_pos = driver.find('GridPos')
 
-        if (category_elem is None) or not ("F1S13" in category_elem.text):                        
+        if (category_elem is None) or not ("F1S14" in category_elem.text):                        
             continue
 
         if (finished is None):
@@ -1239,6 +1255,10 @@ def read_raceresult_xml():
 
         if finished.text == "None":
             xml_export.append((name_elem.text, position.text, "DNS", fastes_lap, penalty))
+            continue
+
+        if finished.text == "DQ":
+            xml_export.append((name_elem.text, position.text, "DQ", fastes_lap, penalty))
             continue
 
         if finished.text == "DNF":
@@ -1361,13 +1381,11 @@ def read_driver_config(race_number):
     
     filename = "configs/driver_config.csv"
 
-    if (race_number >= 7):
-        filename = "configs/driver_config_from_frankreich.csv"
-    if (race_number >= 12):
-        filename = "configs/driver_config_from_monza.csv"
-    if (race_number >= 13):
-        filename = "configs/driver_config_from_baku.csv"    
-        
+    
+    #if (race_number >= 7):
+    #    filename = "configs/driver_config_from_frankreich.csv"
+    
+    
     
     with open(filename, encoding="utf-8") as csvfile:
         driver_config.clear()  # Clear existing data
@@ -1400,15 +1418,14 @@ def result_preprocessing():
     rennergebnis.clear()  # Clear existing results
     for entry in xml_export:        
         found = False
-        for driver in driver_config:
+        for driver in driver_config:            
             if (driver.get_driver_name().upper() == entry[0].upper()):  
                 #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
                 driver_config.remove(driver)
 
                 if entry[-1] > 0:
                     driver.penalty = entry[-1]
-                driver.finish_time = entry[2]
-
+                driver.finish_time = entry[2]                
                 rennergebnis.append(driver)      
                 driver.fastest_lap = entry[3]                                                      
                 found = True    
@@ -1459,12 +1476,10 @@ def quali_preprocessing():
 def get_team_logo(team):
     if(team == "Toyota F1 Team"):
             return "toyota.png"
-    if(team == "Hugo Bros BMW Williams"):
+    if(team == "BMW Williams"):
         return "bmw.png"
-    if(team == "Scuderia Toro Rosso"):
-        return "toro_rosso.png"
-    if(team == "Alpine F1 Team"):
-        return "alpine.png"
+    if(team == "Racing Bulls"):
+        return "racing_bulls.png"    
     if(team == "Mercedes AMG"):
         return "mercedes.png"
     if(team == "Scuderia Ferrari"):
@@ -1473,8 +1488,8 @@ def get_team_logo(team):
         return "mclaren.png"
     if(team == "LUNZiT Red Bull Racing"):
         return "red_bull.png"
-    if(team == "Jordan Grand Prix"):
-        return "jordan.png"
+    if(team == "Aston Martin"):
+        return "aston_martin.png"
     if(team == "Cadillac F1 Team"):
         return "cadillac.png"
     if(team == "Audi F1 Team"):
@@ -1483,7 +1498,7 @@ def get_team_logo(team):
         return "reserve.png"
 
 def calculate_wm_rankings():
-    global xml_export, driver_config, team_config, rennergebnis
+    global xml_export, driver_config, team_config, rennergebnis, sprint_race
     driver_standings = []
     team_standings = []
     driver_standings_last_race = []
@@ -1491,7 +1506,7 @@ def calculate_wm_rankings():
     xml_export.clear()  # Clear existing results
 
     team_config = read_team_config()
-    for team in team_config:
+    for team in team_config:        
         team.append(0)
         team_standings.append(team)
 
@@ -1502,8 +1517,9 @@ def calculate_wm_rankings():
     pattern = re.compile(r'Rennen(\d+)\.xml')
 
     # Find all files matching the pattern
-    files = [f for f in os.listdir(folder) if pattern.match(f)]
-
+    all_files = [f for f in os.listdir(folder) if pattern.match(f)]
+    files = all_files[:generating_race]  # Get files up to the current race number
+    print(f"Berechne WM Standings für Rennen 1 bis {len(files)}")
     import xml.etree.ElementTree as ET
     race_number = 0
     ### Für jedes Rennen
@@ -1514,6 +1530,14 @@ def calculate_wm_rankings():
         xml_export.clear()
         race_number += 1
 
+        name_rennen = race_titels[race_number - 1][0]                    
+        if(name_rennen.__contains__("SPRINT")):
+            sprint_race = True
+            print("Sprint Rennen erkannt")
+        else:
+            sprint_race = False
+
+
         ### Extract Drivers from XML ###    
         for driver in root.findall('.//Driver'):
             name_elem = driver.find('Name')
@@ -1522,7 +1546,7 @@ def calculate_wm_rankings():
             fastes_lap = driver.find('BestLapTime')
             team = driver.find('TeamName')
             
-            if (category_elem is None) or not ("F1S13" in category_elem.text):                        
+            if (category_elem is None) or not ("F1S14" in category_elem.text):                        
                 continue
 
             if fastes_lap is None:
@@ -1541,10 +1565,10 @@ def calculate_wm_rankings():
         finish_position = 0
         #print("\nRennergebnis:")
         for driver in rennergebnis:
-            finish_position += 1              
-            #print(driver[0][0] + " " + driver[0][1], finish_position)
+            finish_position += 1             
             if(len(driver_standings) == 0):
                 print("Driver Standing init")
+                print("Fahrer " + driver.get_driver_name() +  " hinzufügen zu Standings")
                 driver_standings.append([driver, 25])
                 team = "reserve"
                 if(driver.Stammfahrer):                    
@@ -1722,7 +1746,7 @@ def calculate_wm_rankings():
                     if(not sprint_race):
                         driver_standings.append([driver, (1) - (finish_position/10000)])
                         team_standings[team_index][-1] += 1
-                else:
+                elif(finish_position > 10):
                     driver_standings.append([driver,  (0.01)  - (finish_position/10000)])                      
 
                 team_standings[team_index][-1] -= (finish_position/10000)                     
@@ -1847,7 +1871,7 @@ def generate_drivers_championship(last_race_standings, driver_standings):
 
                 if (last_race_index > 1):
                     # Paste images onto the final image at specified positions
-                    final_image.paste(arrow_up, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_up)
+                    final_image.paste(arrow_up, (driver_wm_arrow_x, driver_wm_first_row_lower - row_height + ((row_height - arrow_scale[1]) % 2) + (position * y_offset) + 7), arrow_up)
                     draw = ImageDraw.Draw(final_image)
                 
 
@@ -1963,7 +1987,7 @@ def driver_championship_insta(last_race_standings, relevant_drivers):
             
             if (last_race_index > 1):
                     # Paste images onto the final image at specified positions
-                    final_image.paste(logo, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), logo)
+                    final_image.paste(arrow_up, (insta_position_text - 25, insta_first_name + (position * insta_y_offset) - insta_arrow_size[0]), arrow_up)
                     draw = ImageDraw.Draw(final_image)
 
         else:
@@ -2216,7 +2240,6 @@ def team_championship_insta(last_race_standings, team_standings):
 
 
 if __name__ == "__main__":
-
     read_raceresult_xml()
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile)        
@@ -2226,8 +2249,9 @@ if __name__ == "__main__":
         else:
             name_rennen = race_titels[current_race_number - 1][0]        
     
-    if(name_rennen.__contains__("Sprint")):
+    if(name_rennen.__contains__("SPRINT")):
         sprint_race = True
+        print("Sprint Rennen erkannt")
     else:
         sprint_race = False
 
@@ -2237,19 +2261,24 @@ if __name__ == "__main__":
     
     # create badges for betreuer
     fahrer_seite1 = rennergebnis[:12]  # First 11 entries for page 1
-    fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2    
+    fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2   
+    if(sprint_race):
+        create_rennergebnis_page_1(fahrer_seite1, "sprint_rennergebnisse_seite1.png")
+        create_insta_rennergebnis_page_1(fahrer_seite1, "_insta_sprint_rennergebnisse_seite1.png")
+        create_rennergebnis_page_2(fahrer_seite2, "sprint_rennergebnisse_seite2.png")
+        create_insta_rennergebnis_page_2(fahrer_seite2, "_insta_sprint_rennergebnisse_seite2.png")
     create_rennergebnis_page_1(fahrer_seite1)
     create_insta_rennergebnis_page_1(fahrer_seite1)
     create_rennergebnis_page_2(fahrer_seite2)
     create_insta_rennergebnis_page_2(fahrer_seite2)
+    read_driver_config(current_race_number)
     calculate_wm_rankings()
     
 
-    read_driver_config(current_race_number)
-    read_quali_xml()
-    quali_preprocessing()
-    create_quali_page_1(qualiergebnis[:12])
-    create_insta_quali_page_1(qualiergebnis[:12])
-    create_quali_page_2(qualiergebnis[12:])
-    create_insta_quali_page_2(qualiergebnis[12:])    
-    team_championship_insta
+    #read_driver_config(current_race_number)
+    #read_quali_xml()
+    #quali_preprocessing()
+    #create_quali_page_1(qualiergebnis[:12])
+    #create_insta_quali_page_1(qualiergebnis[:12])
+    #create_quali_page_2(qualiergebnis[12:])
+    #create_insta_quali_page_2(qualiergebnis[12:])    
