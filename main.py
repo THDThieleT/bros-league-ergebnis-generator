@@ -103,6 +103,8 @@ class fastest_lap:
 
 #Setup Variables
 
+sprint_race = False
+
 width, height = 1920, 1080
 y_offset = 65
 first_name = 243 #310 unterseite erste Zeile
@@ -277,29 +279,49 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
         # Draw the rest of row     
         bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
         name_length = bbox[2] - bbox[0]
-        
-        if(position == 0):
-            gained_points = "+25"
-        elif(position == 1):
-            gained_points = "+18"
-        elif(position == 2):
-            gained_points = "+15"
-        elif(position == 3):
-            gained_points = "+12"
-        elif(position == 4):
-            gained_points = "+10"
-        elif(position == 5):
-            gained_points = "+8"
-        elif(position == 6):
-            gained_points = "+6"
-        elif(position == 7):
-            gained_points = "+4"
-        elif(position == 8):
-            gained_points = "+2"
-        elif(position == 9):
-            gained_points = "+1"
+
+        if(sprint_race):
+            if(position == 0):
+                gained_points = "+8"
+            elif(position == 1):
+                gained_points = "+7"
+            elif(position == 2):
+                gained_points = "+6"
+            elif(position == 3):
+                gained_points = "+5"
+            elif(position == 4):
+                gained_points = "+4"
+            elif(position == 5):
+                gained_points = "+3"
+            elif(position == 6):
+                gained_points = "+2"
+            elif(position == 7):
+                gained_points = "+1"            
+            else:
+                gained_points = "+0"
         else:
-            gained_points = "+0"
+            if(position == 0):
+                gained_points = "+25"
+            elif(position == 1):
+                gained_points = "+18"
+            elif(position == 2):
+                gained_points = "+15"
+            elif(position == 3):
+                gained_points = "+12"
+            elif(position == 4):
+                gained_points = "+10"
+            elif(position == 5):
+                gained_points = "+8"
+            elif(position == 6):
+                gained_points = "+6"
+            elif(position == 7):
+                gained_points = "+4"
+            elif(position == 8):
+                gained_points = "+2"
+            elif(position == 9):
+                gained_points = "+1"
+            else:
+                gained_points = "+0"
 
         
         if(position == 0):
@@ -1545,69 +1567,78 @@ def calculate_wm_rankings():
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
 
                 if(finish_position == 1):
-                    item[1] += 25
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 25
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 8    
+                        team_standings[team_index][-1] += 8
+                    else:
+                        item[1] += 25
+                        team_standings[team_index][-1] += 25
                 elif(finish_position == 2):
-                    item[1] += 18
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 18
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 7
+                        team_standings[team_index][-1] += 7
+                    else:
+                        item[1] += 18
+                        team_standings[team_index][-1] += 18
                 elif(finish_position == 3):
-                    item[1] += 15
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 15
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 6
+                        team_standings[team_index][-1] += 6
+                    else:
+                        item[1] += 15
+                        team_standings[team_index][-1] += 15
                 elif(finish_position == 4):
-                    item[1] += 12
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 12
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 5
+                        team_standings[team_index][-1] += 5
+                    else:
+                        item[1] += 12
+                        team_standings[team_index][-1] += 12
                 elif(finish_position == 5):
-                    item[1] += 10
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 10
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 4
+                        team_standings[team_index][-1] += 4
+                    else:
+                        item[1] += 10
+                        team_standings[team_index][-1] += 10
                 elif(finish_position == 6):
-                    item[1] += 8
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 8
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 3
+                        team_standings[team_index][-1] += 3
+                    else:
+                        item[1] += 8
+                        team_standings[team_index][-1] += 8
                 elif(finish_position == 7):
-                    item[1] += 6
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 6
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 2
+                        team_standings[team_index][-1] += 2
+                    else:
+                        item[1] += 6
+                        team_standings[team_index][-1] += 6
                 elif(finish_position == 8):
-                    item[1] += 4
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 4
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        item[1] += 1
+                        team_standings[team_index][-1] += 1
+                    else:
+                        item[1] += 4
+                        team_standings[team_index][-1] += 4
                 elif(finish_position == 9):
-                    item[1] += 2
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 2
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(not sprint_race):
+                        item[1] += 2
+                        team_standings[team_index][-1] += 2
+                    
                 elif(finish_position == 10):
-                    item[1] += 1
-                    item[1] -= (finish_position/10000)
-                    team_standings[team_index][-1] += 1
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(not sprint_race):
+                        item[1] += 1
+                        team_standings[team_index][-1] += 1
+                    
                 elif(finish_position > 10):
-                    item[1] += 0.01 
-                    item[1] -= (finish_position/10000)
-                    continue
+                    if(not sprint_race):
+                        item[1] += 0.01 
+                        item[1] -= (finish_position/10000)                   
+
+                item[1] -= (finish_position/10000)                    
+                team_standings[team_index][-1] -= (finish_position/10000)
             else:        
                 print("Fahrer " + driver.get_driver_name() +  " hinzufügen zu Standings")   
                 #print(driver)
@@ -1619,58 +1650,82 @@ def calculate_wm_rankings():
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))                                                   
                 if(finish_position == 1):
-                    driver_standings.append([driver, (25) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 25
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (8) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 8
+                    else:
+                        driver_standings.append([driver, (25) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 25                    
+                    
                 elif(finish_position == 2):
-                    driver_standings.append([driver, (18) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 18
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (7) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 7
+                    else:
+                        driver_standings.append([driver, (18) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 18
+                    
                 elif(finish_position == 3):
-                    driver_standings.append([driver, (15) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 15
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (6) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 6
+                    else:
+                        driver_standings.append([driver, (15) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 15                   
+                    
                 elif(finish_position == 4):
-                    driver_standings.append([driver, (12) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 12
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (5) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 5
+                    else:
+                        driver_standings.append([driver, (12) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 12
+                                    
                 elif(finish_position == 5):
-                    driver_standings.append([driver, (10) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 10
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (4) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 4
+                    else:
+                        driver_standings.append([driver, (10) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 10                    
+                    
                 elif(finish_position == 6):
-                    driver_standings.append([driver, (8) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 8
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (3) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 3
+                    else:
+                        driver_standings.append([driver, (8) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 8                    
+                    
                 elif(finish_position == 7):
-                    driver_standings.append([driver, (6) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 6
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (2) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 2
+                    else:
+                        driver_standings.append([driver, (6) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 6                    
+                    
                 elif(finish_position == 8):
-                    driver_standings.append([driver, (4) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 4
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(sprint_race):
+                        driver_standings.append([driver, (1) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 1
+                    else:
+                        driver_standings.append([driver, (4) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 4                    
+                    
                 elif(finish_position == 9):
-                    driver_standings.append([driver, (2) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 2
-                    team_standings[team_index][-1] -= (finish_position/10000)
-                    continue
+                    if(not sprint_race):
+                        driver_standings.append([driver, (2) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 2                    
+                    
                 elif(finish_position == 10):
-                    driver_standings.append([driver, (1) - (finish_position/10000)])
-                    team_standings[team_index][-1] += 1
-                    team_standings[team_index][-1] -= (finish_position/10000) 
-                    continue
+                    if(not sprint_race):
+                        driver_standings.append([driver, (1) - (finish_position/10000)])
+                        team_standings[team_index][-1] += 1
                 else:
-                    driver_standings.append([driver,  (0.01)  - (finish_position/10000)])
-                    continue                        
+                    driver_standings.append([driver,  (0.01)  - (finish_position/10000)])                      
+
+                team_standings[team_index][-1] -= (finish_position/10000)                     
 
         ### Sort by points ###
         driver_standings.sort(key=lambda x:x[1], reverse=True)
@@ -2171,6 +2226,11 @@ if __name__ == "__main__":
         else:
             name_rennen = race_titels[current_race_number - 1][0]        
     
+    if(name_rennen.__contains__("Sprint")):
+        sprint_race = True
+    else:
+        sprint_race = False
+
     read_driver_config(current_race_number)
     winner, fastest_lap_driver = result_preprocessing()    
     print(fastest_lap_driver)
