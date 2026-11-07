@@ -98,8 +98,9 @@ class fastest_lap:
         return f"{int(minutes):02}:{sec:06.3f}"
 
 #Setup Variables
+new_race_allignment = -230
 name_rennen = "Name des Rennens"
-generating_race = 8
+generating_race = 1
 current_race_number = 0
 sprint_race = False
 
@@ -107,30 +108,30 @@ width, height = 1920, 1080
 y_offset = 65
 first_name = 243 #310 unterseite erste Zeile
 first_team_and_points = 232
-position_text = 556
-left_allignment = 620
+position_text = 556 + new_race_allignment
+left_allignment = 630 + new_race_allignment
 name_size = 20
 name_size_insta = 16
 row_height = 42
 
-fastest_lap_position = (556, 1006)
+fastest_lap_position = (556 + new_race_allignment, 1006)
 lastname_size = 30
 flag_width = 40
 flag_height = 26
 flag_y_offset = 22
 spacer = 10
-team_logo_alignment = (1085,212)
+team_logo_alignment = (1085 + new_race_allignment,212)
 team_logo_scaled = (40,40)
-team_name_allignment = 1165
-race_time_allignment = 1700
-quali_time_allignment = 1820
+team_name_allignment = 1165 + new_race_allignment
+race_time_allignment = 1700 + new_race_allignment
+quali_time_allignment = 1820 + new_race_allignment
 overall_position = (-50, 100)
 
-points_pos_x = 1811
+points_pos_x = 1811 + new_race_allignment
 position_size = 24
 
-penalty_pos_x = 1590
-quali_penalty_x = 1700
+penalty_pos_x = 1590 + new_race_allignment
+quali_penalty_x = 1700 + new_race_allignment
 penalty_text_size = 15
 
 winner_team_position = (86, 80)
@@ -143,7 +144,7 @@ winner_name_size = 42
 fastest_lap_driver = fastest_lap()
 
 arrow_scale = (25,25)
-driver_wm_arrow_x = 1592
+driver_wm_arrow_x = 1592 
 team_wm_arrow_x = 1594
 
 ###### Drivers Championship
@@ -175,7 +176,7 @@ team_wm_team_logo_scaled = (40,40)
 insta_team_logo_pos_x = 800
 
 # Load a font (optional: use default if you don't have one)
-race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=34)
+race_titel = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=30)
 race_titel_insta = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=28)
 race_classification = ImageFont.truetype("./fonts/Formula1-Bold_web.ttf", size=56)
 regular = ImageFont.truetype("./fonts/Formula1-Regular_web.ttf", size=name_size)
@@ -226,9 +227,8 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
     global sprint_race
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
-    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
-    background = Image.open("./images/Rennergebnis_Hintergrund.png").convert("RGBA")
-
+    classment_transparent = Image.open("./images/Rennergebnis/Rennergebnis_S14_Hintergrund.png").convert("RGBA")
+    background = Image.open("./images/Rennergebnis/Rennergebnis_S14_1.png").convert("RGBA")
     # Paste images onto the final image at specified positions
     mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
     final_image.paste(classment_transparent, (0, 0), mask)  # The third argument is the mask for transparency
@@ -236,44 +236,12 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
     draw = ImageDraw.Draw(final_image)
 
     # Draw Racetitel with semi-transparency
-    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
+    draw.text((557 + new_race_allignment, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
 
-    #Draw race winner
-    winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
-    winner_overall = winner_overall.resize((680, 680))
-    final_image.paste(winner_overall, overall_position, winner_overall)
-    overall_fade = Image.open("./images/Winner_Vordergrund.png").convert("RGBA")
-    final_image.paste(overall_fade, (0,0), overall_fade)
-    
-    #Winner rotated team text
-    team_box = draw.textbbox((-100, -100), winner.winning_team, font=winner_team_font)
-    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
-    temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
-
-    # Rotate the temporary image 90 degrees counter-clockwise
-    rotated_text = temp_img.rotate(90, expand=True)
-    final_image.paste(rotated_text, winner_team_position, rotated_text)
-
-    #Winner rotated number text
-    team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
-    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
-    temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
-
-    # Rotate the temporary image 90 degrees counter-clockwise
-    rotated_text = temp_img.rotate(90, expand=True)
-    final_image.paste(rotated_text, winner_number_position, rotated_text)
-    
-    ### Winner Name
-    draw.text(winner_name_pos, winner.Nachname.upper(), font=winner_name_font, fill=(255, 255, 255, 255), anchor="mm")
-    
     ### Fill Positions
     position = 0
     for driver in data:
-        #Text zu CAPS
-
-        
+        #Text zu CAPS        
         # Draw the rest of row     
         bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
         name_length = bbox[2] - bbox[0]
@@ -404,8 +372,8 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
 def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"):
     # Create a transparent base image (RGBA mode)  
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
-    classment_transparent = Image.open("./images/Classement_background.png").convert("RGBA")
-    background = Image.open("./images/Rennergebnis_Hintergrund_2.png").convert("RGBA")
+    classment_transparent = Image.open("./images/Rennergebnis/Rennergebnis_S14_Hintergrund.png").convert("RGBA")
+    background = Image.open("./images/Rennergebnis/Rennergebnis_S14_2.png").convert("RGBA")
 
     # Paste images onto the final image at specified positions
     mask = Image.new('L', classment_transparent.size, 200)  # 50% transparency
@@ -414,38 +382,7 @@ def create_rennergebnis_page_2(data, filename="output/rennergebnisse_seite2.png"
     draw = ImageDraw.Draw(final_image)
 
     # Draw Racetitel with semi-transparency
-    draw.text((557, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
-
-    #Draw race winner
-    winner_overall = Image.open("./overalls/" + winner.Overall).convert("RGBA")
-    winner_overall = winner_overall.resize((680, 680))
-    final_image.paste(winner_overall, overall_position, winner_overall)
-    overall_fade = Image.open("./images/Winner_Vordergrund.png").convert("RGBA")
-    final_image.paste(overall_fade, (0,0), overall_fade)
-    
-    #Winner rotated team text
-    team_box = draw.textbbox((-100, -100), winner.winning_team, font=winner_team_font)
-    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
-    temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.winning_team, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
-
-    # Rotate the temporary image 90 degrees counter-clockwise
-    rotated_text = temp_img.rotate(90, expand=True)
-    final_image.paste(rotated_text, winner_team_position, rotated_text)
-
-    #Winner rotated number text
-    team_box = draw.textbbox((-100, -100), winner.Nummer, font=winner_team_font)
-    temp_img = Image.new("RGBA", (team_box[2] - team_box[0], team_box[3] - team_box[1]), (0, 0, 0, 0))  # Big enough for horizontal text
-    temp_draw = ImageDraw.Draw(temp_img)
-    temp_draw.text((0, 0), winner.Nummer, font=winner_team_font, fill=(255, 255, 255, 100), anchor="lt")
-
-    # Rotate the temporary image 90 degrees counter-clockwise
-    rotated_text = temp_img.rotate(90, expand=True)
-    final_image.paste(rotated_text, winner_number_position, rotated_text)
-    
-    ### Winner Name
-    draw.text(winner_name_pos, winner.Nachname.upper(), font=winner_name_font, fill=(255, 255, 255, 255), anchor="mm")
-    
+    draw.text((557 + new_race_allignment, 100), name_rennen, font=race_titel, fill=(255, 255, 255, 255), anchor="lt")
 
     #Draw Winner in Tableau
     position = 0
@@ -1789,7 +1726,7 @@ def calculate_wm_rankings():
 
     generate_drivers_championship(driver_standings_last_race, driver_standings)
     generate_constructor_championship(team_standings_last_race, team_standings_sorted)
-    team_championship_insta(team_standings_last_race, team_standings_sorted)
+    #team_championship_insta(team_standings_last_race, team_standings_sorted)
 
 def generate_drivers_championship(last_race_standings, driver_standings):
     
@@ -1798,11 +1735,11 @@ def generate_drivers_championship(last_race_standings, driver_standings):
     for i in range(0, necessary_pages):
         # Create a transparent base image (RGBA mode)          
         final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
-        background = Image.open("./images/Driver_standing_Background.png").convert("RGBA")
+        background = Image.open("./images/Fahrer_WM/Driver_standing_Background.png").convert("RGBA")
         if(i == 0):
-            overlay = Image.open("./images/Driver_standings_1.png").convert("RGBA")
+            overlay = Image.open("./images/Fahrer_WM/Driver_standings_1.png").convert("RGBA")
         else:
-            overlay = Image.open("./images/Driver_standings_2.png").convert("RGBA")
+            overlay = Image.open("./images/Fahrer_WM/Driver_standings_2.png").convert("RGBA")
 
         # Paste images onto the final image at specified positions
         mask = Image.new('L', background.size, 200)  # 50% transparency
@@ -1915,8 +1852,8 @@ def generate_drivers_championship(last_race_standings, driver_standings):
         filename = "output/Fahrer_WM_Seite_" + str(i + 1) + ".png"
         final_image.save(filename, format="PNG")
         print("Image saved as "+ filename)
-        if(i == 0):
-            driver_championship_insta(last_race_standings,driver_standings[0:12])
+        #if(i == 0):
+        #    driver_championship_insta(last_race_standings,driver_standings[0:12])
 
 def driver_championship_insta(last_race_standings, relevant_drivers):
     # Create a transparent base image (RGBA mode)  
@@ -2036,8 +1973,8 @@ def generate_constructor_championship(last_race_standings, team_standings):
 
     # Create a transparent base image (RGBA mode)          
     final_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))  # Fully transparent
-    background = Image.open("./images/Constructor_Standing_background.png").convert("RGBA")
-    overlay = Image.open("./images/Constructor_Standing.png").convert("RGBA")
+    background = Image.open("./images/Team_WM/Constructor_Standing_background.png").convert("RGBA")
+    overlay = Image.open("./images/Team_WM/Constructor_Standing.png").convert("RGBA")
 
     # Paste images onto the final image at specified positions
     mask = Image.new('L', background.size, 200)  # 50% transparency
@@ -2238,7 +2175,6 @@ def team_championship_insta(last_race_standings, team_standings):
     final_image.save("insta/Team_WM.png", format="PNG")
     print("Image saved as insta_Team_WM.png")
 
-
 if __name__ == "__main__":
     read_raceresult_xml()
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
@@ -2264,13 +2200,13 @@ if __name__ == "__main__":
     fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2   
     if(sprint_race):
         create_rennergebnis_page_1(fahrer_seite1, "sprint_rennergebnisse_seite1.png")
-        create_insta_rennergebnis_page_1(fahrer_seite1, "_insta_sprint_rennergebnisse_seite1.png")
+        #create_insta_rennergebnis_page_1(fahrer_seite1, "_insta_sprint_rennergebnisse_seite1.png")
         create_rennergebnis_page_2(fahrer_seite2, "sprint_rennergebnisse_seite2.png")
-        create_insta_rennergebnis_page_2(fahrer_seite2, "_insta_sprint_rennergebnisse_seite2.png")
+        #create_insta_rennergebnis_page_2(fahrer_seite2, "_insta_sprint_rennergebnisse_seite2.png")
     create_rennergebnis_page_1(fahrer_seite1)
-    create_insta_rennergebnis_page_1(fahrer_seite1)
+    #create_insta_rennergebnis_page_1(fahrer_seite1)
     create_rennergebnis_page_2(fahrer_seite2)
-    create_insta_rennergebnis_page_2(fahrer_seite2)
+    #create_insta_rennergebnis_page_2(fahrer_seite2)
     read_driver_config(current_race_number)
     calculate_wm_rankings()
     
