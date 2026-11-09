@@ -56,6 +56,7 @@ class Driver:
             self.finish_time = ""
             self.fastest_lap = ""
             self.penalty = None
+            self.classified = True
 
     def get_driver_name(self):
         return self.Vorname + " " + self.Nachname
@@ -97,10 +98,10 @@ class fastest_lap:
         minutes, sec = divmod(td.total_seconds(), 60)
         return f"{int(minutes):02}:{sec:06.3f}"
 
-#Setup Variables
+#Setup Variablesrennen
 new_race_allignment = -230
 name_rennen = "Name des Rennens"
-generating_race = 1
+generating_race = 11
 current_race_number = 0
 sprint_race = False
 
@@ -158,7 +159,7 @@ driver_wm_team_x = 950
 driver_wm_team_y = (int) (driver_wm_first_row_lower - (row_height / 2))
 driver_wm_team_logo = (driver_wm_team_x - 75, driver_wm_team_y - 20)
 driver_wm_points_pos = (1575, (int) (driver_wm_first_row_lower - (row_height / 2)))
-driver_wm_info_text_position = (350, 974)
+driver_wm_info_text_position = (310, 974)
 
 ###### Constructor Championship
 team_wm_race_titel_position = (330, 85)
@@ -171,7 +172,7 @@ team_wm_team_x = 1050
 team_wm_team_y = (int) (team_wm_first_row_lower - (row_height / 2))
 team_wm_team_logo = (team_wm_team_x - 75, team_wm_team_y - 20)
 team_wm_points_pos = (1575, (int) (team_wm_first_row_lower - (row_height / 2)))
-team_wm_info_text_position = (350, 1005)
+team_wm_info_text_position = (310, 1005)
 team_wm_team_logo_scaled = (40,40)
 insta_team_logo_pos_x = 800
 
@@ -245,49 +246,46 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
         # Draw the rest of row     
         bbox = draw.textbbox((-100, -100), driver.Vorname, font=regular)
         name_length = bbox[2] - bbox[0]
-
-        if(sprint_race):
-            if(position == 0):
-                gained_points = "+8"
-            elif(position == 1):
-                gained_points = "+7"
-            elif(position == 2):
-                gained_points = "+6"
-            elif(position == 3):
-                gained_points = "+5"
-            elif(position == 4):
-                gained_points = "+4"
-            elif(position == 5):
-                gained_points = "+3"
-            elif(position == 6):
-                gained_points = "+2"
-            elif(position == 7):
-                gained_points = "+1"            
+        gained_points = "+0"
+        if(driver.classified):
+            if(sprint_race):
+                if(position == 0):
+                    gained_points = "+8"
+                elif(position == 1):
+                    gained_points = "+7"
+                elif(position == 2):
+                    gained_points = "+6"
+                elif(position == 3):
+                    gained_points = "+5"
+                elif(position == 4):
+                    gained_points = "+4"
+                elif(position == 5):
+                    gained_points = "+3"
+                elif(position == 6):
+                    gained_points = "+2"
+                elif(position == 7):
+                    gained_points = "+1"
             else:
-                gained_points = "+0"
-        else:
-            if(position == 0):
-                gained_points = "+25"
-            elif(position == 1):
-                gained_points = "+18"
-            elif(position == 2):
-                gained_points = "+15"
-            elif(position == 3):
-                gained_points = "+12"
-            elif(position == 4):
-                gained_points = "+10"
-            elif(position == 5):
-                gained_points = "+8"
-            elif(position == 6):
-                gained_points = "+6"
-            elif(position == 7):
-                gained_points = "+4"
-            elif(position == 8):
-                gained_points = "+2"
-            elif(position == 9):
-                gained_points = "+1"
-            else:
-                gained_points = "+0"
+                if(position == 0):
+                    gained_points = "+25"
+                elif(position == 1):
+                    gained_points = "+18"
+                elif(position == 2):
+                    gained_points = "+15"
+                elif(position == 3):
+                    gained_points = "+12"
+                elif(position == 4):
+                    gained_points = "+10"
+                elif(position == 5):
+                    gained_points = "+8"
+                elif(position == 6):
+                    gained_points = "+6"
+                elif(position == 7):
+                    gained_points = "+4"
+                elif(position == 8):
+                    gained_points = "+2"
+                elif(position == 9):
+                    gained_points = "+1"
 
         
         if(position == 0):
@@ -341,6 +339,8 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNS", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             elif (driver.finish_time == "DNF"):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DNF", font=regular, fill=(255, 255, 255, 255), anchor="rm")            
+            elif (driver.finish_time == "DQ"):
+                            draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), "DQ", font=regular, fill=(255, 255, 255, 255), anchor="rm")
             elif ("Lap" in driver.finish_time):
                 draw.text((race_time_allignment , first_team_and_points + (position * y_offset)), driver.finish_time, font=regular, fill=(255, 255, 255, 255), anchor="rm")
             else:
@@ -354,8 +354,6 @@ def create_rennergebnis_page_1(data, filename="output/rennergebnisse_seite1.png"
             #Penatly
             if (driver.penalty is not None):
                 draw.text((penalty_pos_x , first_team_and_points + (position * y_offset)), ("+" + str(driver.penalty) + " sek") , font=penalty_font, fill=(255, 0, 0, 255), anchor="rm")
-
-
         # Update position for the next name
         position += 1
 
@@ -1130,7 +1128,7 @@ def generate_race_number():
         current_race_number = 1
 
 def read_raceresult_xml():
-    global current_race_number, xml_export, starting_grid
+    global current_race_number, xml_export, starting_grid, driver_config
 
     xml_export = []
     starting_grid = []
@@ -1153,9 +1151,7 @@ def read_raceresult_xml():
         root = tree.getroot()
     else:
         print("Keine passenden XML-Dateien gefunden.")
-    
-    current_race_number = generating_race
-
+        
     race_laps = root.find('.//RaceLaps')
     ### Extract Drivers from XML ###    
     for driver in root.findall('.//Driver'):
@@ -1188,7 +1184,13 @@ def read_raceresult_xml():
         if fastes_lap is None:
             fastes_lap = "1000"
         else:
-            fastes_lap = fastes_lap.text
+            fastes_lap = fastes_lap.text            
+            
+        if(float(race_laps.text) * 0.9 > float(finished_laps.text)):
+            print(f"Driver {name_elem.text} finished {finished_laps.text} / {race_laps.text} laps")
+            temp = [driver for driver in driver_config if driver.get_driver_name() == name_elem.text]
+            driver_config[driver_config.index(temp[0])].classified = False        
+            print(driver_config[driver_config.index(temp[0])].get_driver_name() + " ist nicht classified")
 
         if finished.text == "None":
             xml_export.append((name_elem.text, position.text, "DNS", fastes_lap, penalty))
@@ -1197,18 +1199,18 @@ def read_raceresult_xml():
         if finished.text == "DQ":
             xml_export.append((name_elem.text, position.text, "DQ", fastes_lap, penalty))
             continue
-
-        if finished.text == "DNF":
-            xml_export.append((name_elem.text, position.text, "DNF", fastes_lap, penalty))
-            continue
-
-        if int(finished_laps.text) < int(race_laps.text):
+        
+        if(finished_laps.text < race_laps.text):
             if (int(race_laps.text) - int(finished_laps.text) == 1):
                 xml_export.append((name_elem.text, position.text, "+1 Lap", fastes_lap, penalty))
             else:
                 xml_export.append((name_elem.text, position.text, f"+ {int(race_laps.text) - int(finished_laps.text)} Laps", fastes_lap, penalty))
             continue
-
+        
+        if finished.text == "DNF":
+            xml_export.append((name_elem.text, position.text, "DNF", fastes_lap, penalty))
+            continue        
+        
         if finished.text == "Finished Normally":
             xml_export.append((name_elem.text, position.text, racetime.text, fastes_lap, penalty))
             continue
@@ -1319,10 +1321,13 @@ def read_driver_config(race_number):
     filename = "configs/driver_config.csv"
 
     
-    #if (race_number >= 7):
-    #    filename = "configs/driver_config_from_frankreich.csv"
+    if (race_number >= 6):
+        filename = "configs/driver_config_from_germany.csv"
     
     
+    if (race_number >= 9):
+        filename = "configs/driver_config_from_hungary.csv"
+        
     
     with open(filename, encoding="utf-8") as csvfile:
         driver_config.clear()  # Clear existing data
@@ -1355,7 +1360,7 @@ def result_preprocessing():
     rennergebnis.clear()  # Clear existing results
     for entry in xml_export:        
         found = False
-        for driver in driver_config:            
+        for driver in driver_config: 
             if (driver.get_driver_name().upper() == entry[0].upper()):  
                 #print("Gefunden: " + config[0] + " " + config[1] + ". Gesucht: " + entry[0])              
                 driver_config.remove(driver)
@@ -1474,7 +1479,10 @@ def calculate_wm_rankings():
         else:
             sprint_race = False
 
+        ### Get driver config again    
+        read_driver_config(race_number) 
 
+        race_laps = root.find('.//RaceLaps')
         ### Extract Drivers from XML ###    
         for driver in root.findall('.//Driver'):
             name_elem = driver.find('Name')
@@ -1482,6 +1490,7 @@ def calculate_wm_rankings():
             category_elem = driver.find('Category')
             fastes_lap = driver.find('BestLapTime')
             team = driver.find('TeamName')
+            laps_finished = driver.find('Laps')
             
             if (category_elem is None) or not ("F1S14" in category_elem.text):                        
                 continue
@@ -1490,14 +1499,18 @@ def calculate_wm_rankings():
                 fastes_lap = "1000"
             else:
                 fastes_lap = fastes_lap.text
+                
+            if(float(race_laps.text) * 0.9 > float(laps_finished.text)):
+                print(f"WM: Driver {name_elem.text} finished {laps_finished.text} / {race_laps.text} laps")
+                temp = [driver for driver in driver_config if driver.get_driver_name() == name_elem.text]
+                driver_config[driver_config.index(temp[0])].classified = False        
 
             xml_export.append((name_elem.text, position.text, fastes_lap, team.text))
 
         ### Sortiere nach Position
         xml_export.sort(key=lambda x: int(x[1]))  # Sort by position
 
-        ### Get driver config again    
-        read_driver_config(race_number)
+        
         _, fastest = result_preprocessing_wm()     
         finish_position = 0
         #print("\nRennergebnis:")
@@ -1524,9 +1537,12 @@ def calculate_wm_rankings():
                 team = "reserve"
                 if(driver.Stammfahrer):                    
                     team = driver.Team
+                    
+                if(driver.classified == False):
+                    print(driver.get_driver_name() + " ist nicht classified")
+                    continue
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))
-
                 if(finish_position == 1):
                     if(sprint_race):
                         item[1] += 8    
@@ -1608,6 +1624,9 @@ def calculate_wm_rankings():
                 team = "reserve"
                 if(driver.Stammfahrer):
                     team = driver.Team
+                if(driver.classified == False):
+                    driver_standings.append([driver, 0])
+                    continue
 
                 team_index = team_standings.index(next(entry for entry in team_standings if entry[0] == team))                                                   
                 if(finish_position == 1):
@@ -1690,7 +1709,7 @@ def calculate_wm_rankings():
 
         ### Sort by points ###
         driver_standings.sort(key=lambda x:x[1], reverse=True)
-        team_standings_sorted = (team_standings.copy())[:11]
+        team_standings_sorted = (team_standings.copy())[:10]
         team_standings_sorted.sort(key=lambda x: x[-1], reverse=True)
         team_standings_sorted.append(team_standings[-1])        
 
@@ -1701,7 +1720,6 @@ def calculate_wm_rankings():
     if(race_number == 1):
         driver_standings_last_race = driver_standings.copy()
         team_standings_last_race = team_standings_sorted.copy()
-
     #print("\nFahrer WM Stand nach " + race_file + "\n" + "-------------------------------")                                                    
     #for driver in driver_standings:
     #    if(driver[1] % 1) < 0.5:
@@ -2176,6 +2194,8 @@ def team_championship_insta(last_race_standings, team_standings):
     print("Image saved as insta_Team_WM.png")
 
 if __name__ == "__main__":
+    current_race_number = generating_race    
+    read_driver_config(current_race_number)
     read_raceresult_xml()
     with open("configs/Race_Names.csv", encoding="utf-8") as csvfile:
         csvreader = csv.reader(csvfile)        
@@ -2191,11 +2211,9 @@ if __name__ == "__main__":
     else:
         sprint_race = False
 
-    read_driver_config(current_race_number)
     winner, fastest_lap_driver = result_preprocessing()    
     print(fastest_lap_driver)
     
-    # create badges for betreuer
     fahrer_seite1 = rennergebnis[:12]  # First 11 entries for page 1
     fahrer_seite2 = rennergebnis[12:]  # Next 11 entries for page 2   
     if(sprint_race):
